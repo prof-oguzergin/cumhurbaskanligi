@@ -85,7 +85,6 @@ header.site nav a {
   opacity: 0.9;
   transition: opacity 0.2s;
 }
-body.page header.site nav a { color: var(--c-primary-2); }
 header.site nav a:hover { opacity: 1; text-decoration: none; }
 
 /* ===== HERO ===== */
@@ -450,6 +449,15 @@ body.page h3 {
   margin-top: 1.8rem;
 }
 body.page strong { color: var(--c-primary); }
+body.page main a {
+  color: var(--c-primary-2);
+  font-weight: 600;
+  text-decoration: underline;
+  text-decoration-thickness: 2px;
+  text-underline-offset: 3px;
+  transition: color 0.15s;
+}
+body.page main a:hover { color: var(--c-primary); text-decoration-thickness: 3px; }
 body.page table {
   width: 100%;
   border-collapse: collapse;
