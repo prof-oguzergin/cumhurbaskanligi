@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Destekçi Haritası</title>
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+        integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+        crossorigin="" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      background: linear-gradient(180deg, #f5f7fa 0%, #e8eef5 100%);
+      color: #1a3a5f;
+    }
+    .wrap { max-width: 1100px; margin: 0 auto; padding: 1.5rem; }
+    h1 { margin: 0 0 .25rem 0; font-size: 1.6rem; }
+    .lede { color: #4a5a6f; margin: 0 0 1.5rem 0; font-size: 0.95rem; }
+    .stats {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: .75rem;
+      margin-bottom: 1.5rem;
+    }
+    .stat {
+      background: #fff;
+      border-left: 4px solid #1a3a5f;
+      padding: .75rem 1rem;
+      border-radius: 0 6px 6px 0;
+      box-shadow: 0 1px 3px rgba(0,0,0,.05);
+    }
+    .stat-num {
+      font-size: 1.6rem;
+      font-weight: 700;
+      color: #1a3a5f;
+      line-height: 1.1;
+    }
+    .stat-label { font-size: .85rem; color: #4a5a6f; }
+    h2 {
+      margin: 1.75rem 0 .5rem 0;
+      font-size: 1.2rem;
+      color: #1a3a5f;
+    }
+    .map {
+      width: 100%;
+      height: 500px;
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(0,0,0,.08);
+      background: #d6e2ec;
+    }
+    .legend {
+      background: rgba(255,255,255,.95);
+      padding: .5rem .75rem;
+      border-radius: 6px;
+      box-shadow: 0 1px 3px rgba(0,0,0,.1);
+      font-size: .8rem;
+      line-height: 1.4;
+    }
+    .legend .dot {
+      display: inline-block;
+      border-radius: 50%;
+      vertical-align: middle;
+      margin-right: 4px;
+    }
+    footer {
+      margin-top: 1.5rem;
+      font-size: .82rem;
+      color: #6a7a8f;
+      text-align: center;
+    }
+    @media (max-width: 600px) {
+      .map { height: 360px; }
+      h1 { font-size: 1.3rem; }
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <h1>Destekçi Haritası</h1>
+    <p class="lede">Türkiye'nin dört bir köşesinden ve dünyanın 22 ülkesinden vatandaşlarımız bu yolculukta yanımızda. Aşağıdaki haritada destekçilerimizin coğrafi dağılımı görülmektedir.</p>
+
+    <div class="stats">
+      <div class="stat">
+        <div class="stat-num">69</div>
+        <div class="stat-label">Türkiye'de destekçinin bulunduğu il</div>
+      </div>
+      <div class="stat">
+        <div class="stat-num">22</div>
+        <div class="stat-label">Yurt dışından destek gelen ülke</div>
+      </div>
+      <div class="stat">
+        <div class="stat-num">5</div>
+        <div class="stat-label">Kıtadan destek</div>
+      </div>
+    </div>
+
+    <h2>Türkiye</h2>
+    <div id="tr-map" class="map"></div>
+
+    <h2>Dünya</h2>
+    <div id="world-map" class="map"></div>
+
+    <footer>Konum verileri il ve ülke düzeyinde kümelenmiştir; bireysel destekçi bilgisi paylaşılmaz. Harita verisi: OpenStreetMap.</footer>
+  </div>
+
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+          integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+          crossorigin=""></script>
+  <script>
+    const ILLER = {"Eskişehir": 32, "Afyonkarahisar": 4, "Bursa": 59, "İstanbul": 431, "Kocaeli": 45, "Kayseri": 23, "Ankara": 460, "İzmir": 85, "Mersin": 11, "Malatya": 6, "Çanakkale": 7, "Yozgat": 3, "Niğde": 3, "Edirne": 3, "Kahramanmaraş": 8, "Sakarya": 19, "Nevşehir": 6, "Manisa": 8, "Isparta": 8, "Trabzon": 7, "Muğla": 10, "Düzce": 6, "Tekirdağ": 10, "Antalya": 23, "Hatay": 10, "Aydın": 12, "Osmaniye": 4, "Samsun": 13, "Çorum": 6, "Balıkesir": 11, "Konya": 30, "Zonguldak": 5, "Adana": 10, "Bilecik": 2, "Bingöl": 2, "Karaman": 2, "Şanlıurfa": 4, "Kütahya": 10, "Yalova": 5, "Rize": 1, "Sivas": 7, "Elazığ": 10, "Artvin": 5, "Gaziantep": 10, "Van": 7, "Ordu": 2, "Aksaray": 3, "Bayburt": 1, "Karabük": 4, "Kırklareli": 2, "Sinop": 3, "Denizli": 12, "Kars": 1, "Giresun": 1, "Erzincan": 2, "Batman": 3, "Kastamonu": 1, "Tokat": 4, "Gümüşhane": 2, "Diyarbakır": 2, "Çankırı": 1, "Bolu": 2, "Amasya": 1, "Erzurum": 3, "Siirt": 1, "Bartın": 2, "Kilis": 1, "Kırıkkale": 1, "Şırnak": 1};
+    const ULKELER = {"Hollanda": 7, "İsviçre": 5, "Birleşik Krallık": 6, "Japonya": 1, "İrlanda": 2, "İtalya": 3, "İsveç": 3, "ABD": 19, "Güney Kore": 1, "Birleşik Arap Emirlikleri": 4, "Suudi Arabistan": 2, "Sırbistan": 1, "Almanya": 17, "Kanada": 2, "Kazakistan": 1, "İspanya": 1, "Finlandiya": 1, "Çekya": 1, "KKTC": 1, "Belçika": 1, "Avusturya": 1, "Estonya": 1};
+    const IL_KOORD = {"Adana": [37.0, 35.3213], "Adıyaman": [37.7648, 38.2786], "Afyonkarahisar": [38.7507, 30.5567], "Ağrı": [39.7191, 43.0503], "Aksaray": [38.3687, 34.037], "Amasya": [40.6499, 35.8353], "Ankara": [39.9334, 32.8597], "Antalya": [36.8841, 30.7056], "Ardahan": [41.1105, 42.7022], "Artvin": [41.1828, 41.8183], "Aydın": [37.8444, 27.8458], "Balıkesir": [39.6484, 27.8826], "Bartın": [41.6344, 32.3375], "Batman": [37.8812, 41.1351], "Bayburt": [40.2552, 40.2249], "Bilecik": [40.0567, 30.0665], "Bingöl": [38.8854, 40.4983], "Bitlis": [38.4006, 42.1095], "Bolu": [40.7325, 31.5917], "Burdur": [37.7203, 30.2908], "Bursa": [40.1828, 29.0665], "Çanakkale": [40.1553, 26.4142], "Çankırı": [40.6013, 33.6134], "Çorum": [40.5499, 34.9533], "Denizli": [37.7765, 29.0864], "Diyarbakır": [37.9144, 40.2306], "Düzce": [40.8438, 31.1565], "Edirne": [41.6772, 26.5557], "Elazığ": [38.681, 39.2264], "Erzincan": [39.7464, 39.4914], "Erzurum": [39.9043, 41.2658], "Eskişehir": [39.7767, 30.5206], "Gaziantep": [37.0662, 37.3833], "Giresun": [40.9128, 38.3895], "Gümüşhane": [40.4598, 39.4814], "Hakkari": [37.5833, 43.7333], "Hatay": [36.4018, 36.3498], "Iğdır": [39.888, 44.0048], "Isparta": [37.7648, 30.5566], "İstanbul": [41.0082, 28.9784], "İzmir": [38.4192, 27.1287], "Kahramanmaraş": [37.5858, 36.9371], "Karabük": [41.2061, 32.6204], "Karaman": [37.1759, 33.2287], "Kars": [40.6013, 43.0975], "Kastamonu": [41.3887, 33.7827], "Kayseri": [38.7322, 35.4787], "Kilis": [36.7184, 37.1212], "Kırıkkale": [39.8468, 33.5153], "Kırklareli": [41.7333, 27.2167], "Kırşehir": [39.1425, 34.1709], "Kocaeli": [40.8533, 29.8815], "Konya": [37.8746, 32.4932], "Kütahya": [39.4242, 29.9833], "Malatya": [38.3552, 38.3095], "Manisa": [38.6191, 27.4289], "Mardin": [37.3212, 40.7245], "Mersin": [36.8121, 34.6415], "Muğla": [37.2153, 28.3636], "Muş": [38.7432, 41.5065], "Nevşehir": [38.6939, 34.6857], "Niğde": [37.9667, 34.6833], "Ordu": [40.9839, 37.8764], "Osmaniye": [37.0742, 36.2461], "Rize": [41.0201, 40.5234], "Sakarya": [40.7569, 30.3781], "Samsun": [41.2867, 36.33], "Siirt": [37.9333, 41.95], "Sinop": [42.0231, 35.1531], "Sivas": [39.7477, 37.0179], "Şanlıurfa": [37.1591, 38.7969], "Şırnak": [37.4187, 42.4918], "Tekirdağ": [40.9833, 27.5167], "Tokat": [40.3167, 36.55], "Trabzon": [41.0015, 39.7178], "Tunceli": [39.1079, 39.5401], "Uşak": [38.6823, 29.4082], "Van": [38.4942, 43.38], "Yalova": [40.65, 29.2667], "Yozgat": [39.8181, 34.8147], "Zonguldak": [41.4564, 31.7987]};
+    const ULKE_KOORD = {"ABD": [39.5, -98.0], "Almanya": [51.16, 10.45], "Hollanda": [52.13, 5.29], "Birleşik Krallık": [54.0, -2.0], "İsviçre": [46.82, 8.23], "Birleşik Arap Emirlikleri": [23.42, 53.85], "İtalya": [41.87, 12.57], "İsveç": [60.13, 18.64], "İrlanda": [53.41, -8.24], "Suudi Arabistan": [23.89, 45.08], "Kanada": [56.13, -106.35], "Japonya": [36.2, 138.25], "Güney Kore": [35.91, 127.77], "Sırbistan": [44.02, 21.01], "Kazakistan": [48.02, 66.92], "İspanya": [40.46, -3.75], "Finlandiya": [61.92, 25.75], "Çekya": [49.82, 15.47], "KKTC": [35.18, 33.43], "Belçika": [50.5, 4.47], "Avusturya": [47.52, 14.55], "Estonya": [58.59, 25.01]};
+
+    function radiusFor(count, base, scale, max) {
+      return Math.min(max, base + Math.log2(count + 1) * scale);
+    }
+
+    // Türkiye haritası
+    const trMap = L.map('tr-map', { scrollWheelZoom: false, attributionControl: true })
+                   .setView([39.2, 35.5], 6);
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+      maxZoom: 18,
+      attribution: '&copy; OpenStreetMap'
+    }).addTo(trMap);
+
+    Object.entries(ILLER).forEach(([il, count]) => {
+      const coord = IL_KOORD[il];
+      if (!coord) return;
+      const r = radiusFor(count, 5, 2.4, 22);
+      L.circleMarker(coord, {
+        radius: r,
+        fillColor: '#1a3a5f',
+        color: '#fff',
+        weight: 1.5,
+        fillOpacity: 0.7
+      }).addTo(trMap).bindTooltip(il, {
+        permanent: false, direction: 'top', offset: [0, -4]
+      });
+    });
+
+    // Türkiye legend
+    const trLegend = L.control({position: 'bottomright'});
+    trLegend.onAdd = function() {
+      const div = L.DomUtil.create('div', 'legend');
+      div.innerHTML = '<strong>Destekçi yoğunluğu</strong><br>' +
+        '<span class="dot" style="width:8px;height:8px;background:#1a3a5f"></span>az &nbsp;' +
+        '<span class="dot" style="width:14px;height:14px;background:#1a3a5f"></span>orta &nbsp;' +
+        '<span class="dot" style="width:20px;height:20px;background:#1a3a5f"></span>çok';
+      return div;
+    };
+    trLegend.addTo(trMap);
+
+    // Dünya haritası
+    const worldMap = L.map('world-map', { scrollWheelZoom: false, attributionControl: true,
+                                          worldCopyJump: true })
+                      .setView([40, 25], 2);
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+      maxZoom: 18,
+      attribution: '&copy; OpenStreetMap'
+    }).addTo(worldMap);
+
+    // Türkiye'yi vurgu olarak göster
+    L.circleMarker([39.0, 35.0], {
+      radius: 14, fillColor: '#1a3a5f', color: '#fff', weight: 2, fillOpacity: 0.85
+    }).addTo(worldMap).bindTooltip('Türkiye', {permanent: false, direction: 'top'});
+
+    Object.entries(ULKELER).forEach(([ulke, count]) => {
+      const coord = ULKE_KOORD[ulke];
+      if (!coord) return;
+      const r = radiusFor(count, 5, 2.5, 16);
+      L.circleMarker(coord, {
+        radius: r,
+        fillColor: '#c91418',
+        color: '#fff',
+        weight: 1.5,
+        fillOpacity: 0.75
+      }).addTo(worldMap).bindTooltip(ulke, {
+        permanent: false, direction: 'top', offset: [0, -4]
+      });
+    });
+
+    // Dünya legend
+    const wLegend = L.control({position: 'bottomright'});
+    wLegend.onAdd = function() {
+      const div = L.DomUtil.create('div', 'legend');
+      div.innerHTML = '<span class="dot" style="width:14px;height:14px;background:#1a3a5f"></span>Türkiye<br>' +
+                      '<span class="dot" style="width:14px;height:14px;background:#c91418"></span>Yurt dışı';
+      return div;
+    };
+    wLegend.addTo(worldMap);
+  </script>
+</body>
+</html>
