@@ -86,14 +86,25 @@ header.site nav a:hover { opacity: 1; text-decoration: none; }
 .hero {
   min-height: 100vh;
   position: relative;
+  background-image:
+    linear-gradient(95deg, rgba(15,32,55,0.92) 0%, rgba(15,32,55,0.72) 38%, rgba(15,32,55,0.30) 70%, rgba(15,32,55,0.10) 100%),
+    url('assets/img/hero-banner.jpg');
   background-size: cover;
-  background-position: center center;
+  background-position: 70% center;
   background-repeat: no-repeat;
   display: flex;
   align-items: center;
   justify-content: flex-start;
   padding: 6rem 8vw 4rem;
   color: var(--c-text-light);
+}
+@media (max-width: 720px) {
+  .hero {
+    background-image:
+      linear-gradient(180deg, rgba(15,32,55,0.55) 0%, rgba(15,32,55,0.45) 35%, rgba(15,32,55,0.92) 100%),
+      url('assets/img/hero-banner.jpg');
+    background-position: 65% center;
+  }
 }
 .hero-inner {
   max-width: 720px;
