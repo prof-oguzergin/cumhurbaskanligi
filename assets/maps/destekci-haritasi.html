@@ -119,18 +119,18 @@
     }
 
     // Türkiye haritası
-    const trMap = L.map('tr-map', { scrollWheelZoom: false, attributionControl: true })
-                   .setView([39.2, 35.5], 6);
+    const trMap = L.map('tr-map', { scrollWheelZoom: false, attributionControl: true });
     L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
       maxZoom: 18,
       attribution: '&copy; OpenStreetMap'
     }).addTo(trMap);
 
+    const trMarkers = [];
     Object.entries(ILLER).forEach(([il, count]) => {
       const coord = IL_KOORD[il];
       if (!coord) return;
       const r = radiusFor(count, 5, 2.4, 22);
-      L.circleMarker(coord, {
+      const m = L.circleMarker(coord, {
         radius: r,
         fillColor: '#1a3a5f',
         color: '#fff',
@@ -139,7 +139,15 @@
       }).addTo(trMap).bindTooltip(il, {
         permanent: false, direction: 'top', offset: [0, -4]
       });
+      trMarkers.push(m);
     });
+    // Türkiye sınırlarını noktalara göre kucakla (yumuşak padding)
+    if (trMarkers.length) {
+      const trGroup = L.featureGroup(trMarkers);
+      trMap.fitBounds(trGroup.getBounds(), { padding: [25, 25] });
+    } else {
+      trMap.setView([39.2, 35.5], 6);
+    }
 
     // Türkiye legend
     const trLegend = L.control({position: 'bottomright'});
@@ -155,23 +163,25 @@
 
     // Dünya haritası
     const worldMap = L.map('world-map', { scrollWheelZoom: false, attributionControl: true,
-                                          worldCopyJump: true })
-                      .setView([40, 25], 2);
+                                          worldCopyJump: true });
     L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
       maxZoom: 18,
       attribution: '&copy; OpenStreetMap'
     }).addTo(worldMap);
 
+    const worldMarkers = [];
     // Türkiye'yi vurgu olarak göster
-    L.circleMarker([39.0, 35.0], {
-      radius: 14, fillColor: '#1a3a5f', color: '#fff', weight: 2, fillOpacity: 0.85
-    }).addTo(worldMap).bindTooltip('Türkiye', {permanent: false, direction: 'top'});
+    worldMarkers.push(
+      L.circleMarker([39.0, 35.0], {
+        radius: 14, fillColor: '#1a3a5f', color: '#fff', weight: 2, fillOpacity: 0.85
+      }).addTo(worldMap).bindTooltip('Türkiye', {permanent: false, direction: 'top'})
+    );
 
     Object.entries(ULKELER).forEach(([ulke, count]) => {
       const coord = ULKE_KOORD[ulke];
       if (!coord) return;
       const r = radiusFor(count, 5, 2.5, 16);
-      L.circleMarker(coord, {
+      const m = L.circleMarker(coord, {
         radius: r,
         fillColor: '#c91418',
         color: '#fff',
@@ -180,7 +190,15 @@
       }).addTo(worldMap).bindTooltip(ulke, {
         permanent: false, direction: 'top', offset: [0, -4]
       });
+      worldMarkers.push(m);
     });
+    // Dünyada noktaları kucakla — Türkiye + tüm yurt dışı ülkeler
+    if (worldMarkers.length) {
+      const wGroup = L.featureGroup(worldMarkers);
+      worldMap.fitBounds(wGroup.getBounds(), { padding: [40, 40] });
+    } else {
+      worldMap.setView([40, 25], 2);
+    }
 
     // Dünya legend
     const wLegend = L.control({position: 'bottomright'});
