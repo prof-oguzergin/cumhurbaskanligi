@@ -458,6 +458,29 @@ body.page main a {
   transition: color 0.15s;
 }
 body.page main a:hover { color: var(--c-primary); text-decoration-thickness: 3px; }
+body.page main figure {
+  margin: 2rem 0 2rem;
+  text-align: center;
+}
+body.page main figure img {
+  width: 100%;
+  max-width: 100%;
+  border-radius: 12px;
+  box-shadow: 0 6px 24px rgba(15,32,55,0.14);
+  display: block;
+}
+body.page main figure.portrait {
+  max-width: 420px;
+  margin-left: auto;
+  margin-right: auto;
+}
+body.page main figure figcaption {
+  margin-top: 0.6rem;
+  font-size: 0.92rem;
+  color: var(--c-text-muted);
+  font-style: italic;
+  line-height: 1.5;
+}
 body.page table {
   width: 100%;
   border-collapse: collapse;
