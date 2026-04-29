@@ -347,6 +347,15 @@ header.site nav a:hover { opacity: 1; text-decoration: none; }
 }
 .phase-card ul li:last-child { border-bottom: 0; }
 
+/* ===== KURUM LOGOSU (inline) ===== */
+img.kurum-logo {
+  height: 28px;
+  width: auto;
+  vertical-align: middle;
+  margin-right: 8px;
+  display: inline-block;
+}
+
 /* ===== CALISMALAR LIST ===== */
 .calismalar-list {
   display: flex;
