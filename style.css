@@ -347,6 +347,56 @@ header.site nav a:hover { opacity: 1; text-decoration: none; }
 }
 .phase-card ul li:last-child { border-bottom: 0; }
 
+/* ===== CALISMALAR LIST ===== */
+.calismalar-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin: 2rem 0 1rem;
+}
+a.calismalar-card {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  background: var(--c-bg-alt);
+  padding: 1.5rem 1.75rem;
+  border-radius: 12px;
+  border-left: 4px solid var(--c-primary-2);
+  text-decoration: none !important;
+  color: inherit !important;
+  transition: transform 0.15s, box-shadow 0.15s, background 0.15s;
+}
+a.calismalar-card:hover {
+  transform: translateX(4px);
+  box-shadow: 0 4px 14px rgba(15,32,55,0.10);
+  background: #eef3f9;
+  text-decoration: none !important;
+}
+.calismalar-card .icon {
+  font-size: 2.5rem;
+  flex-shrink: 0;
+  width: 56px;
+  text-align: center;
+  line-height: 1;
+}
+.calismalar-card .info h3 {
+  margin: 0 0 0.4rem !important;
+  font-size: 1.2rem;
+  border-bottom: none !important;
+  padding-bottom: 0 !important;
+  color: var(--c-primary) !important;
+}
+.calismalar-card .info p {
+  margin: 0;
+  font-size: 0.95rem;
+  color: var(--c-text-muted);
+  line-height: 1.55;
+}
+@media (max-width: 540px) {
+  a.calismalar-card { flex-direction: column; align-items: flex-start; gap: 0.75rem; padding: 1.25rem; }
+  .calismalar-card .icon { font-size: 2.2rem; width: auto; }
+}
+
 /* ===== STAT ROW ===== */
 .stat-row {
   display: grid;
