@@ -347,6 +347,63 @@ header.site nav a:hover { opacity: 1; text-decoration: none; }
 }
 .phase-card ul li:last-child { border-bottom: 0; }
 
+/* ===== YANIMDAKILER (destekci kartlari) ===== */
+.yanimdaki-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  margin: 2rem 0 1rem;
+}
+.yanimdaki-card {
+  display: flex;
+  gap: 1.5rem;
+  background: var(--c-bg-alt);
+  padding: 1.5rem 1.75rem;
+  border-radius: 12px;
+  border-left: 4px solid var(--c-primary-2);
+  align-items: flex-start;
+}
+.yanimdaki-foto {
+  width: 96px;
+  height: 96px;
+  border-radius: 50%;
+  object-fit: cover;
+  flex-shrink: 0;
+  border: 3px solid #ffffff;
+  box-shadow: 0 2px 8px rgba(15,32,55,0.08);
+}
+.yanimdaki-info { flex: 1; min-width: 0; }
+.yanimdaki-info h3 {
+  margin: 0 0 0.3rem !important;
+  font-size: 1.2rem;
+  border-bottom: none !important;
+  padding-bottom: 0 !important;
+}
+.yanimdaki-rol {
+  margin: 0 0 0.2rem !important;
+  font-weight: 600;
+  color: var(--c-primary-2);
+  font-size: 0.95rem;
+}
+.yanimdaki-yer {
+  margin: 0 0 0.75rem !important;
+  font-size: 0.85rem;
+  color: var(--c-text-muted);
+}
+.yanimdaki-aciklama {
+  margin: 0 0 0.75rem !important;
+  font-size: 0.95rem;
+  line-height: 1.55;
+}
+.yanimdaki-baglanti {
+  margin: 0 !important;
+  font-size: 0.92rem;
+}
+@media (max-width: 540px) {
+  .yanimdaki-card { flex-direction: column; align-items: center; text-align: center; gap: 1rem; }
+  .yanimdaki-foto { width: 80px; height: 80px; }
+}
+
 /* ===== KURUM LOGOSU (inline) ===== */
 img.kurum-logo {
   height: 32px;
