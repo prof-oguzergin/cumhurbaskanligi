@@ -351,15 +351,10 @@ header.site nav a:hover { opacity: 1; text-decoration: none; }
 img.kurum-logo {
   height: 32px;
   width: 32px;
-  background: #ffffff;
-  border-radius: 50%;
-  padding: 3px;
-  border: 1px solid rgba(0,0,0,0.08);
   vertical-align: middle;
   margin-right: 8px;
   display: inline-block;
   object-fit: contain;
-  box-sizing: border-box;
 }
 
 /* ===== CALISMALAR LIST ===== */
