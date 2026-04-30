@@ -386,8 +386,13 @@ header.site nav a:hover { opacity: 1; text-decoration: none; }
   font-size: 0.95rem;
 }
 .yanimdaki-yer {
-  margin: 0 0 0.75rem !important;
+  margin: 0 0 0.4rem !important;
   font-size: 0.85rem;
+  color: var(--c-text-muted);
+}
+.yanimdaki-egitim {
+  margin: 0 0 0.75rem !important;
+  font-size: 0.88rem;
   color: var(--c-text-muted);
 }
 .yanimdaki-aciklama {
