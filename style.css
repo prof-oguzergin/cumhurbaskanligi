@@ -376,10 +376,31 @@ header.site nav a:hover { opacity: 1; text-decoration: none; }
 /* ===== YANIMDAKILER (destekci kartlari) ===== */
 .yanimdaki-list {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(420px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
   gap: 1.25rem;
   margin: 2rem 0 1rem;
   align-items: stretch;
+}
+.yanimdaki-list .yanimdaki-card {
+  flex-direction: column;
+  align-items: center;
+  gap: 0.85rem;
+  padding: 1.5rem 1.25rem 1.25rem;
+}
+.yanimdaki-list .yanimdaki-foto {
+  width: 92px;
+  height: 92px;
+}
+.yanimdaki-list .yanimdaki-info {
+  width: 100%;
+  text-align: left;
+}
+.yanimdaki-list .yanimdaki-info h3 {
+  text-align: center;
+}
+.yanimdaki-list .yanimdaki-rol,
+.yanimdaki-list .yanimdaki-yer {
+  text-align: center;
 }
 .yanimdaki-card {
   display: flex;
