@@ -495,6 +495,32 @@ a.calismalar-card:hover {
   .calismalar-card .icon { font-size: 2.2rem; width: auto; }
 }
 
+/* ===== PAGE SIGNOFF (sayfa sonu imzası) ===== */
+.page-signoff {
+  margin: 2.5rem 0 0;
+  text-align: right;
+}
+.page-signoff p {
+  margin: 0.35rem 0;
+  color: var(--c-text-muted);
+  font-style: italic;
+  font-size: 1rem;
+}
+.page-signoff .closing {
+  margin-top: 0.6rem;
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: var(--c-primary);
+  font-style: normal;
+  letter-spacing: -0.01em;
+}
+.page-signoff .author {
+  margin-top: 0.4rem;
+  font-style: italic;
+  font-size: 1rem;
+  color: var(--c-text-muted);
+}
+
 /* ===== QUOTE WITH PORTRAIT (Oğuz alıntıları) ===== */
 .quote-oguz {
   display: flex;
