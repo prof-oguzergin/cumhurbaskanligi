@@ -354,11 +354,24 @@ header.site nav a:hover { opacity: 1; text-decoration: none; }
   list-style: none;
 }
 .phase-card ul li {
-  padding: 0.4rem 0;
+  padding: 0.55rem 0;
   border-bottom: 1px solid rgba(255,255,255,0.1);
   color: rgba(255,255,255,0.85);
 }
 .phase-card ul li:last-child { border-bottom: 0; }
+.phase-card ul li strong {
+  display: block;
+  color: var(--c-text-light);
+  font-weight: 700;
+  font-size: 0.98rem;
+}
+.phase-card ul li .phase-sub {
+  display: block;
+  color: rgba(255,255,255,0.62);
+  font-size: 0.82rem;
+  margin-top: 0.15rem;
+  line-height: 1.35;
+}
 
 /* ===== YANIMDAKILER (destekci kartlari) ===== */
 .yanimdaki-list {
