@@ -554,6 +554,55 @@ a.calismalar-card:hover {
   font-style: italic;
 }
 
+/* ===== KİTAP IZGARASI (Çalışmalar — Kitaplar bölümü) ===== */
+.book-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 2rem;
+  margin: 1.5rem 0 2rem;
+}
+.book {
+  display: flex;
+  flex-direction: column;
+}
+.book a img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 4px;
+  box-shadow: 0 6px 16px rgba(0,0,0,0.18);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+.book a:hover img {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 24px rgba(0,0,0,0.22);
+}
+body.page .book h3 {
+  font-size: 1.1rem;
+  margin: 1rem 0 0.4rem;
+  line-height: 1.3;
+  border-bottom: none;
+  padding-bottom: 0;
+}
+.book .meta {
+  font-size: 0.82rem;
+  color: var(--c-text-muted);
+  margin: 0 0 0.55rem;
+}
+.book p {
+  font-size: 0.92rem;
+  line-height: 1.5;
+  margin: 0 0 0.55rem;
+}
+.book.book-no-cover {
+  background: var(--c-bg-alt);
+  border-left: 3px solid var(--c-primary-2);
+  padding: 1.2rem 1.3rem;
+  border-radius: 0 8px 8px 0;
+  justify-content: center;
+}
+.book.book-no-cover h3 { margin-top: 0; }
+
 /* ===== SAYFA İÇİ TOC ===== */
 .page-toc {
   margin: 1.5rem 0 2rem;
