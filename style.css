@@ -498,7 +498,7 @@ a.calismalar-card:hover {
 /* ===== QUOTE WITH PORTRAIT (Oğuz alıntıları) ===== */
 .quote-oguz {
   display: flex;
-  align-items: flex-start;
+  align-items: center;
   gap: 1.1rem;
   margin: 1.6rem 0;
   padding: 1.1rem 1.3rem;
@@ -506,6 +506,7 @@ a.calismalar-card:hover {
   border-left: 4px solid var(--c-accent);
   border-radius: 8px;
 }
+.quote-oguz.quote-multi { align-items: flex-start; }
 .quote-oguz > img {
   width: 60px;
   height: 60px;
@@ -514,18 +515,22 @@ a.calismalar-card:hover {
   object-fit: cover;
   border: 2px solid var(--c-accent);
 }
-.quote-oguz blockquote {
+.quote-oguz blockquote,
+body.page .quote-oguz blockquote {
   margin: 0;
   padding: 0;
   border: 0;
   background: transparent;
+  border-radius: 0;
   font-style: normal;
 }
-.quote-oguz blockquote p {
+.quote-oguz blockquote p,
+body.page .quote-oguz blockquote p {
   margin: 0;
   font-size: 1.1rem;
   line-height: 1.5;
   color: var(--c-text);
+  font-style: italic;
 }
 .quote-oguz .quote-source {
   margin: 0.55rem 0 0;
