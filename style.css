@@ -554,6 +554,21 @@ a.calismalar-card:hover {
   font-style: italic;
 }
 
+/* ===== SAYFA İÇİ TOC ===== */
+.page-toc {
+  margin: 1.5rem 0 2rem;
+  padding: 0.85rem 1.1rem;
+  background: var(--c-bg-alt);
+  border-left: 3px solid var(--c-accent);
+  border-radius: 0 6px 6px 0;
+  font-size: 0.95rem;
+  color: var(--c-text-muted);
+}
+.page-toc a {
+  color: var(--c-primary);
+  font-weight: 500;
+}
+
 /* ===== PAGE SIGNOFF (sayfa sonu imzası) ===== */
 .page-signoff {
   margin: 2.5rem 0 0;
