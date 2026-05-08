@@ -567,7 +567,9 @@ a.calismalar-card:hover {
 }
 .book a img {
   width: 100%;
-  height: auto;
+  aspect-ratio: 2 / 3;
+  object-fit: cover;
+  object-position: center;
   display: block;
   border-radius: 4px;
   box-shadow: 0 6px 16px rgba(0,0,0,0.18);
