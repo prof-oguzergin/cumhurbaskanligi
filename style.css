@@ -495,6 +495,56 @@ a.calismalar-card:hover {
   .calismalar-card .icon { font-size: 2.2rem; width: auto; }
 }
 
+/* ===== BAŞLIK + İKON (Program sayfası) ===== */
+.basliik-icon {
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
+}
+.basliik-icon svg {
+  width: 28px;
+  height: 28px;
+  flex-shrink: 0;
+  color: var(--c-accent);
+  stroke-width: 2;
+}
+
+/* ===== KPI KARTLARI (Program sayfası ölçülebilir hedefler) ===== */
+.kpi-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
+  gap: 0.85rem;
+  margin: 1rem 0 2rem;
+}
+.kpi-card {
+  background: var(--c-bg-alt);
+  border-left: 4px solid var(--c-accent);
+  padding: 1rem 1.1rem;
+  border-radius: 0 8px 8px 0;
+}
+.kpi-card .kpi-num {
+  display: block;
+  font-size: 1.95rem;
+  font-weight: 800;
+  color: var(--c-primary);
+  line-height: 1.05;
+  letter-spacing: -0.02em;
+}
+.kpi-card .kpi-label {
+  display: block;
+  margin-top: 0.35rem;
+  font-size: 0.88rem;
+  color: var(--c-text);
+  line-height: 1.35;
+}
+.kpi-card .kpi-meta {
+  display: block;
+  margin-top: 0.3rem;
+  font-size: 0.74rem;
+  color: var(--c-text-muted);
+  font-style: italic;
+}
+
 /* ===== PAGE SIGNOFF (sayfa sonu imzası) ===== */
 .page-signoff {
   margin: 2.5rem 0 0;
