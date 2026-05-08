@@ -482,6 +482,41 @@ a.calismalar-card:hover {
   .calismalar-card .icon { font-size: 2.2rem; width: auto; }
 }
 
+/* ===== SECTION SPLIT (TEXT + FIGURE) ===== */
+.section-split {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  align-items: center;
+}
+.section-split .section-title,
+.section-split .section-lede {
+  max-width: none;
+}
+.section-split figure {
+  margin: 0;
+}
+.section-split figure img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 12px;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.14);
+}
+.section-split figcaption {
+  margin-top: 0.65rem;
+  font-size: 0.88rem;
+  color: var(--c-text-muted);
+  text-align: center;
+}
+.section-dark .section-split figcaption { color: rgba(255,255,255,0.7); }
+@media (max-width: 768px) {
+  .section-split {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+}
+
 /* ===== STAT ROW ===== */
 .stat-row {
   display: grid;
