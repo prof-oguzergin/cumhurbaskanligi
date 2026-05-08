@@ -375,10 +375,11 @@ header.site nav a:hover { opacity: 1; text-decoration: none; }
 
 /* ===== YANIMDAKILER (destekci kartlari) ===== */
 .yanimdaki-list {
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(420px, 1fr));
   gap: 1.25rem;
   margin: 2rem 0 1rem;
+  align-items: stretch;
 }
 .yanimdaki-card {
   display: flex;
