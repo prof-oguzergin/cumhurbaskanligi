@@ -1046,10 +1046,12 @@ footer.site .copyright a:hover { color: var(--c-text-light); text-decoration-col
   border-radius: 8px;
   margin: 2rem 0 1.5rem;
 }
-.dogrudan-iletisim h2 {
+body.page .dogrudan-iletisim h2 {
   margin: 0.25rem 0 0.5rem;
   font-size: 1.25rem;
   line-height: 1.25;
+  padding-bottom: 0;
+  border-bottom: 0;
 }
 .dogrudan-iletisim p { margin: 0.4rem 0; }
 .dogrudan-iletisim a { color: var(--c-primary-2); font-weight: 600; }
