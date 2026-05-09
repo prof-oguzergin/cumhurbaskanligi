@@ -192,17 +192,30 @@
 
   var bannerEl, modalEl;
 
+  function updateBodySpacer() {
+    if (bannerEl && bannerEl.classList.contains('visible')) {
+      // Banner yuksekligi kadar body'ye padding-bottom ekle ki footer banner ustunde kalsin
+      document.body.style.paddingBottom = (bannerEl.offsetHeight + 12) + 'px';
+    }
+  }
+
   function showBanner() {
     if (bannerEl) return;
     bannerEl = createBanner();
     document.body.appendChild(bannerEl);
-    requestAnimationFrame(function () { bannerEl.classList.add('visible'); });
+    requestAnimationFrame(function () {
+      bannerEl.classList.add('visible');
+      updateBodySpacer();
+    });
     bannerEl.addEventListener('click', handleBannerClick);
+    window.addEventListener('resize', updateBodySpacer);
   }
 
   function hideBanner() {
     if (!bannerEl) return;
     bannerEl.classList.remove('visible');
+    document.body.style.paddingBottom = '';
+    window.removeEventListener('resize', updateBodySpacer);
     setTimeout(function () { if (bannerEl) bannerEl.remove(); bannerEl = null; }, 300);
   }
 
