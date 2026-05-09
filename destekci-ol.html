@@ -51,21 +51,82 @@
 <p>Bilim, sanat, hukuk ve sivil toplumdan destek veren isimleri görmek için: <a href="yanimdakiler.html">Yanımdakiler →</a></p>
 <p>Verilerinizin korunmasına ilişkin: <a href="yasal.html">Gizlilik &amp; KVKK Politikası →</a></p>
 <h2>Destekçi Formu</h2>
-<p><iframe
-  src="https://docs.google.com/forms/d/e/1FAIpQLScEucGLAl3PuKRFAeq_v5iMQAEFWwATvFIXMah8fkPlWc8AOA/viewform?embedded=true"
-  width="100%"
-  height="2000"
+<iframe
+  id="JotFormIFrame-261281463795465"
+  title="Cumhurbaşkanlığı Destek Formu"
+  onload="window.parent.scrollTo(0,0)"
+  allowtransparency="true"
+  allow="geolocation; microphone; camera; fullscreen; payment"
+  src="https://form.jotform.com/261281463795465"
   frameborder="0"
-  marginheight="0"
-  marginwidth="0"
-  scrolling="no"
-  style="border-radius: 12px; border: 1px solid #dde1e8; margin: 1rem 0;"
-  title="Cumhurbaşkanlığı Destek Formu">
-  Yükleniyor...
+  style="min-width: 100%; max-width: 100%; height: 1400px; border: none; margin: 1.5rem 0;"
+  scrolling="no">
 </iframe>
-</p>
+<script type="text/javascript">
+  window.handleIFrameMessage = function(e) {
+    if (typeof e.data === 'object') return;
+    var args = e.data.split(":");
+    var iframe;
+    if (args.length > 2) {
+      iframe = document.getElementById("JotFormIFrame-" + args[args.length - 1]);
+    } else {
+      iframe = document.getElementById("JotFormIFrame");
+    }
+    if (!iframe) return;
+    switch (args[0]) {
+      case "scrollIntoView":
+        iframe.scrollIntoView();
+        break;
+      case "setHeight":
+        iframe.style.height = args[1] + "px";
+        if (!isNaN(args[1]) && parseInt(iframe.style.minHeight) > parseInt(args[1])) {
+          iframe.style.minHeight = args[1] + "px";
+        }
+        break;
+      case "collapseErrorPage":
+        if (iframe.clientHeight > window.innerHeight) {
+          iframe.style.height = window.innerHeight + "px";
+        }
+        break;
+      case "reloadPage":
+        window.location.reload();
+        break;
+      case "loadScript":
+        if (!window.isPermitted(e.origin, ['jotform.com', 'jotform.pro'])) break;
+        var src = args[1];
+        if (args.length > 3) src = args[1] + ':' + args[2];
+        var script = document.createElement('script');
+        script.src = src;
+        script.type = 'text/javascript';
+        document.body.appendChild(script);
+        break;
+      case "exitFullscreen":
+        if (window.document.exitFullscreen) window.document.exitFullscreen();
+        break;
+    }
+  };
+  window.isPermitted = function(originUrl, whitelisted_domains) {
+    var url = document.createElement('a');
+    url.href = originUrl;
+    var hostname = url.hostname;
+    var result = false;
+    if (typeof hostname !== 'undefined') {
+      whitelisted_domains.forEach(function(domain) {
+        if (hostname.slice((-1 * domain.length - 1)) === '.' + domain || hostname === domain) {
+          result = true;
+        }
+      });
+      return result;
+    }
+  };
+  if (window.addEventListener) {
+    window.addEventListener("message", handleIFrameMessage, false);
+  } else if (window.attachEvent) {
+    window.attachEvent("onmessage", handleIFrameMessage);
+  }
+</script>
 <blockquote>
-<p>Form yüklenmezse <a href="https://docs.google.com/forms/d/e/1FAIpQLScEucGLAl3PuKRFAeq_v5iMQAEFWwATvFIXMah8fkPlWc8AOA/viewform">bu bağlantıdan doğrudan açabilirsiniz</a>.</p>
+<p>Form yüklenmezse <a href="https://form.jotform.com/261281463795465" target="_blank">bu bağlantıdan doğrudan açabilirsiniz</a>.</p>
 </blockquote>
 <h2>Birlikte Neler Yapabiliriz?</h2>
 <p><strong>Birlikte hukuki girişimlere katılın.</strong> Yeni bir maktu dilekçe ya da YSK başvuru hareketi başlattığımızda kayıtlı destekçilerimize duyururuz. Vatandaş olarak birlikte yapacağımız başvurular sürecin sivil meşruiyetini güçlendirir.</p>
