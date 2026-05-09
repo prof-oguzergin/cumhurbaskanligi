@@ -8,7 +8,7 @@
   <link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicon-32.png?v=5">
   <link rel="icon" type="image/png" sizes="192x192" href="assets/img/favicon-192.png?v=5">
   <link rel="apple-touch-icon" sizes="180x180" href="assets/img/favicon-192.png?v=5">
-  <link rel="stylesheet" href="style.css?v=17">
+  <link rel="stylesheet" href="style.css?v=18">
   <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-XQPWBWM9N0"></script>
   <script>
@@ -84,23 +84,32 @@
     clearTimeout(toastTimer);
     toastTimer = setTimeout(function(){ toast.classList.remove("visible"); }, 2400);
   }
+  var IFRAME_ORIGIN = "https://oguz-ergin-yapay-oguz.hf.space";
+  var IFRAME_BASE = IFRAME_ORIGIN + "/";
   function askIframe(q){
     if (!iframe) return;
-    // 1) postMessage — iframe destekliyorsa otomatik gönderir
-    try {
-      iframe.contentWindow.postMessage({ type: "yapay-oguz-ask", q: q }, "https://oguz-ergin-yapay-oguz.hf.space");
-    } catch(_) {}
-    // 2) iframe'i göster
-    iframe.scrollIntoView({ behavior: "smooth", block: "start" });
-    // 3) Pano yedeği — soru kutusuna yapıştırılabilir
-    if (navigator.clipboard && navigator.clipboard.writeText) {
-      navigator.clipboard.writeText(q).then(
-        function(){ showToast("Soru gönderildi. Yanıt gelmezse kutuya yapıştırın (Ctrl+V)."); },
-        function(){ showToast("Soru gönderildi."); }
-      );
-    } else {
-      showToast("Soru gönderildi.");
+    var acked = false;
+    function onAck(e){
+      if (e.origin !== IFRAME_ORIGIN) return;
+      if (e.data && e.data.type === "yapay-oguz-ack") {
+        acked = true;
+        window.removeEventListener("message", onAck);
+      }
     }
+    window.addEventListener("message", onAck);
+    // 1) postMessage — yeni iframe (sohbet geçmişi korunur)
+    try {
+      iframe.contentWindow.postMessage({ type: "yapay-oguz-ask", q: q }, IFRAME_ORIGIN);
+    } catch(_) {}
+    // 2) 700 ms ack gelmezse URL parametresi ile iframe'i yenile (eski cache)
+    setTimeout(function(){
+      window.removeEventListener("message", onAck);
+      if (!acked) {
+        iframe.src = IFRAME_BASE + "?q=" + encodeURIComponent(q) + "&t=" + Date.now();
+      }
+    }, 700);
+    iframe.scrollIntoView({ behavior: "smooth", block: "start" });
+    showToast("Soru gönderildi.");
   }
   document.querySelectorAll("#ornek-sorular button[data-soru]").forEach(function(btn){
     btn.addEventListener("click", function(){ askIframe(btn.getAttribute("data-soru")); });
