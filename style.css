@@ -1038,6 +1038,35 @@ footer.site .copyright a:hover { color: var(--c-text-light); text-decoration-col
   transform: translateX(-50%) translateY(0);
 }
 
+/* ===== DESTEKÇI FORMU — KVKK AYDINLATMA KUTUSU ===== */
+.kvkk-bilgi-kutusu {
+  background: var(--c-bg-alt);
+  border-left: 4px solid var(--c-accent);
+  border-radius: 8px;
+  padding: 1.25rem 1.5rem;
+  margin: 1.5rem 0 2rem;
+  font-size: 0.95rem;
+}
+body.page .kvkk-bilgi-kutusu h3 {
+  color: var(--c-primary);
+  margin: 0 0 0.6rem;
+  font-size: 1.1rem;
+}
+.kvkk-bilgi-kutusu p {
+  margin: 0.5rem 0;
+}
+.kvkk-bilgi-kutusu ul {
+  margin: 0.4rem 0 0.6rem;
+  padding-left: 1.25rem;
+}
+.kvkk-bilgi-kutusu li {
+  margin: 0.25rem 0;
+}
+.kvkk-bilgi-kutusu a {
+  color: var(--c-primary-2);
+  font-weight: 500;
+}
+
 /* ===== ŞARKILAR — TELİF BEYANI ===== */
 .sarkilar-uyari-bandi {
   background: #fff8e1;
