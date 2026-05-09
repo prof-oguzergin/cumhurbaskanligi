@@ -1038,6 +1038,62 @@ footer.site .copyright a:hover { color: var(--c-text-light); text-decoration-col
   transform: translateX(-50%) translateY(0);
 }
 
+/* ===== ŞARKILAR — TELİF BEYANI ===== */
+.sarkilar-uyari-bandi {
+  background: #fff8e1;
+  border: 1px solid #d4a017;
+  border-radius: 6px;
+  padding: 0.75rem 1rem;
+  text-align: center;
+  font-size: 0.95rem;
+  margin: 0 0 1.5rem;
+}
+.sarkilar-uyari-bandi p { margin: 0; color: #5d4400; }
+.sarkilar-uyari-bandi a { color: var(--c-primary-2); font-weight: 600; }
+
+.sarki-bilgi {
+  background: var(--c-bg-alt);
+  padding: 0.6rem 0.85rem;
+  border-radius: 6px;
+  margin: 0.5rem 0 1.5rem;
+  font-size: 0.85rem;
+  color: var(--c-text-muted);
+  border-left: 3px solid var(--c-accent);
+}
+.sarki-bilgi a { color: var(--c-primary-2); font-weight: 500; }
+.sarki-bilgi strong { color: var(--c-primary); }
+
+.telif-beyani {
+  max-width: 900px;
+  margin: 3rem auto 2rem;
+  padding: 1.75rem 2rem;
+  background: var(--c-bg-alt);
+  border-radius: 12px;
+  border-left: 4px solid var(--c-accent);
+}
+body.page .telif-beyani h2 { color: var(--c-primary); margin-top: 0; padding-bottom: 0.4rem; }
+body.page .telif-beyani h3 { color: var(--c-primary-2); margin-top: 1.5rem; font-size: 1.05rem; }
+.telif-beyani .lead { font-size: 1rem; color: #4a4a4a; margin-top: 0.5rem; }
+
+.telif-tablosu {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 0.75rem 0 1rem;
+  font-size: 0.92rem;
+  background: #fff;
+  border-radius: 8px;
+  overflow: hidden;
+}
+.telif-tablosu th, .telif-tablosu td {
+  padding: 0.6rem 0.75rem;
+  text-align: left;
+  border-bottom: 1px solid var(--c-border);
+}
+.telif-tablosu th { background: var(--c-primary); color: var(--c-text-light); font-weight: 600; }
+
+.lisans-listesi { list-style: none; padding-left: 0; }
+.lisans-listesi li { padding: 0.25rem 0; }
+
 /* ===== YAPAY OĞUZ — KVKK ONAY MODAL ===== */
 [hidden] { display: none !important; }
 .ai-consent-overlay {
