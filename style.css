@@ -979,6 +979,76 @@ footer.site .copyright {
   padding-top: 1.25rem;
   margin-top: 1rem;
 }
+footer.site .copyright a {
+  color: var(--c-accent);
+  text-decoration: underline;
+  text-decoration-color: rgba(212,160,23,0.45);
+}
+footer.site .copyright a:hover { color: var(--c-text-light); text-decoration-color: rgba(255,255,255,0.7); }
+
+/* ===== YAPAY OĞUZ — ÖRNEK SORULAR ===== */
+.ornek-sorular {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 0.65rem;
+  margin: 1rem 0 1.5rem;
+}
+.ornek-sorular button {
+  font: inherit;
+  text-align: left;
+  cursor: pointer;
+  background: var(--c-bg-alt);
+  color: var(--c-primary);
+  border: 1px solid var(--c-border);
+  border-left: 3px solid var(--c-accent);
+  border-radius: 8px;
+  padding: 0.75rem 1rem;
+  line-height: 1.45;
+  transition: background 0.15s, border-color 0.15s, transform 0.05s;
+}
+.ornek-sorular button:hover {
+  background: #fff;
+  border-color: var(--c-primary-2);
+  border-left-color: var(--c-accent);
+}
+.ornek-sorular button:active { transform: translateY(1px); }
+.ornek-sorular button::before {
+  content: "→ ";
+  color: var(--c-accent);
+  font-weight: 700;
+}
+.ornek-toast {
+  position: fixed;
+  bottom: 1.5rem;
+  left: 50%;
+  transform: translateX(-50%) translateY(1rem);
+  background: var(--c-primary);
+  color: var(--c-text-light);
+  padding: 0.75rem 1.25rem;
+  border-radius: 999px;
+  font-size: 0.9rem;
+  box-shadow: 0 6px 20px rgba(15,32,55,0.25);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.2s, transform 0.2s;
+  z-index: 9999;
+}
+.ornek-toast.visible {
+  opacity: 1;
+  transform: translateX(-50%) translateY(0);
+}
+
+/* ===== YAPAY OĞUZ — DOĞRUDAN İLETİŞİM ===== */
+.dogrudan-iletisim {
+  background: var(--c-bg-alt);
+  border-left: 3px solid var(--c-accent);
+  padding: 1.25rem 1.5rem;
+  border-radius: 8px;
+  margin: 2rem 0 1.5rem;
+}
+.dogrudan-iletisim h2 { margin-top: 0; }
+.dogrudan-iletisim p { margin: 0.5rem 0; }
+.dogrudan-iletisim a { color: var(--c-primary-2); font-weight: 600; }
 
 /* ===== MOBILE ===== */
 @media (max-width: 720px) {

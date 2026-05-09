@@ -8,7 +8,7 @@
   <link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicon-32.png?v=5">
   <link rel="icon" type="image/png" sizes="192x192" href="assets/img/favicon-192.png?v=5">
   <link rel="apple-touch-icon" sizes="180x180" href="assets/img/favicon-192.png?v=5">
-  <link rel="stylesheet" href="style.css?v=15">
+  <link rel="stylesheet" href="style.css?v=16">
   <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-XQPWBWM9N0"></script>
   <script>
@@ -52,6 +52,7 @@
 <p><strong>Beta sürüm uyarısı:</strong> Bu yanıtlar yapay zekâ tarafından üretilir. Oğuz Ergin'in resmi veya kişisel beyanları değildir; mevcut konuşmalardan derlenen yorumlardır. Yanıtlarda hata olabilir, kritik konularda kaynak videolarına başvurarak doğrulamanız önerilir.</p>
 </blockquote>
 <p><iframe
+  id="yapay-oguz-iframe"
   src="https://oguz-ergin-yapay-oguz.hf.space"
   width="100%"
   height="780"
@@ -61,14 +62,57 @@
   title="YapayOğuz sohbet asistanı">
 </iframe>
 </p>
-<h2>Sorabileceğiniz örnekler</h2>
-<ul>
-<li><em>"Beyin göçünü nasıl tersine çeviririz?"</em></li>
-<li><em>"Cumhurbaşkanlığı sürecinde nereye geldin?"</em></li>
-<li><em>"Apple M5 hakkında ne dedin?"</em></li>
-<li><em>"Türkiye'de yonga teknolojisi nerede?"</em></li>
-<li><em>"Hiçbiri seçeneği nedir?"</em></li>
-</ul>
+<h2 id="ornekler">Sorabileceğiniz örnekler</h2>
+<p>Aşağıdaki örneklerden birine tıklayın — soru yukarıdaki sohbet kutusuna gönderilecek.</p>
+<div class="ornek-sorular" id="ornek-sorular">
+  <button type="button" data-soru="Beyin göçünü nasıl tersine çeviririz?">Beyin göçünü nasıl tersine çeviririz?</button>
+  <button type="button" data-soru="Cumhurbaşkanlığı sürecinde nereye geldin?">Cumhurbaşkanlığı sürecinde nereye geldin?</button>
+  <button type="button" data-soru="Apple M5 hakkında ne dedin?">Apple M5 hakkında ne dedin?</button>
+  <button type="button" data-soru="Türkiye'de yonga teknolojisi nerede?">Türkiye'de yonga teknolojisi nerede?</button>
+  <button type="button" data-soru="Hiçbiri seçeneği nedir?">Hiçbiri seçeneği nedir?</button>
+</div>
+<div class="ornek-toast" id="ornek-toast" role="status" aria-live="polite"></div>
+<script>
+(function(){
+  var iframe = document.getElementById("yapay-oguz-iframe");
+  var toast = document.getElementById("ornek-toast");
+  var toastTimer = null;
+  function showToast(msg){
+    if (!toast) return;
+    toast.textContent = msg;
+    toast.classList.add("visible");
+    clearTimeout(toastTimer);
+    toastTimer = setTimeout(function(){ toast.classList.remove("visible"); }, 2400);
+  }
+  function askIframe(q){
+    if (!iframe) return;
+    // 1) postMessage — iframe destekliyorsa otomatik gönderir
+    try {
+      iframe.contentWindow.postMessage({ type: "yapay-oguz-ask", q: q }, "https://oguz-ergin-yapay-oguz.hf.space");
+    } catch(_) {}
+    // 2) iframe'i göster
+    iframe.scrollIntoView({ behavior: "smooth", block: "start" });
+    // 3) Pano yedeği — soru kutusuna yapıştırılabilir
+    if (navigator.clipboard && navigator.clipboard.writeText) {
+      navigator.clipboard.writeText(q).then(
+        function(){ showToast("Soru gönderildi. Yanıt gelmezse kutuya yapıştırın (Ctrl+V)."); },
+        function(){ showToast("Soru gönderildi."); }
+      );
+    } else {
+      showToast("Soru gönderildi.");
+    }
+  }
+  document.querySelectorAll("#ornek-sorular button[data-soru]").forEach(function(btn){
+    btn.addEventListener("click", function(){ askIframe(btn.getAttribute("data-soru")); });
+  });
+})();
+</script>
+<div class="dogrudan-iletisim">
+  <h2>Doğrudan bana ulaşın</h2>
+  <p>YapayOğuz bir arama aracıdır; resmi tutum, basın ve görüşme talepleri için doğrudan bana yazın.</p>
+  <p>📧 <a href="mailto:bilgi@oguzergin.net">bilgi@oguzergin.net</a></p>
+  <p>📝 Destekçi olmak ya da görüş bildirmek için: <a href="destekci-ol.html">Destekçi formu →</a></p>
+</div>
 <hr />
 <p><a href="destekci-ol.html">Destekçi olun →</a></p>
   </main>
