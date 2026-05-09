@@ -8,7 +8,7 @@
   <link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicon-32.png?v=5">
   <link rel="icon" type="image/png" sizes="192x192" href="assets/img/favicon-192.png?v=5">
   <link rel="apple-touch-icon" sizes="180x180" href="assets/img/favicon-192.png?v=5">
-  <link rel="stylesheet" href="style.css?v=22">
+  <link rel="stylesheet" href="style.css?v=23">
   <link rel="stylesheet" href="assets/css/cookie-banner.css?v=2">
   <meta property="og:type" content="website">
   <meta property="og:title" content="Yapay Oğuz'a Sor · Kanal Arşivi Arama Aracı">
@@ -227,6 +227,25 @@
       checks[cb.dataset.key] = cb.checked;
     });
     saveConsent(checks);
+    // KVKK m.12/3 ispat — anonim onay logu HF Space'e
+    try {
+      var payload = JSON.stringify({
+        type: "ai-chat",
+        action: "accept",
+        preferences: checks,
+        version: STORAGE_VERSION
+      });
+      if (navigator.sendBeacon) {
+        navigator.sendBeacon(IFRAME_BASE + "api/log-consent", new Blob([payload], { type: "application/json" }));
+      } else {
+        fetch(IFRAME_BASE + "api/log-consent", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: payload,
+          keepalive: true
+        }).catch(function(){});
+      }
+    } catch(_) {}
     hideOverlay();
     activateChat();
   });
@@ -328,6 +347,6 @@
       <p class="copyright">© 2026 Prof. Dr. Oğuz Ergin · Bağımsız adaylık girişimi · <a href="yasal.html">Gizlilik & KVKK</a> · <a href="kullanim-sartlari.html">Kullanım Şartları</a> · <button type="button" class="cookie-prefs-link" data-cookie-prefs>Çerez Tercihleri</button></p>
     </div>
   </footer>
-<script defer src="assets/js/cookie-banner.js?v=2"></script>
+<script defer src="assets/js/cookie-banner.js?v=3"></script>
 </body>
 </html>

@@ -17,7 +17,8 @@
     storageKey: 'cookieConsent',
     storageVersion: '1.0',
     expiryDays: 180,
-    gaId: 'G-XQPWBWM9N0'  // GA4 Measurement ID — oguzergin.net
+    gaId: 'G-XQPWBWM9N0',  // GA4 Measurement ID — oguzergin.net
+    consentLogUrl: 'https://oguz-ergin-yapay-oguz.hf.space/api/log-consent'  // KVKK m.12/3 ispat logu
   };
 
   var DEFAULT_PREFS = {
@@ -65,7 +66,7 @@
     }
   }
 
-  function saveConsent(prefs) {
+  function saveConsent(prefs, action) {
     var record = {
       version: CONFIG.storageVersion,
       timestamp: Date.now(),
@@ -78,6 +79,33 @@
     window.cookieConsent = prefs;
     window.dispatchEvent(new CustomEvent('cookieConsentChange', { detail: prefs }));
     loadAllowedScripts(prefs);
+    // KVKK m.12/3 ispat — sunucuya anonim onay logu gönder
+    sendConsentLog('cookie', action || 'save', prefs);
+  }
+
+  function sendConsentLog(type, action, prefs) {
+    try {
+      // Beacon API (sayfa ayrılırken bile gönderir, yanıt beklemez)
+      var payload = JSON.stringify({
+        type: type,
+        action: action,
+        preferences: prefs || {},
+        version: CONFIG.storageVersion
+      });
+      if (navigator.sendBeacon) {
+        var blob = new Blob([payload], { type: 'application/json' });
+        navigator.sendBeacon(CONFIG.consentLogUrl, blob);
+      } else {
+        fetch(CONFIG.consentLogUrl, {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: payload,
+          keepalive: true
+        }).catch(function(){});
+      }
+    } catch (e) {
+      // Sessiz başarısızlık — logu kaydedemesek de kullanıcı deneyimini bozma
+    }
   }
 
   // -------- Banner DOM (XSS-safe) --------
@@ -245,10 +273,10 @@
     if (!action) return;
 
     if (action === 'accept') {
-      saveConsent({ necessary: true, analytics: true, functional: true, thirdParty: true });
+      saveConsent({ necessary: true, analytics: true, functional: true, thirdParty: true }, 'accept-all');
       hideBanner();
     } else if (action === 'reject') {
-      saveConsent({ necessary: true, analytics: false, functional: false, thirdParty: false });
+      saveConsent({ necessary: true, analytics: false, functional: false, thirdParty: false }, 'reject-all');
       hideBanner();
     } else if (action === 'manage') {
       showModal();
@@ -260,7 +288,7 @@
     var action = target && target.dataset.action;
     if (action === 'close') { hideModal(); return; }
     if (action === 'reject') {
-      saveConsent({ necessary: true, analytics: false, functional: false, thirdParty: false });
+      saveConsent({ necessary: true, analytics: false, functional: false, thirdParty: false }, 'reject-all');
       hideModal();
       hideBanner();
       return;
@@ -270,7 +298,7 @@
       modalEl.querySelectorAll('input[data-category]').forEach(function (input) {
         prefs[input.dataset.category] = input.checked;
       });
-      saveConsent(prefs);
+      saveConsent(prefs, 'save-custom');
       hideModal();
       hideBanner();
     }
