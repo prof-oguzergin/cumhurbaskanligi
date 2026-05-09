@@ -8,7 +8,7 @@
   <link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicon-32.png?v=5">
   <link rel="icon" type="image/png" sizes="192x192" href="assets/img/favicon-192.png?v=5">
   <link rel="apple-touch-icon" sizes="180x180" href="assets/img/favicon-192.png?v=5">
-  <link rel="stylesheet" href="style.css?v=19">
+  <link rel="stylesheet" href="style.css?v=20">
   <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-XQPWBWM9N0"></script>
   <script>
@@ -51,17 +51,87 @@
 <blockquote>
 <p><strong>Beta sürüm uyarısı:</strong> Bu yanıtlar yapay zekâ tarafından üretilir. Oğuz Ergin'in resmi veya kişisel beyanları değildir; mevcut konuşmalardan derlenen yorumlardır. Yanıtlarda hata olabilir, kritik konularda kaynak videolarına başvurarak doğrulamanız önerilir.</p>
 </blockquote>
-<p><iframe
-  id="yapay-oguz-iframe"
-  src="https://oguz-ergin-yapay-oguz.hf.space"
-  width="100%"
-  height="780"
-  frameborder="0"
-  style="border-radius: 12px; border: 1px solid #dde1e8; margin: 1.5rem 0;"
-  allow="clipboard-write"
-  title="YapayOğuz sohbet asistanı">
-</iframe>
-</p>
+
+<!-- Onay sonrası görünür: yapay zekâ uyarı bandı -->
+<div id="aiDisclaimerBar" class="ai-disclaimer-bar" hidden>
+  ⚠️ Bu sohbet yapay zekâ tarafından üretilir. Resmi beyan değildir. Doğruluk kullanıcı tarafından doğrulanmalıdır.
+  <a href="#" id="aiConsentRevoke">Onayı geri çek</a>
+</div>
+
+<!-- Onay öncesi: placeholder -->
+<div id="aiChatPlaceholder" class="ai-chat-placeholder">
+  <p><strong>Sohbete başlamadan önce kısa bir bilgilendirme.</strong></p>
+  <p>Yapay Oğuz, sorularınızı yanıtlamak için <strong>Google Gemini</strong> (ABD) servisine soru iletir. KVKK gereği bu aktarım için onayınızı almamız gerekiyor.</p>
+  <button type="button" id="aiOpenConsentBtn" class="btn-primary">Bilgilendirme &amp; Onay →</button>
+</div>
+
+<!-- iframe sarmalayıcı: onay sonrası görünür, iframe.src onay sonrası set edilir -->
+<div id="aiChatWrapper" hidden>
+  <iframe
+    id="yapay-oguz-iframe"
+    data-src="https://oguz-ergin-yapay-oguz.hf.space"
+    width="100%"
+    height="780"
+    frameborder="0"
+    style="border-radius: 12px; border: 1px solid #dde1e8; margin: 1.5rem 0;"
+    allow="clipboard-write"
+    title="YapayOğuz sohbet asistanı"></iframe>
+</div>
+
+<!-- KVKK Onay Modalı -->
+<div id="aiConsentOverlay" class="ai-consent-overlay" role="dialog" aria-modal="true" aria-labelledby="aiConsentTitle" hidden>
+  <div class="ai-consent-modal" role="document">
+    <h2 id="aiConsentTitle">Yapay Oğuz — Sohbet Öncesi Bilgilendirme</h2>
+
+    <div class="ai-consent-modal__intro">
+      <strong>Önemli:</strong> Bu sohbet asistanı yapay zekâ tarafından üretilen yanıtlar verir. <strong>Resmi beyan değildir.</strong> Doğruluk kullanıcı tarafından doğrulanmalıdır.
+    </div>
+
+    <h3>Veri İşleme Bilgileri</h3>
+    <table class="ai-info-table">
+      <tr><th>Veri Sorumlusu</th><td>Prof. Dr. Oğuz Ergin</td></tr>
+      <tr><th>İletişim</th><td><a href="mailto:bilgi@oguzergin.net">bilgi@oguzergin.net</a></td></tr>
+      <tr><th>AI Sağlayıcı</th><td><strong>Google Gemini 2.5 Flash</strong> (Google LLC)</td></tr>
+      <tr><th>Sunucu Lokasyonu</th><td><strong>ABD</strong></td></tr>
+      <tr><th>İşlenen Veri</th><td>Sohbet metni, IP adresi, oturum kimliği, zaman damgası</td></tr>
+      <tr><th>Yurt Dışı Aktarım</th><td><strong>Var</strong> (KVKK m.9 — açık rıza)</td></tr>
+      <tr><th>Saklama Politikası</th><td><a href="https://ai.google.dev/gemini-api/terms" target="_blank" rel="noopener">Google Gemini API koşulları →</a></td></tr>
+      <tr><th>Hukuki Dayanak</th><td>KVKK m.5/1 (açık rıza), m.9 (yurt dışı aktarım), m.10 (aydınlatma)</td></tr>
+    </table>
+
+    <h3>Onay</h3>
+    <div class="ai-consent-checkboxes">
+      <label class="ai-consent-checkbox">
+        <input type="checkbox" data-required="true" data-key="aydinlatma">
+        <span><strong>Aydınlatma metnini okudum ve anladım.</strong> Kişisel verilerimin yukarıdaki amaçlarla işlenmesine <strong>açık rıza</strong> veriyorum. <span class="zorunlu-yildiz">*</span></span>
+      </label>
+      <label class="ai-consent-checkbox">
+        <input type="checkbox" data-required="true" data-key="yurtdisi">
+        <span>AI sağlayıcısının <strong>ABD merkezli</strong> olduğunu biliyorum, kişisel verilerimin <strong>yurt dışına aktarılmasına</strong> açık rıza veriyorum. <span class="zorunlu-yildiz">*</span></span>
+      </label>
+      <label class="ai-consent-checkbox">
+        <input type="checkbox" data-required="true" data-key="yas">
+        <span><strong>18 yaşımı doldurdum.</strong> <span class="zorunlu-yildiz">*</span></span>
+      </label>
+      <label class="ai-consent-checkbox">
+        <input type="checkbox" data-key="egitim">
+        <span><em>(İsteğe bağlı)</em> Sohbet kayıtlarımın anonimleştirilmiş şekilde modelin geliştirilmesinde kullanılmasına izin veriyorum.</span>
+      </label>
+    </div>
+
+    <p class="ai-consent-warning"><strong>⚠️ Önerilmez:</strong> T.C. kimlik numarası, sağlık bilgisi, banka hesabı, üçüncü kişiler hakkında özel bilgi gibi <strong>hassas verileri sohbete girmeyiniz</strong>.</p>
+
+    <div class="ai-consent-actions">
+      <button id="aiConsentCancel" type="button" class="btn-secondary">Vazgeç</button>
+      <button id="aiConsentAccept" type="button" class="btn-primary" disabled>Sohbeti Başlat →</button>
+    </div>
+
+    <p class="ai-consent-note">
+      Onayınız tarayıcınızda <strong>30 gün</strong> saklanır (yalnızca bu cihazda; sunucumuza gönderilmez). Geri çekmek için: <a href="mailto:bilgi@oguzergin.net?subject=Yapay%20O%C4%9Fuz%20Onay%20Geri%20%C3%87ekme">bilgi@oguzergin.net</a>
+    </p>
+  </div>
+</div>
+
 <h2 id="ornekler">Sorabileceğiniz örnekler</h2>
 <p>Aşağıdaki örneklerden birine tıklayın — soru yukarıdaki sohbet kutusuna gönderilecek.</p>
 <div class="ornek-sorular" id="ornek-sorular">
@@ -72,11 +142,29 @@
   <button type="button" data-soru="Hiçbiri seçeneği nedir?">Hiçbiri seçeneği nedir?</button>
 </div>
 <div class="ornek-toast" id="ornek-toast" role="status" aria-live="polite"></div>
+
 <script>
 (function(){
+  // ======= KVKK Onay yönetimi =======
+  var STORAGE_KEY = "aiChatConsent";
+  var STORAGE_VERSION = "1.0";
+  var VALIDITY_DAYS = 30;
+  var IFRAME_ORIGIN = "https://oguz-ergin-yapay-oguz.hf.space";
+  var IFRAME_BASE = IFRAME_ORIGIN + "/";
+
+  var overlay = document.getElementById("aiConsentOverlay");
+  var btnAccept = document.getElementById("aiConsentAccept");
+  var btnCancel = document.getElementById("aiConsentCancel");
+  var btnOpen = document.getElementById("aiOpenConsentBtn");
+  var btnRevoke = document.getElementById("aiConsentRevoke");
   var iframe = document.getElementById("yapay-oguz-iframe");
+  var iframeWrapper = document.getElementById("aiChatWrapper");
+  var placeholder = document.getElementById("aiChatPlaceholder");
+  var disclaimerBar = document.getElementById("aiDisclaimerBar");
+  var checkboxes = overlay ? overlay.querySelectorAll("input[type=checkbox]") : [];
   var toast = document.getElementById("ornek-toast");
   var toastTimer = null;
+
   function showToast(msg){
     if (!toast) return;
     toast.textContent = msg;
@@ -84,10 +172,91 @@
     clearTimeout(toastTimer);
     toastTimer = setTimeout(function(){ toast.classList.remove("visible"); }, 2400);
   }
-  var IFRAME_ORIGIN = "https://oguz-ergin-yapay-oguz.hf.space";
-  var IFRAME_BASE = IFRAME_ORIGIN + "/";
+  function getStored(){
+    try {
+      var raw = localStorage.getItem(STORAGE_KEY);
+      if (!raw) return null;
+      var parsed = JSON.parse(raw);
+      if (parsed.version !== STORAGE_VERSION) return null;
+      var ageDays = (Date.now() - parsed.timestamp) / (1000*60*60*24);
+      if (ageDays > VALIDITY_DAYS) return null;
+      return parsed;
+    } catch(_){ return null; }
+  }
+  function saveConsent(checks){
+    var rec = {
+      version: STORAGE_VERSION,
+      timestamp: Date.now(),
+      timestampISO: new Date().toISOString(),
+      provider: { name: "Google Gemini 2.5 Flash", serverLocation: "ABD", crossBorder: true },
+      checkboxes: checks,
+      userAgent: navigator.userAgent
+    };
+    localStorage.setItem(STORAGE_KEY, JSON.stringify(rec));
+    return rec;
+  }
+  function showOverlay(){
+    if (!overlay) return;
+    overlay.hidden = false;
+    document.body.style.overflow = "hidden";
+  }
+  function hideOverlay(){
+    if (!overlay) return;
+    overlay.hidden = true;
+    document.body.style.overflow = "";
+  }
+  function activateChat(){
+    if (iframe && !iframe.src) iframe.src = iframe.getAttribute("data-src");
+    if (iframeWrapper) iframeWrapper.hidden = false;
+    if (placeholder) placeholder.hidden = true;
+    if (disclaimerBar) disclaimerBar.hidden = false;
+  }
+  function deactivateChat(){
+    if (iframeWrapper) iframeWrapper.hidden = true;
+    if (placeholder) placeholder.hidden = false;
+    if (disclaimerBar) disclaimerBar.hidden = true;
+    if (iframe) { iframe.src = "about:blank"; iframe.removeAttribute("src"); }
+  }
+  function updateAcceptBtn(){
+    if (!btnAccept) return;
+    var allReq = true;
+    Array.prototype.forEach.call(checkboxes, function(cb){
+      if (cb.dataset.required === "true" && !cb.checked) allReq = false;
+    });
+    btnAccept.disabled = !allReq;
+  }
+  Array.prototype.forEach.call(checkboxes, function(cb){
+    cb.addEventListener("change", updateAcceptBtn);
+  });
+  if (btnAccept) btnAccept.addEventListener("click", function(){
+    var checks = {};
+    Array.prototype.forEach.call(checkboxes, function(cb){
+      checks[cb.dataset.key] = cb.checked;
+    });
+    saveConsent(checks);
+    hideOverlay();
+    activateChat();
+  });
+  if (btnCancel) btnCancel.addEventListener("click", hideOverlay);
+  if (btnOpen) btnOpen.addEventListener("click", showOverlay);
+  if (btnRevoke) btnRevoke.addEventListener("click", function(e){
+    e.preventDefault();
+    if (!confirm("Onayı geri çekmek istediğinize emin misiniz? Sohbet kapatılacak.")) return;
+    localStorage.removeItem(STORAGE_KEY);
+    deactivateChat();
+    showToast("Onay geri çekildi.");
+  });
+
+  // Init: onay var mı?
+  if (getStored()) activateChat();
+
+  // ======= Örnek soru butonları =======
   function askIframe(q){
-    if (!iframe) return;
+    if (!iframe || iframeWrapper.hidden) {
+      showOverlay();
+      showToast("Önce sohbete onay verin.");
+      return;
+    }
     var acked = false;
     function onAck(e){
       if (e.origin !== IFRAME_ORIGIN) return;
@@ -97,11 +266,9 @@
       }
     }
     window.addEventListener("message", onAck);
-    // 1) postMessage — yeni iframe (sohbet geçmişi korunur)
     try {
       iframe.contentWindow.postMessage({ type: "yapay-oguz-ask", q: q }, IFRAME_ORIGIN);
     } catch(_) {}
-    // 2) 700 ms ack gelmezse URL parametresi ile iframe'i yenile (eski cache)
     setTimeout(function(){
       window.removeEventListener("message", onAck);
       if (!acked) {
