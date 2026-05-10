@@ -840,7 +840,7 @@ body.page .quote-oguz blockquote p {
 
 /* ===== INNER PAGES (page layout) ===== */
 body.page main {
-  max-width: 880px;
+  max-width: 960px;
   margin: 6rem auto 4rem;
   padding: 3rem 3rem 3.5rem;
   background: var(--c-bg);
