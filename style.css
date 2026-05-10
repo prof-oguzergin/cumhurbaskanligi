@@ -1038,6 +1038,171 @@ footer.site .copyright a:hover { color: var(--c-text-light); text-decoration-col
   transform: translateX(-50%) translateY(0);
 }
 
+/* ===== ÇALIŞMALAR — DERS PLAYLIST KARTLARI ===== */
+.ders-playlist-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.25rem;
+  margin: 1.25rem 0 2rem;
+}
+.ders-playlist-card {
+  background: #fff;
+  border: 1px solid var(--c-border);
+  border-radius: 10px;
+  overflow: hidden;
+  transition: transform 0.15s, box-shadow 0.15s;
+}
+.ders-playlist-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(15, 32, 55, 0.12);
+}
+.ders-playlist-card a {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+}
+.ders-playlist-card .thumb-wrap {
+  position: relative;
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+  background: #000;
+}
+.ders-playlist-card .thumb-wrap img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.ders-playlist-card .thumb-wrap::before {
+  content: "▶";
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 3.2rem;
+  color: rgba(255, 255, 255, 0.92);
+  text-shadow: 0 2px 12px rgba(0, 0, 0, 0.7);
+  pointer-events: none;
+  transition: transform 0.15s;
+  z-index: 1;
+}
+.ders-playlist-card:hover .thumb-wrap::before { transform: scale(1.1); }
+.ders-playlist-card .video-count {
+  position: absolute;
+  bottom: 8px;
+  right: 8px;
+  background: rgba(0, 0, 0, 0.85);
+  color: #fff;
+  padding: 0.2rem 0.55rem;
+  border-radius: 4px;
+  font-size: 0.78rem;
+  font-weight: 600;
+  z-index: 2;
+}
+.ders-playlist-card .info {
+  padding: 0.85rem 1rem;
+}
+body.page .ders-playlist-card h4 {
+  margin: 0 0 0.3rem;
+  font-size: 1rem;
+  color: var(--c-primary);
+  line-height: 1.3;
+  border: 0;
+  padding: 0;
+}
+.ders-playlist-card .meta {
+  font-size: 0.85rem;
+  color: var(--c-text-muted);
+  margin: 0;
+  line-height: 1.45;
+}
+
+/* ===== YOUTUBE KANAL KARTI ===== */
+.youtube-kanal-karti {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  background: linear-gradient(135deg, #cc0000 0%, #ff0033 100%);
+  color: #fff;
+  padding: 1.5rem 1.75rem;
+  border-radius: 12px;
+  margin: 1.5rem 0;
+  text-decoration: none;
+  box-shadow: 0 4px 14px rgba(204, 0, 0, 0.25);
+  transition: transform 0.15s, box-shadow 0.15s, filter 0.15s;
+}
+.youtube-kanal-karti:hover {
+  text-decoration: none;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 22px rgba(204, 0, 0, 0.35);
+  filter: brightness(1.05);
+}
+.youtube-kanal-karti img {
+  width: 96px;
+  height: 96px;
+  border-radius: 50%;
+  border: 3px solid #fff;
+  flex-shrink: 0;
+  object-fit: cover;
+}
+.youtube-kanal-karti .info { flex: 1; min-width: 0; }
+body.page .youtube-kanal-karti h3 {
+  margin: 0;
+  color: #fff;
+  font-size: 1.4rem;
+  border: 0;
+  padding: 0;
+}
+.youtube-kanal-karti .stats {
+  margin: 0.4rem 0 0.55rem;
+  font-size: 1.1rem;
+  font-weight: 700;
+  letter-spacing: 0.01em;
+}
+.youtube-kanal-karti p {
+  margin: 0;
+  font-size: 0.95rem;
+  opacity: 0.95;
+  line-height: 1.5;
+}
+.youtube-kanal-karti .cta {
+  display: inline-block;
+  margin-top: 0.5rem;
+  font-weight: 600;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+}
+@media (max-width: 600px) {
+  .youtube-kanal-karti { flex-direction: column; text-align: center; padding: 1.5rem 1rem; }
+}
+
+/* ===== ÇALIŞMALAR — DERS KURUM KARTLARI ===== */
+.ders-kurum-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 1.25rem;
+  margin: 1.25rem 0 2rem;
+}
+.ders-kurum-karti {
+  background: var(--c-bg-alt);
+  border-left: 4px solid var(--c-accent);
+  border-radius: 8px;
+  padding: 1.25rem 1.5rem;
+}
+body.page .ders-kurum-karti h4 {
+  margin: 0 0 0.4rem;
+  color: var(--c-primary);
+  font-size: 1.1rem;
+  border: 0;
+  padding: 0;
+}
+.ders-kurum-karti .donem {
+  font-size: 0.85rem;
+  color: var(--c-text-muted);
+  margin: 0 0 0.75rem;
+}
+.ders-kurum-karti ul { margin: 0.5rem 0 0; padding-left: 1.25rem; }
+.ders-kurum-karti li { margin: 0.2rem 0; font-size: 0.95rem; }
+
 /* ===== DESTEKÇI FORMU — KVKK AYDINLATMA KUTUSU ===== */
 .kvkk-bilgi-kutusu {
   background: var(--c-bg-alt);
