@@ -8,7 +8,7 @@
   <link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicon-32.png?v=5">
   <link rel="icon" type="image/png" sizes="192x192" href="assets/img/favicon-192.png?v=5">
   <link rel="apple-touch-icon" sizes="180x180" href="assets/img/favicon-192.png?v=5">
-  <link rel="stylesheet" href="style.css?v=34">
+  <link rel="stylesheet" href="style.css?v=35">
   <link rel="stylesheet" href="assets/css/cookie-banner.css?v=2">
   <meta property="og:type" content="website">
   <meta property="og:title" content="Yapay Oğuz'a Sor · Kanal Arşivi Arama Aracı">
@@ -76,7 +76,7 @@
 <!-- KVKK Onay Modalı -->
 <div id="aiConsentOverlay" class="ai-consent-overlay" role="dialog" aria-modal="true" aria-labelledby="aiConsentTitle" hidden>
   <div class="ai-consent-modal" role="document">
-    <h2 id="aiConsentTitle">Yapay Oğuz — Sohbet Öncesi Bilgilendirme</h2>
+    <h2 id="aiConsentTitle">Yapay Oğuz: Sohbet Öncesi Bilgilendirme</h2>
 
     <div class="ai-consent-modal__intro">
       <strong>Önemli:</strong> Bu sohbet asistanı yapay zekâ tarafından üretilen yanıtlar verir. <strong>Resmi beyan değildir.</strong> Doğruluk kullanıcı tarafından doğrulanmalıdır.
@@ -89,7 +89,7 @@
       <tr><th>AI Sağlayıcı</th><td><strong>Google Gemini 2.5 Flash</strong> (Google LLC)</td></tr>
       <tr><th>Sunucu Lokasyonu</th><td><strong>ABD</strong></td></tr>
       <tr><th>İşlenen Veri</th><td>Sohbet metni, IP adresi, oturum kimliği, zaman damgası</td></tr>
-      <tr><th>Yurt Dışı Aktarım</th><td><strong>Var</strong> (KVKK m.9 — açık rıza)</td></tr>
+      <tr><th>Yurt Dışı Aktarım</th><td><strong>Var</strong> (KVKK m.9: açık rıza)</td></tr>
       <tr><th>Saklama Politikası</th><td><a href="https://ai.google.dev/gemini-api/terms" target="_blank" rel="noopener">Google Gemini API koşulları →</a></td></tr>
       <tr><th>Hukuki Dayanak</th><td>KVKK m.5/1 (açık rıza), m.9 (yurt dışı aktarım), m.10 (aydınlatma)</td></tr>
     </table>
@@ -128,7 +128,7 @@
 </div>
 
 <h2 id="ornekler">Sorabileceğiniz örnekler</h2>
-<p>Aşağıdaki örneklerden birine tıklayın — soru yukarıdaki sohbet kutusuna gönderilecek.</p>
+<p>Aşağıdaki örneklerden birine tıklayın: soru yukarıdaki sohbet kutusuna gönderilecek.</p>
 <div class="ornek-sorular" id="ornek-sorular">
   <button type="button" data-soru="Beyin göçünü nasıl tersine çeviririz?">Beyin göçünü nasıl tersine çeviririz?</button>
   <button type="button" data-soru="Cumhurbaşkanlığı sürecinde nereye geldin?">Cumhurbaşkanlığı sürecinde nereye geldin?</button>
@@ -229,7 +229,7 @@
       checks[cb.dataset.key] = cb.checked;
     });
     saveConsent(checks);
-    // KVKK m.12/3 ispat — anonim onay logu HF Space'e
+    // KVKK m.12/3 ispat: anonim onay logu HF Space'e
     try {
       var payload = JSON.stringify({
         type: "ai-chat",
