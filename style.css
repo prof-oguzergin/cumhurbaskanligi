@@ -117,13 +117,13 @@ header.site nav a:hover { opacity: 1; text-decoration: none; }
 @media (max-width: 720px) {
   .hero {
     background-image:
-      linear-gradient(180deg, rgba(15,32,55,0.20) 0%, rgba(15,32,55,0.55) 35%, rgba(15,32,55,0.96) 65%, rgba(15,32,55,1) 100%),
+      linear-gradient(180deg, rgba(15,32,55,0.10) 0%, rgba(15,32,55,0.40) 30%, rgba(15,32,55,0.85) 55%, rgba(15,32,55,1) 75%),
       url('assets/img/hero-banner.jpg');
-    background-size: auto 48vh;
+    background-size: auto 55vh;
     background-position: left top;
     background-repeat: no-repeat;
     justify-content: flex-start;
-    padding-top: 46vh;
+    padding-top: 38vh; /* icerik fotonun alt kismina (omuz/yaka) biner; gozlere/yuze degmez */
   }
 }
 .hero-inner {
@@ -1582,8 +1582,9 @@ body.page .dogrudan-iletisim h2 {
     width: 100%;
   }
   header.site nav a:hover { background: rgba(255, 255, 255, 0.06); }
-  /* .hero padding-top mobil fotograf icin yukarida 55vh ayarlandi (line ~117); burada sadece yan/alt boslugu degistir */
-  .hero { padding-right: 6vw; padding-left: 6vw; padding-bottom: 5rem; min-height: 90vh; }
+  /* .hero padding-top mobilde yukarida ayarlandi (line ~117); burada sadece yan/alt boslugu + min-height */
+  /* dvh: iOS Safari adres+sekme cubuklari hesaba katilir, asagi ok ilk ekranda gorunur kalir */
+  .hero { padding-right: 6vw; padding-left: 6vw; padding-bottom: 4.5rem; min-height: 88vh; min-height: 92dvh; }
   .hero-eyebrow { font-size: 0.7rem; padding: 0.35rem 0.85rem; }
   .hero-cta .btn { width: 100%; text-align: center; }
   .section { padding: 4rem 1.25rem; }
