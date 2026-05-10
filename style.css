@@ -1520,11 +1520,68 @@ body.page .dogrudan-iletisim h2 {
 .dogrudan-iletisim p { margin: 0.4rem 0; }
 .dogrudan-iletisim a { color: var(--c-primary-2); font-weight: 600; }
 
+/* ===== HAMBURGER MENÜ (mobil) ===== */
+.nav-toggle {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  gap: 5px;
+  width: 40px;
+  height: 40px;
+  padding: 0;
+  background: transparent;
+  border: 0;
+  cursor: pointer;
+  margin-left: auto;
+}
+.nav-toggle span {
+  display: block;
+  width: 24px;
+  height: 2.5px;
+  background: var(--c-text-light, #fff);
+  border-radius: 2px;
+  transition: transform 0.25s ease, opacity 0.2s ease;
+}
+.nav-toggle[aria-expanded="true"] span:nth-child(1) {
+  transform: translateY(7.5px) rotate(45deg);
+}
+.nav-toggle[aria-expanded="true"] span:nth-child(2) {
+  opacity: 0;
+}
+.nav-toggle[aria-expanded="true"] span:nth-child(3) {
+  transform: translateY(-7.5px) rotate(-45deg);
+}
+
 /* ===== MOBILE ===== */
 @media (max-width: 720px) {
-  header.site { padding: 0.6rem 1rem; flex-wrap: wrap; gap: 0.5rem; }
-  header.site nav { gap: 0.85rem; width: 100%; }
-  header.site nav a { font-size: 0.85rem; }
+  header.site { padding: 0.6rem 1rem; flex-wrap: nowrap; gap: 0.5rem; align-items: center; }
+  .nav-toggle { display: flex; }
+  header.site nav {
+    display: none;
+    position: fixed;
+    top: 60px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: var(--c-primary);
+    padding: 1rem 1.25rem 2rem;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0;
+    overflow-y: auto;
+    z-index: 99;
+    width: auto;
+  }
+  header.site nav.is-open { display: flex; }
+  header.site nav a {
+    color: #fff !important;
+    opacity: 1 !important;
+    padding: 1rem 0.5rem;
+    font-size: 1.05rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    width: 100%;
+  }
+  header.site nav a:hover { background: rgba(255, 255, 255, 0.06); }
   .hero { padding: 7rem 6vw 5rem; min-height: 90vh; }
   .hero-eyebrow { font-size: 0.7rem; padding: 0.35rem 0.85rem; }
   .hero-cta .btn { width: 100%; text-align: center; }
