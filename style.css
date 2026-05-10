@@ -1582,7 +1582,8 @@ body.page .dogrudan-iletisim h2 {
     width: 100%;
   }
   header.site nav a:hover { background: rgba(255, 255, 255, 0.06); }
-  .hero { padding: 7rem 6vw 5rem; min-height: 90vh; }
+  /* .hero padding-top mobil fotograf icin yukarida 55vh ayarlandi (line ~117); burada sadece yan/alt boslugu degistir */
+  .hero { padding-right: 6vw; padding-left: 6vw; padding-bottom: 5rem; min-height: 90vh; }
   .hero-eyebrow { font-size: 0.7rem; padding: 0.35rem 0.85rem; }
   .hero-cta .btn { width: 100%; text-align: center; }
   .section { padding: 4rem 1.25rem; }
