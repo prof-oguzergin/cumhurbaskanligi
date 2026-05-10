@@ -1562,7 +1562,10 @@ body.page .dogrudan-iletisim h2 {
     top: 56px;
     left: 0;
     right: 0;
-    bottom: 0;
+    /* iOS Safari + flex-child quirk: bottom:0 alone bbox'i 40px'te birakir.
+       Explicit height vermek zorundayiz. */
+    height: calc(100vh - 56px);
+    height: calc(100dvh - 56px);
     background: #0f2037;
     padding: 0.5rem 1.25rem 2rem;
     flex-direction: column !important;
@@ -1570,8 +1573,9 @@ body.page .dogrudan-iletisim h2 {
     align-items: stretch;
     gap: 0;
     overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
     z-index: 200;
-    width: 100vw;
+    width: 100%;
     box-shadow: 0 8px 24px rgba(0,0,0,0.35);
   }
   header.site nav#site-nav.is-open { display: flex !important; }
