@@ -1047,13 +1047,12 @@ footer.site .copyright a:hover { color: var(--c-text-light); text-decoration-col
 }
 .proje-karti {
   display: flex;
-  flex-direction: column;
-  gap: 0.4rem;
+  gap: 1rem;
   background: var(--c-bg-alt);
   border: 1px solid var(--c-border);
   border-left: 3px solid var(--c-accent);
   border-radius: 8px;
-  padding: 0.85rem 1rem;
+  padding: 0.9rem 1rem;
   text-decoration: none;
   color: inherit;
   transition: transform 0.15s, box-shadow 0.15s, border-color 0.15s;
@@ -1065,41 +1064,46 @@ footer.site .copyright a:hover { color: var(--c-text-light); text-decoration-col
   border-color: var(--c-primary-2);
   border-left-color: var(--c-accent);
 }
-.proje-karti .proje-baslik {
-  display: flex;
-  align-items: center;
-  gap: 0.6rem;
-}
 .proje-karti .proje-thumb {
-  width: 64px;
-  height: 40px;
+  width: 160px;
+  height: 100px;
   flex-shrink: 0;
   border-radius: 4px;
   border: 1px solid var(--c-border);
   object-fit: cover;
   background: #fff;
 }
+.proje-karti .proje-icerik {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+  min-width: 0;
+  flex: 1;
+}
 body.page .proje-karti h4 {
   margin: 0;
   color: var(--c-primary);
-  font-size: 1rem;
+  font-size: 1.05rem;
   border: 0;
   padding: 0;
   line-height: 1.25;
-  flex: 1;
-  min-width: 0;
 }
 .proje-karti p {
   margin: 0;
   font-size: 0.88rem;
   color: var(--c-text);
   line-height: 1.5;
+  flex: 1;
 }
 .proje-karti .proje-url {
   font-size: 0.78rem;
   color: var(--c-text-muted);
   font-family: ui-monospace, "SF Mono", Consolas, monospace;
   word-break: break-all;
+}
+@media (max-width: 480px) {
+  .proje-karti { flex-direction: column; gap: 0.6rem; }
+  .proje-karti .proje-thumb { width: 100%; height: auto; aspect-ratio: 16/10; }
 }
 
 /* ===== ÇALIŞMALAR — DERS PLAYLIST KARTLARI ===== */
