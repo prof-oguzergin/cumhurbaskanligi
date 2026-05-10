@@ -1038,6 +1038,59 @@ footer.site .copyright a:hover { color: var(--c-text-light); text-decoration-col
   transform: translateX(-50%) translateY(0);
 }
 
+/* ===== ÇALIŞMALAR — AÇIK PROJELER MINI KARTLAR ===== */
+.proje-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1rem;
+  margin: 1.25rem 0 1.5rem;
+}
+.proje-karti {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  background: var(--c-bg-alt);
+  border: 1px solid var(--c-border);
+  border-left: 3px solid var(--c-accent);
+  border-radius: 8px;
+  padding: 1rem 1.15rem;
+  text-decoration: none;
+  color: inherit;
+  transition: transform 0.15s, box-shadow 0.15s, border-color 0.15s;
+}
+.proje-karti:hover {
+  text-decoration: none;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 14px rgba(15, 32, 55, 0.1);
+  border-color: var(--c-primary-2);
+  border-left-color: var(--c-accent);
+}
+.proje-karti .proje-icon {
+  font-size: 1.4rem;
+  line-height: 1;
+}
+body.page .proje-karti h4 {
+  margin: 0;
+  color: var(--c-primary);
+  font-size: 1.05rem;
+  border: 0;
+  padding: 0;
+}
+.proje-karti p {
+  margin: 0;
+  font-size: 0.9rem;
+  color: var(--c-text);
+  line-height: 1.5;
+  flex: 1;
+}
+.proje-karti .proje-url {
+  font-size: 0.8rem;
+  color: var(--c-text-muted);
+  font-family: ui-monospace, "SF Mono", Consolas, monospace;
+  margin-top: 0.25rem;
+  word-break: break-all;
+}
+
 /* ===== ÇALIŞMALAR — DERS PLAYLIST KARTLARI ===== */
 .ders-playlist-grid {
   display: grid;
