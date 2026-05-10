@@ -847,8 +847,19 @@ body.page main {
   border-radius: 14px;
   box-shadow: 0 4px 24px rgba(15, 32, 55, 0.08);
 }
-/* page-wide: interaktif sayfalar (Yapay Oguz vb.) container'i 1180px'e cikarir */
-body.page.page-wide main { max-width: var(--max-w); }
+/* page-iframe-bleed: container 960 kalir, iframe + disclaimer + placeholder
+   container'in 3rem yan padding'ini asarak kenarlara dayanir (full-bleed) */
+body.page-iframe-bleed #aiChatWrapper,
+body.page-iframe-bleed #aiChatPlaceholder,
+body.page-iframe-bleed #aiDisclaimerBar {
+  margin-left: -3rem;
+  margin-right: -3rem;
+  width: calc(100% + 6rem);
+  max-width: none;
+  box-sizing: border-box;
+}
+body.page-iframe-bleed #aiChatWrapper iframe { border-radius: 0; }
+body.page-iframe-bleed #aiDisclaimerBar { border-radius: 0; }
 body.page h1 {
   font-size: clamp(2rem, 4vw, 2.8rem);
   font-weight: 800;
