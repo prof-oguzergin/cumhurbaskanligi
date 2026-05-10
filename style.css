@@ -1556,32 +1556,37 @@ body.page .dogrudan-iletisim h2 {
 @media (max-width: 720px) {
   header.site { padding: 0.6rem 1rem; flex-wrap: nowrap; gap: 0.5rem; align-items: center; }
   .nav-toggle { display: flex; }
-  header.site nav {
+  header.site nav#site-nav {
     display: none;
     position: fixed;
-    top: 60px;
+    top: 56px;
     left: 0;
     right: 0;
     bottom: 0;
-    background: var(--c-primary);
-    padding: 1rem 1.25rem 2rem;
-    flex-direction: column;
+    background: #0f2037;
+    padding: 0.5rem 1.25rem 2rem;
+    flex-direction: column !important;
+    flex-wrap: nowrap !important;
     align-items: stretch;
     gap: 0;
     overflow-y: auto;
-    z-index: 99;
-    width: auto;
+    z-index: 200;
+    width: 100vw;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.35);
   }
-  header.site nav.is-open { display: flex; }
-  header.site nav a {
+  header.site nav#site-nav.is-open { display: flex !important; }
+  header.site nav#site-nav a {
     color: #fff !important;
     opacity: 1 !important;
-    padding: 1rem 0.5rem;
+    padding: 1rem 0.25rem;
     font-size: 1.05rem;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    font-weight: 500;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.12);
     width: 100%;
+    display: block;
   }
-  header.site nav a:hover { background: rgba(255, 255, 255, 0.06); }
+  header.site nav#site-nav a:hover,
+  header.site nav#site-nav a:active { background: rgba(255, 255, 255, 0.06); }
   /* .hero padding-top mobilde yukarida ayarlandi (line ~117); burada sadece yan/alt boslugu + min-height */
   /* dvh: iOS Safari adres+sekme cubuklari hesaba katilir, asagi ok ilk ekranda URL bar'in ustunde kalir */
   .hero { padding-right: 6vw; padding-left: 6vw; padding-bottom: 2.25rem; min-height: 82vh; min-height: 86dvh; }
