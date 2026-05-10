@@ -847,6 +847,8 @@ body.page main {
   border-radius: 14px;
   box-shadow: 0 4px 24px rgba(15, 32, 55, 0.08);
 }
+/* page-wide: interaktif sayfalar (Yapay Oguz vb.) container'i 1180px'e cikarir */
+body.page.page-wide main { max-width: var(--max-w); }
 body.page h1 {
   font-size: clamp(2rem, 4vw, 2.8rem);
   font-weight: 800;
