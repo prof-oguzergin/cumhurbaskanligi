@@ -1119,60 +1119,62 @@ body.page .ders-playlist-card h4 {
 
 /* ===== YOUTUBE KANAL KARTI ===== */
 .youtube-kanal-karti {
-  display: flex;
-  align-items: center;
-  gap: 1.5rem;
-  background: linear-gradient(135deg, #cc0000 0%, #ff0033 100%);
-  color: #fff;
-  padding: 1.5rem 1.75rem;
+  display: block;
+  background: var(--c-bg-alt);
+  color: var(--c-text);
   border-radius: 12px;
   margin: 1.5rem 0;
   text-decoration: none;
-  box-shadow: 0 4px 14px rgba(204, 0, 0, 0.25);
-  transition: transform 0.15s, box-shadow 0.15s, filter 0.15s;
+  overflow: hidden;
+  border: 1px solid var(--c-border);
+  transition: transform 0.15s, box-shadow 0.15s;
 }
 .youtube-kanal-karti:hover {
   text-decoration: none;
   transform: translateY(-2px);
-  box-shadow: 0 8px 22px rgba(204, 0, 0, 0.35);
-  filter: brightness(1.05);
+  box-shadow: 0 8px 22px rgba(15, 32, 55, 0.18);
 }
 .youtube-kanal-karti img {
-  width: 96px;
-  height: 96px;
-  border-radius: 50%;
-  border: 3px solid #fff;
-  flex-shrink: 0;
-  object-fit: cover;
+  width: 100%;
+  height: auto;
+  display: block;
+  border-bottom: 1px solid var(--c-border);
 }
-.youtube-kanal-karti .info { flex: 1; min-width: 0; }
+.youtube-kanal-karti .info {
+  padding: 1.1rem 1.5rem 1.25rem;
+  background: var(--c-primary);
+  color: #fff;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 0.5rem 1rem;
+}
 body.page .youtube-kanal-karti h3 {
   margin: 0;
   color: #fff;
-  font-size: 1.4rem;
+  font-size: 1.2rem;
   border: 0;
   padding: 0;
+  flex: 1 1 auto;
+  min-width: 0;
 }
 .youtube-kanal-karti .stats {
-  margin: 0.4rem 0 0.55rem;
-  font-size: 1.1rem;
+  margin: 0;
+  font-size: 1rem;
   font-weight: 700;
+  color: var(--c-accent);
   letter-spacing: 0.01em;
 }
-.youtube-kanal-karti p {
-  margin: 0;
-  font-size: 0.95rem;
-  opacity: 0.95;
-  line-height: 1.5;
-}
 .youtube-kanal-karti .cta {
-  display: inline-block;
-  margin-top: 0.5rem;
   font-weight: 600;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+  color: #fff;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.55);
+  white-space: nowrap;
 }
 @media (max-width: 600px) {
-  .youtube-kanal-karti { flex-direction: column; text-align: center; padding: 1.5rem 1rem; }
+  .youtube-kanal-karti .info { padding: 1rem 1.1rem 1.1rem; }
+  body.page .youtube-kanal-karti h3 { font-size: 1.05rem; flex-basis: 100%; }
+  .youtube-kanal-karti .stats { font-size: 0.95rem; }
 }
 
 /* ===== ÇALIŞMALAR — DERS KURUM KARTLARI ===== */
