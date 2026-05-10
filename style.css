@@ -1583,10 +1583,13 @@ body.page .dogrudan-iletisim h2 {
   }
   header.site nav a:hover { background: rgba(255, 255, 255, 0.06); }
   /* .hero padding-top mobilde yukarida ayarlandi (line ~117); burada sadece yan/alt boslugu + min-height */
-  /* dvh: iOS Safari adres+sekme cubuklari hesaba katilir, asagi ok ilk ekranda gorunur kalir */
-  .hero { padding-right: 6vw; padding-left: 6vw; padding-bottom: 4.5rem; min-height: 88vh; min-height: 92dvh; }
+  /* dvh: iOS Safari adres+sekme cubuklari hesaba katilir, asagi ok ilk ekranda URL bar'in ustunde kalir */
+  .hero { padding-right: 6vw; padding-left: 6vw; padding-bottom: 2.25rem; min-height: 82vh; min-height: 86dvh; }
   .hero-eyebrow { font-size: 0.7rem; padding: 0.35rem 0.85rem; }
+  .hero-tagline { margin-bottom: 1.25rem; }
+  .hero-cta { margin-bottom: 1rem; }
   .hero-cta .btn { width: 100%; text-align: center; }
+  .hero-scroll { bottom: 1rem; width: 42px; height: 42px; font-size: 1.4rem; }
   .section { padding: 4rem 1.25rem; }
   .stat-num { font-size: 2.2rem; }
   body.page main { margin: 5rem 0.75rem 2rem; padding: 2rem 1.25rem 2.5rem; border-radius: 10px; }
