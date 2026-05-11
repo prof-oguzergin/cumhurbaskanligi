@@ -1,0 +1,496 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Yanımdakiler Önizleme · A Kadrosu (3) + Adaylar (5)</title>
+  <link rel="stylesheet" href="style.css?v=39">
+  <style>
+    .preview-banner {
+      background: #fff4cc;
+      border: 1px solid #d4a017;
+      padding: 1rem 1.25rem;
+      border-radius: 8px;
+      margin: 1rem 0 2rem;
+      font-size: 0.95rem;
+    }
+    .preview-banner strong { color: #8b6914; }
+
+    /* A KADROSU — 3 sütun */
+    .ana-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.25rem;
+      margin: 1.5rem 0 2.5rem;
+    }
+    .ana-card {
+      background: var(--c-bg-alt, #f7f3ec);
+      border: 1px solid rgba(0,0,0,0.08);
+      border-radius: 12px;
+      padding: 1.5rem 1.25rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 0.6rem;
+      text-align: center;
+    }
+    .ana-card img {
+      width: 110px;
+      height: 110px;
+      border-radius: 50%;
+      object-fit: cover;
+    }
+    .ana-card h3 {
+      margin: 0.3rem 0 0;
+      font-size: 1.1rem;
+      color: #1a3a5c;
+      line-height: 1.2;
+      border: none !important;
+      padding: 0 !important;
+    }
+    .ana-card .rol {
+      font-size: 0.85rem;
+      color: #555;
+      line-height: 1.35;
+      margin: 0;
+    }
+    .ana-card .yer {
+      font-size: 0.8rem;
+      color: #888;
+      margin: 0;
+    }
+    .ana-card .aciklama {
+      font-size: 0.82rem;
+      color: #444;
+      line-height: 1.45;
+      margin: 0.3rem 0;
+    }
+    .ana-card .baglanti {
+      margin-top: auto;
+      font-size: 0.85rem;
+    }
+    .ana-card .baglanti a {
+      color: #0a66c2;
+      text-decoration: none;
+    }
+
+    /* ADAY GRİDİ — 6 sütun */
+    .aday-grid {
+      display: grid;
+      grid-template-columns: repeat(6, 1fr);
+      gap: 0.8rem;
+      margin: 1.5rem 0;
+    }
+    .aday-card {
+      background: var(--c-bg-alt, #f7f3ec);
+      border: 1px solid rgba(0,0,0,0.08);
+      border-radius: 10px;
+      padding: 0.9rem 0.65rem;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      gap: 0.35rem;
+      font-size: 0.8rem;
+    }
+    .aday-card .aday-foto {
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      margin: 0 auto 0.4rem;
+      background: linear-gradient(135deg, #1a3a5c 0%, #2d5a7e 100%);
+      color: #fff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 600;
+      font-size: 1.25rem;
+      letter-spacing: 1px;
+      font-family: 'Georgia', serif;
+    }
+    .aday-card h4 {
+      margin: 0;
+      font-size: 0.85rem;
+      font-weight: 600;
+      line-height: 1.2;
+      color: #1a3a5c;
+    }
+    .aday-card .aday-meslek {
+      color: #555;
+      font-size: 0.72rem;
+      line-height: 1.25;
+      min-height: 1.8rem;
+    }
+    .aday-card .aday-kurum {
+      color: #777;
+      font-size: 0.7rem;
+      line-height: 1.15;
+      font-style: italic;
+    }
+    .aday-card .aday-sehir {
+      color: #888;
+      font-size: 0.7rem;
+    }
+    .aday-card .aday-li {
+      margin-top: auto;
+      font-size: 0.7rem;
+      padding-top: 0.25rem;
+    }
+    .aday-card .aday-li a {
+      color: #0a66c2;
+      text-decoration: none;
+    }
+
+    .section-divider {
+      margin: 3rem 0 1.5rem;
+      padding-top: 2rem;
+      border-top: 2px solid rgba(26, 58, 92, 0.15);
+    }
+
+    @media (max-width: 1200px) {
+      .aday-grid { grid-template-columns: repeat(5, 1fr); }
+    }
+    @media (max-width: 1000px) {
+      .ana-grid { grid-template-columns: repeat(2, 1fr); }
+      .aday-grid { grid-template-columns: repeat(4, 1fr); }
+    }
+    @media (max-width: 800px) {
+      .aday-grid { grid-template-columns: repeat(3, 1fr); }
+    }
+    @media (max-width: 600px) {
+      .ana-grid { grid-template-columns: 1fr; }
+      .aday-grid { grid-template-columns: repeat(2, 1fr); }
+    }
+  </style>
+</head>
+<body class="page">
+  <main>
+    <h1>Yanımdakiler — Önizleme</h1>
+    <div class="preview-banner">
+      <strong>⚠️ Yerel önizleme.</strong> Üstte 11 kişilik A kadrosu (3 sütun, gerçek fotoğraflarla); altta 20 bekleyen aday (5 sütun, ad-soyad baş harfleri). İki düzeni yan yana görmek için.
+    </div>
+
+    <h2>A Kadrosu · Adıyla Destek Verenler (11)</h2>
+    <p style="color:#666;font-size:0.9rem;"><em>Soyada göre alfabetik · Gerçek fotoğraflarla.</em></p>
+
+    <div class="ana-grid">
+
+      <div class="ana-card">
+        <img src="assets/img/yanimdaki-kursad-albayraktaroglu.jpg" alt="Kürşad Albayraktaroğlu">
+        <h3>Kürşad Albayraktaroğlu (Dr.)</h3>
+        <p class="rol">Mikroişlemci Tasarım Mühendisi · Intel</p>
+        <p class="yer">Austin, Teksas, ABD</p>
+        <p class="aciklama">Mikroişlemci ve SoC ön-uç sayısal tasarımı, RTL doğrulama, donanım güvenliği.</p>
+        <p class="baglanti"><a href="https://www.linkedin.com/in/kursad-albayraktaroglu-4b019/" target="_blank">LinkedIn →</a></p>
+      </div>
+
+      <div class="ana-card">
+        <img src="assets/img/yanimdaki-nart-bedin-atalay.jpg" alt="Nart Bedin Atalay">
+        <h3>Nart Bedin Atalay (Prof. Dr.)</h3>
+        <p class="rol">Öğretim Üyesi · TOBB ETÜ Psikoloji</p>
+        <p class="yer">Ankara, Türkiye</p>
+        <p class="aciklama">Dikkat, otomatiklik, bilişsel kontrol ve müzik tonalite algısı.</p>
+        <p class="baglanti"><a href="https://www.linkedin.com/in/nart-bedin-atalay-47748346/" target="_blank">LinkedIn →</a></p>
+      </div>
+
+      <div class="ana-card">
+        <img src="assets/img/yanimdaki-cemil-azizoglu.jpg" alt="Cemil Azizoğlu">
+        <h3>Cemil Azizoğlu (Dr.)</h3>
+        <p class="rol">Kıdemli Mühendis · AMD</p>
+        <p class="yer">San Antonio, ABD</p>
+        <p class="aciklama">GPU firmware ve sistem yazılımı; mikrokod ve grafik işlemci mimarisi.</p>
+        <p class="baglanti"><a href="https://www.linkedin.com/in/cemil/" target="_blank">LinkedIn →</a></p>
+      </div>
+
+      <div class="ana-card">
+        <img src="assets/img/yanimdaki-zafer-can-bilgin.jpg" alt="Zafer Can Bilgin" style="object-position: 65% 50%;">
+        <h3>Zafer Can Bilgin</h3>
+        <p class="rol">Yönetim Kurulu Başkanı · Türk Teknik Taahhüt A.Ş.</p>
+        <p class="yer">Ankara, Türkiye</p>
+        <p class="aciklama">Mühendis kökenli iş insanı; 30 yılı aşkın sektör deneyimi.</p>
+        <p class="baglanti"><a href="https://www.linkedin.com/in/zafer-can-bilgin-64255350/" target="_blank">LinkedIn →</a></p>
+      </div>
+
+      <div class="ana-card">
+        <img src="assets/img/yanimdaki-ali-bozbey.jpg" alt="Ali Bozbey">
+        <h3>Ali Bozbey (Prof. Dr.)</h3>
+        <p class="rol">Öğretim Üyesi · TOBB ETÜ EE · Phi0 Quantum</p>
+        <p class="yer">Ankara, Türkiye</p>
+        <p class="aciklama">Süperiletken kuantum elektroniği; <strong>QuanT</strong> Türk kuantum bilgisayarı.</p>
+        <p class="baglanti"><a href="https://www.linkedin.com/in/alibozbey/" target="_blank">LinkedIn →</a></p>
+      </div>
+
+      <div class="ana-card">
+        <img src="assets/img/yanimdaki-cagri-eryilmaz.jpg" alt="Çağrı Eryılmaz">
+        <h3>Çağrı Eryılmaz</h3>
+        <p class="rol">Sistem ve SoC Mimarisi Mühendisi · Intel</p>
+        <p class="yer">San Francisco, Kaliforniya, ABD</p>
+        <p class="aciklama">Heterojen mimariler, bellek sistemleri; 2 patent · 2018 Intel DRA.</p>
+        <p class="baglanti"><a href="https://www.linkedin.com/in/cagriery/" target="_blank">LinkedIn →</a></p>
+      </div>
+
+      <div class="ana-card">
+        <img src="assets/img/yanimdaki-tolga-girici.jpg" alt="Tolga Girici">
+        <h3>Tolga Girici (Prof. Dr.)</h3>
+        <p class="rol">Öğretim Üyesi · Middlesex Üniversitesi</p>
+        <p class="yer">Londra, Birleşik Krallık</p>
+        <p class="aciklama">Telekomünikasyon, kablosuz haberleşme, ağ kaynak tahsisi.</p>
+        <p class="baglanti"><a href="https://www.linkedin.com/in/tgirici/" target="_blank">LinkedIn →</a></p>
+      </div>
+
+      <div class="ana-card">
+        <img src="assets/img/yanimdaki-meltem-ozsoy.jpg" alt="Meltem Özsoy">
+        <h3>Meltem Özsoy (Dr.)</h3>
+        <p class="rol">Kıdemli Araştırmacı · Intuitive (Da Vinci)</p>
+        <p class="yer">Kaliforniya, ABD</p>
+        <p class="aciklama">Bilgisayar mimarisi, donanım güvenliği; Iso-X, dallanma denetimi.</p>
+        <p class="baglanti"><a href="https://www.linkedin.com/in/meltemozsoy/" target="_blank">LinkedIn →</a></p>
+      </div>
+
+      <div class="ana-card">
+        <img src="assets/img/yanimdaki-mehmet-sankir.jpg" alt="Mehmet Sankır">
+        <h3>Mehmet Sankır (Prof. Dr.)</h3>
+        <p class="rol">Öğretim Üyesi · TOBB ETÜ Malzeme &amp; Nano</p>
+        <p class="yer">Ankara, Türkiye</p>
+        <p class="aciklama">Yeşil hidrojen, yakıt hücreleri; 100+ yayın. Yeşil Hidrojen Derneği Başkanı.</p>
+        <p class="baglanti"><a href="https://www.linkedin.com/in/mehmet-sankir-4b993684/" target="_blank">LinkedIn →</a></p>
+      </div>
+
+      <div class="ana-card">
+        <img src="assets/img/yanimdaki-serkan-unal.jpg" alt="Serkan Ünal">
+        <h3>Serkan Ünal (Doç. Dr.)</h3>
+        <p class="rol">Öğretim Üyesi · Ufuk Üniversitesi</p>
+        <p class="yer">Ankara, Türkiye</p>
+        <p class="aciklama">Kurumsal yönetim, davranışsal finans; 15+ yıl Borsa İstanbul deneyimi.</p>
+        <p class="baglanti"><a href="https://www.linkedin.com/in/serkan-unal-b543414/" target="_blank">LinkedIn →</a></p>
+      </div>
+
+      <div class="ana-card">
+        <img src="assets/img/yanimdaki-giray-yaglikci.jpg" alt="Abdullah Giray Yağlıkçı">
+        <h3>Abdullah Giray Yağlıkçı (Dr.)</h3>
+        <p class="rol">Öğretim Üyesi · CISPA Helmholtz</p>
+        <p class="yer">Saarbrücken, Almanya</p>
+        <p class="aciklama">Bilgisayar mimarisi, donanım güvenliği; DRAM/RowHammer.</p>
+        <p class="baglanti"><a href="https://www.linkedin.com/in/agyaglikci/" target="_blank">LinkedIn →</a></p>
+      </div>
+
+    </div>
+
+    <div class="section-divider"></div>
+
+    <h2>Bekleyen Adaylar (23)</h2>
+    <p style="color:#666;font-size:0.9rem;"><em>Soyada göre alfabetik · 6 sütun · Fotoğraf yerine ad-soyad baş harfleri. LinkedIn'i olan, ana takımda yer almayan tüm "Evet" diyenler.</em></p>
+
+    <div class="aday-grid">
+
+      <div class="aday-card">
+        <div class="aday-foto">HA</div>
+        <h4>Halis Akbal</h4>
+        <div class="aday-meslek">Bilgisayar Mühendisliği Öğrencisi</div>
+        <div class="aday-kurum">Gebze Teknik Üniversitesi</div>
+        <div class="aday-sehir">Kocaeli · 30</div>
+        <div class="aday-li"><a href="https://www.linkedin.com/in/halis-akbal-052644397" target="_blank">LinkedIn →</a></div>
+      </div>
+
+      <div class="aday-card">
+        <div class="aday-foto">TA</div>
+        <h4>Taha Deniz Akgül</h4>
+        <div class="aday-meslek">Bilgisayar Mühendisliği Öğrencisi</div>
+        <div class="aday-kurum">SDÜ</div>
+        <div class="aday-sehir">Isparta · 22</div>
+        <div class="aday-li"><a href="https://www.linkedin.com/in/taha-deniz-akgül-9a6b651b6" target="_blank">LinkedIn →</a></div>
+      </div>
+
+      <div class="aday-card">
+        <div class="aday-foto">İA</div>
+        <h4>İsmail Akı</h4>
+        <div class="aday-meslek">Yazılım Geliştirici</div>
+        <div class="aday-kurum">—</div>
+        <div class="aday-sehir">Varşova, Polonya · 23</div>
+        <div class="aday-li"><a href="https://www.linkedin.com/in/ismailakii/" target="_blank">LinkedIn →</a></div>
+      </div>
+
+      <div class="aday-card">
+        <div class="aday-foto">SA</div>
+        <h4>Samet Akın</h4>
+        <div class="aday-meslek">Bilgisayar Mühendisi · Üretken YZ</div>
+        <div class="aday-kurum">Kiwio (girişim)</div>
+        <div class="aday-sehir">İstanbul · 23</div>
+        <div class="aday-li"><a href="https://www.linkedin.com/in/sametakin44" target="_blank">LinkedIn →</a></div>
+      </div>
+
+      <div class="aday-card">
+        <div class="aday-foto">BA</div>
+        <h4>Burak Alkan</h4>
+        <div class="aday-meslek">Öğrenci · Bilgisayar Teknikeri</div>
+        <div class="aday-kurum">YTÜ · CDM Projects</div>
+        <div class="aday-sehir">İstanbul · 24</div>
+        <div class="aday-li"><a href="https://www.linkedin.com/in/burakalkan1289/" target="_blank">LinkedIn →</a></div>
+      </div>
+
+      <div class="aday-card">
+        <div class="aday-foto">OA</div>
+        <h4>Okan Ayan</h4>
+        <div class="aday-meslek">Elektrik-Elektronik Müh. Öğrencisi</div>
+        <div class="aday-kurum">Bilecik Şeyh Edebali Üniv.</div>
+        <div class="aday-sehir">Ankara · 24</div>
+        <div class="aday-li"><a href="https://linkedin.com/in/okanayan-ee" target="_blank">LinkedIn →</a></div>
+      </div>
+
+      <div class="aday-card">
+        <div class="aday-foto">MB</div>
+        <h4>Mustafa Bayram</h4>
+        <div class="aday-meslek">Elektronik Müh. · Gömülü Sistemler</div>
+        <div class="aday-kurum">Kocadere Teknoloji</div>
+        <div class="aday-sehir">İstanbul · 33</div>
+        <div class="aday-li"><a href="https://tr.linkedin.com/in/mustafa-fatih-bayram-395942a8" target="_blank">LinkedIn →</a></div>
+      </div>
+
+      <div class="aday-card">
+        <div class="aday-foto">AÇ</div>
+        <h4>Adnan Çakar</h4>
+        <div class="aday-meslek">Bilgi Teknolojileri Teknikeri</div>
+        <div class="aday-kurum">Başaran İleri Teknoloji</div>
+        <div class="aday-sehir">Muğla · 55</div>
+        <div class="aday-li"><a href="https://www.linkedin.com/in/adnan-çakar-29a29243/" target="_blank">LinkedIn →</a></div>
+      </div>
+
+      <div class="aday-card">
+        <div class="aday-foto">OÇ</div>
+        <h4>Oğuzhan Çetinkaya</h4>
+        <div class="aday-meslek">Bilgisayar Mühendisi</div>
+        <div class="aday-kurum">Udemy</div>
+        <div class="aday-sehir">Ankara · 25</div>
+        <div class="aday-li"><a href="https://linkedin.com/in/oguzhancttnky" target="_blank">LinkedIn →</a></div>
+      </div>
+
+      <div class="aday-card">
+        <div class="aday-foto">EÇ</div>
+        <h4>Erhan Çınar</h4>
+        <div class="aday-meslek">CMMI HMLA Danışmanı</div>
+        <div class="aday-kurum">Miyamoto Consulting</div>
+        <div class="aday-sehir">Ankara · 61</div>
+        <div class="aday-li"><a href="https://www.linkedin.com/in/erhan-çinar-5665135" target="_blank">LinkedIn →</a></div>
+      </div>
+
+      <div class="aday-card">
+        <div class="aday-foto">TÇ</div>
+        <h4>Talat Çorak</h4>
+        <div class="aday-meslek">Elektrik-Elektronik Mühendisi</div>
+        <div class="aday-kurum">Agrirossa</div>
+        <div class="aday-sehir">İzmir · 39</div>
+        <div class="aday-li"><a href="https://www.linkedin.com/in/talat-corak" target="_blank">LinkedIn →</a></div>
+      </div>
+
+      <div class="aday-card">
+        <div class="aday-foto">YD</div>
+        <h4>Yiğit Demir</h4>
+        <div class="aday-meslek">Gömülü Sistem Mühendisi</div>
+        <div class="aday-kurum">—</div>
+        <div class="aday-sehir">Münih, Almanya · 32</div>
+        <div class="aday-li"><a href="https://www.linkedin.com/in/yi%C4%9Fit-demir-5853a31aa/" target="_blank">LinkedIn →</a></div>
+      </div>
+
+      <div class="aday-card">
+        <div class="aday-foto">ŞE</div>
+        <h4>Şerefcan Eryavuz</h4>
+        <div class="aday-meslek">Bilgisayar Mühendisi</div>
+        <div class="aday-kurum">TUSAŞ</div>
+        <div class="aday-sehir">Ankara · 33</div>
+        <div class="aday-li"><a href="https://www.linkedin.com/in/serefcaneryavuz" target="_blank">LinkedIn →</a></div>
+      </div>
+
+      <div class="aday-card">
+        <div class="aday-foto">AG</div>
+        <h4>Anılcan Gülkaya</h4>
+        <div class="aday-meslek">Yazılım Mühendisi</div>
+        <div class="aday-kurum">—</div>
+        <div class="aday-sehir">Kayseri · 26</div>
+        <div class="aday-li"><a href="https://www.linkedin.com/in/anilcangulkaya" target="_blank">LinkedIn →</a></div>
+      </div>
+
+      <div class="aday-card">
+        <div class="aday-foto">BH</div>
+        <h4>Berke Halavurt</h4>
+        <div class="aday-meslek">Bilgisayar Mühendisliği Öğrencisi</div>
+        <div class="aday-kurum">Bilkent Üniversitesi</div>
+        <div class="aday-sehir">Ankara · 21</div>
+        <div class="aday-li"><a href="https://www.linkedin.com/in/berkehalavurt/" target="_blank">LinkedIn →</a></div>
+      </div>
+
+      <div class="aday-card">
+        <div class="aday-foto">OK</div>
+        <h4>Orhan Kalaycı</h4>
+        <div class="aday-meslek">Bilgisayar / Endüstri Mühendisi</div>
+        <div class="aday-kurum">Serbest</div>
+        <div class="aday-sehir">İstanbul · 57</div>
+        <div class="aday-li"><a href="https://www.linkedin.com/in/orhankalayci/" target="_blank">LinkedIn →</a></div>
+      </div>
+
+      <div class="aday-card">
+        <div class="aday-foto">EK</div>
+        <h4>Ercan Kurtoğlu</h4>
+        <div class="aday-meslek">Mühendis (MSc)</div>
+        <div class="aday-kurum">Freelance</div>
+        <div class="aday-sehir">Kocaeli · 33</div>
+        <div class="aday-li"><a href="https://www.linkedin.com/in/ercan-kurtoglu" target="_blank">LinkedIn →</a></div>
+      </div>
+
+      <div class="aday-card">
+        <div class="aday-foto">MÖ</div>
+        <h4>Murat Özcan</h4>
+        <div class="aday-meslek">Makine Mühendisi</div>
+        <div class="aday-kurum">—</div>
+        <div class="aday-sehir">Düzce · 42</div>
+        <div class="aday-li"><a href="https://www.linkedin.com/in/murat-özcan" target="_blank">LinkedIn →</a></div>
+      </div>
+
+      <div class="aday-card">
+        <div class="aday-foto">BŞ</div>
+        <h4>Batuhan Şekercioğlu</h4>
+        <div class="aday-meslek">Bilgisayar Mühendisliği Öğrencisi</div>
+        <div class="aday-kurum">İstanbul Üniversitesi</div>
+        <div class="aday-sehir">Aksaray · 21</div>
+        <div class="aday-li"><a href="https://www.linkedin.com/in/batuhan-ş-642ab7270" target="_blank">LinkedIn →</a></div>
+      </div>
+
+      <div class="aday-card">
+        <div class="aday-foto">TŞ</div>
+        <h4>Turgut Şimşek</h4>
+        <div class="aday-meslek">Programcı</div>
+        <div class="aday-kurum">—</div>
+        <div class="aday-sehir">Muğla · 47</div>
+        <div class="aday-li"><a href="https://www.linkedin.com/in/turgutsimsek/" target="_blank">LinkedIn →</a></div>
+      </div>
+
+      <div class="aday-card">
+        <div class="aday-foto">HT</div>
+        <h4>Hüseyin Taşkan</h4>
+        <div class="aday-meslek">Bilgisayar Bilimci Öğrencisi</div>
+        <div class="aday-kurum">Karadeniz Teknik Üniv.</div>
+        <div class="aday-sehir">İzmir · 20</div>
+        <div class="aday-li"><a href="https://www.linkedin.com/in/huseyin-taskan/" target="_blank">LinkedIn →</a></div>
+      </div>
+
+      <div class="aday-card">
+        <div class="aday-foto">ET</div>
+        <h4>Ertan Topçu</h4>
+        <div class="aday-meslek">İşçi · Tekstil</div>
+        <div class="aday-kurum">—</div>
+        <div class="aday-sehir">Tekirdağ · 46</div>
+        <div class="aday-li"><a href="https://www.linkedin.com/me?trk=p_mwlite_feed-secondary_nav" target="_blank">LinkedIn →</a></div>
+      </div>
+
+      <div class="aday-card">
+        <div class="aday-foto">MT</div>
+        <h4>Mustafa Selim Türkmen</h4>
+        <div class="aday-meslek">Veri Bilimi / Finans Öğrencisi</div>
+        <div class="aday-kurum">Sabancı Üniversitesi</div>
+        <div class="aday-sehir">İstanbul · 23</div>
+        <div class="aday-li"><a href="https://www.linkedin.com/in/selimturkmends/" target="_blank">LinkedIn →</a></div>
+      </div>
+
+    </div>
+
+  </main>
+</body>
+</html>

@@ -80,7 +80,10 @@ header.site nav {
 header.site nav a {
   color: var(--c-text-light);
   font-size: 0.92rem;
-  font-weight: 500;
+  /* Windows Segoe UI 500 weight sunmaz; Turkce diakritikler icin fallback font'a
+     dusup glyph karisikligi yaratir (Talat Corak raporu, 11 May 2026). 600 hem
+     Segoe UI'in destekledigi bir weight hem de yeterince belirgin. */
+  font-weight: 600;
   text-decoration: none;
   opacity: 0.9;
   transition: opacity 0.2s;
