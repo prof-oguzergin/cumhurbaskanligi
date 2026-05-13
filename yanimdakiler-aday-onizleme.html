@@ -3,78 +3,85 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Yanımdakiler Önizleme · A Kadrosu (3) + Adaylar (5)</title>
-  <link rel="stylesheet" href="style.css?v=39">
+  <title>Yanımdakiler · Önizleme</title>
+  <link rel="stylesheet" href="style.css?v=40">
   <style>
     .preview-banner {
       background: #fff4cc;
       border: 1px solid #d4a017;
-      padding: 1rem 1.25rem;
+      padding: 0.85rem 1.25rem;
       border-radius: 8px;
       margin: 1rem 0 2rem;
-      font-size: 0.95rem;
+      font-size: 0.9rem;
     }
     .preview-banner strong { color: #8b6914; }
 
-    /* A KADROSU — 3 sütun */
+    /* BİRLİKTE YOLA ÇIKTIKLARIM — 2 sütun */
     .ana-grid {
       display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 1.25rem;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1.5rem;
       margin: 1.5rem 0 2.5rem;
     }
     .ana-card {
       background: var(--c-bg-alt, #f7f3ec);
       border: 1px solid rgba(0,0,0,0.08);
       border-radius: 12px;
-      padding: 1.5rem 1.25rem;
+      padding: 1.75rem 1.5rem;
       display: flex;
       flex-direction: column;
       align-items: center;
-      gap: 0.6rem;
+      gap: 0.7rem;
       text-align: center;
     }
     .ana-card img {
-      width: 110px;
-      height: 110px;
+      width: 130px;
+      height: 130px;
       border-radius: 50%;
       object-fit: cover;
     }
     .ana-card h3 {
       margin: 0.3rem 0 0;
-      font-size: 1.1rem;
+      font-size: 1.2rem;
       color: #1a3a5c;
-      line-height: 1.2;
+      line-height: 1.25;
       border: none !important;
       padding: 0 !important;
     }
     .ana-card .rol {
-      font-size: 0.85rem;
-      color: #555;
-      line-height: 1.35;
+      font-size: 0.92rem;
+      color: #444;
+      line-height: 1.4;
       margin: 0;
     }
     .ana-card .yer {
-      font-size: 0.8rem;
+      font-size: 0.85rem;
       color: #888;
       margin: 0;
     }
-    .ana-card .aciklama {
-      font-size: 0.82rem;
-      color: #444;
+    .ana-card .egitim {
+      font-size: 0.84rem;
+      color: #555;
       line-height: 1.45;
+      margin: 0.2rem 0;
+    }
+    .ana-card .aciklama {
+      font-size: 0.88rem;
+      color: #333;
+      line-height: 1.5;
       margin: 0.3rem 0;
     }
     .ana-card .baglanti {
       margin-top: auto;
-      font-size: 0.85rem;
+      padding-top: 0.4rem;
+      font-size: 0.92rem;
     }
     .ana-card .baglanti a {
       color: #0a66c2;
       text-decoration: none;
     }
 
-    /* ADAY GRİDİ — 6 sütun */
+    /* ADIYLA DESTEK VEREN VATANDAŞLAR — 6 sütun */
     .aday-grid {
       display: grid;
       grid-template-columns: repeat(6, 1fr);
@@ -150,54 +157,58 @@
       .aday-grid { grid-template-columns: repeat(5, 1fr); }
     }
     @media (max-width: 1000px) {
-      .ana-grid { grid-template-columns: repeat(2, 1fr); }
+      .ana-grid { grid-template-columns: 1fr; }
       .aday-grid { grid-template-columns: repeat(4, 1fr); }
     }
     @media (max-width: 800px) {
       .aday-grid { grid-template-columns: repeat(3, 1fr); }
     }
     @media (max-width: 600px) {
-      .ana-grid { grid-template-columns: 1fr; }
       .aday-grid { grid-template-columns: repeat(2, 1fr); }
     }
   </style>
 </head>
 <body class="page">
   <main>
-    <h1>Yanımdakiler — Önizleme</h1>
     <div class="preview-banner">
-      <strong>⚠️ Yerel önizleme.</strong> Üstte 11 kişilik A kadrosu (3 sütun, gerçek fotoğraflarla); altta 20 bekleyen aday (5 sütun, ad-soyad baş harfleri). İki düzeni yan yana görmek için.
+      <strong>⚠️ Yerel önizleme.</strong> Bu sayfa yayında değil. Aşağıdaki başlıklar ve içerik, onay verdiğinde canlı <code>yanimdakiler.html</code> sayfasında nasıl görüneceğinin önizlemesidir.
     </div>
 
-    <h2>A Kadrosu · Adıyla Destek Verenler (11)</h2>
-    <p style="color:#666;font-size:0.9rem;"><em>Soyada göre alfabetik · Gerçek fotoğraflarla.</em></p>
+    <h1>Yanımdakiler</h1>
+    <p>Kampanyamıza adıyla, profiliyle destek olan vatandaşlar. Bu yolda yalnız değiliz; bilim, hukuk, sanat ve sivil toplumdan birçok isim bu hareketin yüzü oluyor.</p>
+
+    <h2>Birlikte Yola Çıktıklarım</h2>
+    <p class="yanimdaki-siralama"><em>Soyada göre alfabetik sıralı.</em></p>
 
     <div class="ana-grid">
 
       <div class="ana-card">
         <img src="assets/img/yanimdaki-kursad-albayraktaroglu.jpg" alt="Kürşad Albayraktaroğlu">
         <h3>Kürşad Albayraktaroğlu (Dr.)</h3>
-        <p class="rol">Mikroişlemci Tasarım Mühendisi · Intel</p>
+        <p class="rol">Mikroişlemci Tasarım Mühendisi · Intel (NEX, Network &amp; Edge Group)</p>
         <p class="yer">Austin, Teksas, ABD</p>
-        <p class="aciklama">Mikroişlemci ve SoC ön-uç sayısal tasarımı, RTL doğrulama, donanım güvenliği.</p>
+        <p class="egitim">🎓 Lisans: Bilkent Üniversitesi, Elektrik-Elektronik Mühendisliği · Yüksek Lisans ve Doktora: Maryland Üniversitesi, College Park</p>
+        <p class="aciklama">Mikroişlemci ve sistem yongası (SoC) ön-uç sayısal tasarımı üzerine çalışan donanım mühendisi; RTL tasarımı, doğrulama ve donanım güvenliği vurgulu bilgisayar mimarisi alanlarında deneyim sahibi.</p>
         <p class="baglanti"><a href="https://www.linkedin.com/in/kursad-albayraktaroglu-4b019/" target="_blank">LinkedIn →</a></p>
       </div>
 
       <div class="ana-card">
         <img src="assets/img/yanimdaki-nart-bedin-atalay.jpg" alt="Nart Bedin Atalay">
         <h3>Nart Bedin Atalay (Prof. Dr.)</h3>
-        <p class="rol">Öğretim Üyesi · TOBB ETÜ Psikoloji</p>
+        <p class="rol">Öğretim Üyesi · TOBB ETÜ, Psikoloji Bölümü</p>
         <p class="yer">Ankara, Türkiye</p>
-        <p class="aciklama">Dikkat, otomatiklik, bilişsel kontrol ve müzik tonalite algısı.</p>
+        <p class="egitim">🎓 Lisans: Hacettepe Üniversitesi, Müzikoloji · Yüksek Lisans ve Doktora: ODTÜ, Bilişsel Bilim · Konuk Doktora Araştırmacısı: Jyväskylä Üniversitesi (Finlandiya), Müzik Algısı ve Bilişi</p>
+        <p class="aciklama">Dikkat, otomatiklik, bilişsel kontrol ve müzik tonalite algısı üzerine çalışan akademisyen.</p>
         <p class="baglanti"><a href="https://www.linkedin.com/in/nart-bedin-atalay-47748346/" target="_blank">LinkedIn →</a></p>
       </div>
 
       <div class="ana-card">
         <img src="assets/img/yanimdaki-cemil-azizoglu.jpg" alt="Cemil Azizoğlu">
         <h3>Cemil Azizoğlu (Dr.)</h3>
-        <p class="rol">Kıdemli Mühendis · AMD</p>
+        <p class="rol">Kıdemli Mühendis (Principal Member of Technical Staff) · AMD</p>
         <p class="yer">San Antonio, ABD</p>
-        <p class="aciklama">GPU firmware ve sistem yazılımı; mikrokod ve grafik işlemci mimarisi.</p>
+        <p class="egitim">🎓 Lisans: ODTÜ, Bilgisayar Mühendisliği · Yüksek Lisans: University of North Texas · Doktora: UC Santa Barbara</p>
+        <p class="aciklama">AMD'de GPU firmware ve sistem yazılımı üzerine çalışan kıdemli mühendis. Donanıma yakın yazılım, mikrokod ve grafik işlemci mimarisi alanlarında uzun yıllık deneyime sahip.</p>
         <p class="baglanti"><a href="https://www.linkedin.com/in/cemil/" target="_blank">LinkedIn →</a></p>
       </div>
 
@@ -206,52 +217,58 @@
         <h3>Zafer Can Bilgin</h3>
         <p class="rol">Yönetim Kurulu Başkanı · Türk Teknik Taahhüt A.Ş.</p>
         <p class="yer">Ankara, Türkiye</p>
-        <p class="aciklama">Mühendis kökenli iş insanı; 30 yılı aşkın sektör deneyimi.</p>
+        <p class="egitim">🎓 Lisans: İstanbul Teknik Üniversitesi, İnşaat Mühendisliği</p>
+        <p class="aciklama">Mühendis kökenli iş insanı. Türk Teknik Taahhüt A.Ş. başta olmak üzere mühendislik, elektrik ve sanayi alanında birden fazla şirkette yönetim ve sahiplik üstleniyor. 30 yılı aşkın sektör deneyimi.</p>
         <p class="baglanti"><a href="https://www.linkedin.com/in/zafer-can-bilgin-64255350/" target="_blank">LinkedIn →</a></p>
       </div>
 
       <div class="ana-card">
         <img src="assets/img/yanimdaki-ali-bozbey.jpg" alt="Ali Bozbey">
         <h3>Ali Bozbey (Prof. Dr.)</h3>
-        <p class="rol">Öğretim Üyesi · TOBB ETÜ EE · Phi0 Quantum</p>
+        <p class="rol">Öğretim Üyesi · TOBB ETÜ, Elektrik-Elektronik Mühendisliği · Phi0 Quantum Technologies</p>
         <p class="yer">Ankara, Türkiye</p>
-        <p class="aciklama">Süperiletken kuantum elektroniği; <strong>QuanT</strong> Türk kuantum bilgisayarı.</p>
+        <p class="egitim">🎓 Lisans, Yüksek Lisans ve Doktora: Bilkent Üniversitesi, Elektrik-Elektronik Mühendisliği · Doktora Sonrası: Nagoya Üniversitesi (Japonya), Kuantum Mühendisliği</p>
+        <p class="aciklama">Süperiletken kuantum elektroniği üzerine 2008'den bu yana TOBB ETÜ'de araştırma yürüten akademisyen; <strong>Türkiye'nin ilk yerli kuantum bilgisayarı QuanT</strong>'ın geliştirilmesinde başrol oynadı. Süperiletken entegre devre, Josephson dinamiği ve bolometre alanlarındaki çalışmaları 3.100'ü aşkın atıf aldı.</p>
         <p class="baglanti"><a href="https://www.linkedin.com/in/alibozbey/" target="_blank">LinkedIn →</a></p>
       </div>
 
       <div class="ana-card">
         <img src="assets/img/yanimdaki-cagri-eryilmaz.jpg" alt="Çağrı Eryılmaz">
         <h3>Çağrı Eryılmaz</h3>
-        <p class="rol">Sistem ve SoC Mimarisi Mühendisi · Intel</p>
+        <p class="rol">Sistem ve SoC Mimarisi Mühendisi · Intel Corporation</p>
         <p class="yer">San Francisco, Kaliforniya, ABD</p>
-        <p class="aciklama">Heterojen mimariler, bellek sistemleri; 2 patent · 2018 Intel DRA.</p>
+        <p class="egitim">🎓 Lisans: ODTÜ, Elektrik-Elektronik Mühendisliği · Yüksek Lisans: Texas Üniversitesi, Austin · Konuk Araştırmacı: Barselona Süperbilgisayar Merkezi</p>
+        <p class="aciklama">Heterojen bilgisayar mimarileri, bellek sistemleri, hata-toleranslı hesaplama ve VLSI alanlarında çalışan donanım mühendisi; makine öğrenmesi donanımı ve bellek-içi hesaplama üzerine 2 patent sahibi. 2018 Intel Division Recognition Award.</p>
         <p class="baglanti"><a href="https://www.linkedin.com/in/cagriery/" target="_blank">LinkedIn →</a></p>
       </div>
 
       <div class="ana-card">
         <img src="assets/img/yanimdaki-tolga-girici.jpg" alt="Tolga Girici">
         <h3>Tolga Girici (Prof. Dr.)</h3>
-        <p class="rol">Öğretim Üyesi · Middlesex Üniversitesi</p>
+        <p class="rol">Öğretim Üyesi · Middlesex Üniversitesi (Londra)</p>
         <p class="yer">Londra, Birleşik Krallık</p>
-        <p class="aciklama">Telekomünikasyon, kablosuz haberleşme, ağ kaynak tahsisi.</p>
+        <p class="egitim">🎓 Lisans: ODTÜ, Elektrik-Elektronik Mühendisliği · Doktora: Maryland Üniversitesi, College Park</p>
+        <p class="aciklama">Telekomünikasyon ve kablosuz haberleşme üzerine çalışan akademisyen; ağ kaynak tahsisi ve mobil ağlar alanlarındaki çalışmalarıyla tanınıyor. 2007-2024 arası TOBB ETÜ Elektrik-Elektronik Mühendisliği Bölümü'nde profesör olarak görev yaptı; 2016-2024 arası bölüm başkanlığını yürüttü.</p>
         <p class="baglanti"><a href="https://www.linkedin.com/in/tgirici/" target="_blank">LinkedIn →</a></p>
       </div>
 
       <div class="ana-card">
         <img src="assets/img/yanimdaki-meltem-ozsoy.jpg" alt="Meltem Özsoy">
         <h3>Meltem Özsoy (Dr.)</h3>
-        <p class="rol">Kıdemli Araştırmacı · Intuitive (Da Vinci)</p>
+        <p class="rol">Kıdemli Araştırmacı · Intuitive (Da Vinci cerrahi robot şirketi)</p>
         <p class="yer">Kaliforniya, ABD</p>
-        <p class="aciklama">Bilgisayar mimarisi, donanım güvenliği; Iso-X, dallanma denetimi.</p>
+        <p class="egitim">🎓 Lisans: TOBB ETÜ, Bilgisayar Mühendisliği · Doktora: Binghamton Üniversitesi (SUNY), Bilgisayar Bilimi</p>
+        <p class="aciklama">Bilgisayar mimarisi ve donanım güvenliği üzerine çalışan araştırmacı; donanım tabanlı izolasyon (Iso-X), zararlı yazılım tespiti ve dallanma denetimi (branch regulation) gibi çalışmalarıyla tanınıyor. Intuitive'den önce Intel'de araştırmacı olarak görev yaptı.</p>
         <p class="baglanti"><a href="https://www.linkedin.com/in/meltemozsoy/" target="_blank">LinkedIn →</a></p>
       </div>
 
       <div class="ana-card">
         <img src="assets/img/yanimdaki-mehmet-sankir.jpg" alt="Mehmet Sankır">
         <h3>Mehmet Sankır (Prof. Dr.)</h3>
-        <p class="rol">Öğretim Üyesi · TOBB ETÜ Malzeme &amp; Nano</p>
+        <p class="rol">Öğretim Üyesi · TOBB ETÜ, Malzeme Bilimi ve Nanoteknoloji Mühendisliği Bölümü</p>
         <p class="yer">Ankara, Türkiye</p>
-        <p class="aciklama">Yeşil hidrojen, yakıt hücreleri; 100+ yayın. Yeşil Hidrojen Derneği Başkanı.</p>
+        <p class="egitim">🎓 Lisans: ODTÜ, Kimya · Doktora: Virginia Tech, Kimya Mühendisliği</p>
+        <p class="aciklama">Enerji ve su uygulamaları için işlevsel membran ve nanoyapı geliştirme üzerine çalışan akademisyen; yakıt hücreleri, fotoelektrokimyasal hidrojen üretimi ve süperkapasitörler alanlarındaki 100'ü aşkın yayınıyla tanınıyor. Yeşil Hidrojen Derneği Başkanı; WILEY-Scrivener kitap serisi editörü.</p>
         <p class="baglanti"><a href="https://www.linkedin.com/in/mehmet-sankir-4b993684/" target="_blank">LinkedIn →</a></p>
       </div>
 
@@ -260,16 +277,18 @@
         <h3>Serkan Ünal (Doç. Dr.)</h3>
         <p class="rol">Öğretim Üyesi · Ufuk Üniversitesi</p>
         <p class="yer">Ankara, Türkiye</p>
-        <p class="aciklama">Kurumsal yönetim, davranışsal finans; 15+ yıl Borsa İstanbul deneyimi.</p>
+        <p class="egitim">🎓 Lisans: Boğaziçi Üniversitesi, İnşaat Mühendisliği · Yüksek Lisans: TOBB ETÜ (MBA) · Doktora: Ufuk Üniversitesi</p>
+        <p class="aciklama">Kurumsal yönetim, davranışsal finans, hisse senedi piyasaları ve portföy yönetimi üzerine çalışan akademisyen. 2022'de doçentlik unvanını alan Ünal, 15 yılı aşkın Borsa İstanbul deneyimiyle uzun vadeli değer yatırımı analizleri kaleme alır; YouTube üzerinden finansal eğitim içerikleri üretir.</p>
         <p class="baglanti"><a href="https://www.linkedin.com/in/serkan-unal-b543414/" target="_blank">LinkedIn →</a></p>
       </div>
 
       <div class="ana-card">
         <img src="assets/img/yanimdaki-giray-yaglikci.jpg" alt="Abdullah Giray Yağlıkçı">
         <h3>Abdullah Giray Yağlıkçı (Dr.)</h3>
-        <p class="rol">Öğretim Üyesi · CISPA Helmholtz</p>
+        <p class="rol">Öğretim Üyesi · CISPA Helmholtz Bilgi Güvenliği Merkezi</p>
         <p class="yer">Saarbrücken, Almanya</p>
-        <p class="aciklama">Bilgisayar mimarisi, donanım güvenliği; DRAM/RowHammer.</p>
+        <p class="egitim">🎓 Lisans: TOBB ETÜ, Elektrik-Elektronik Mühendisliği · Doktora: ETH Zürich</p>
+        <p class="aciklama">Bilgisayar mimarisi ve donanım güvenliği üzerine çalışan araştırmacı. DRAM güvenliği ve RowHammer alanlarındaki katkılarıyla tanınıyor.</p>
         <p class="baglanti"><a href="https://www.linkedin.com/in/agyaglikci/" target="_blank">LinkedIn →</a></p>
       </div>
 
@@ -277,8 +296,8 @@
 
     <div class="section-divider"></div>
 
-    <h2>Bekleyen Adaylar (23)</h2>
-    <p style="color:#666;font-size:0.9rem;"><em>Soyada göre alfabetik · 6 sütun · Fotoğraf yerine ad-soyad baş harfleri. LinkedIn'i olan, ana takımda yer almayan tüm "Evet" diyenler.</em></p>
+    <h2>Adıyla Destek Veren Vatandaşlar</h2>
+    <p class="yanimdaki-siralama"><em>Soyada göre alfabetik sıralı.</em></p>
 
     <div class="aday-grid">
 
@@ -391,6 +410,15 @@
       </div>
 
       <div class="aday-card">
+        <div class="aday-foto">HE</div>
+        <h4>Hüseyin Emre Erdem</h4>
+        <div class="aday-meslek">Mühendis · ALES 2011 Türkiye 1.'si</div>
+        <div class="aday-kurum">—</div>
+        <div class="aday-sehir">Calgary, Kanada · 37</div>
+        <div class="aday-li"><a href="https://www.linkedin.com/in/h-emre-erdem-9b8044187" target="_blank">LinkedIn →</a></div>
+      </div>
+
+      <div class="aday-card">
         <div class="aday-foto">ŞE</div>
         <h4>Şerefcan Eryavuz</h4>
         <div class="aday-meslek">Bilgisayar Mühendisi</div>
@@ -463,6 +491,15 @@
       </div>
 
       <div class="aday-card">
+        <div class="aday-foto">TT</div>
+        <h4>Toygar Tanrıverdi</h4>
+        <div class="aday-meslek">Bilgisayar Mühendisliği Öğrencisi · AlkanLab</div>
+        <div class="aday-kurum">Hacettepe Üniversitesi</div>
+        <div class="aday-sehir">Ankara · 23</div>
+        <div class="aday-li"><a href="https://www.linkedin.com/in/toygar-tanriverdi" target="_blank">LinkedIn →</a></div>
+      </div>
+
+      <div class="aday-card">
         <div class="aday-foto">HT</div>
         <h4>Hüseyin Taşkan</h4>
         <div class="aday-meslek">Bilgisayar Bilimci Öğrencisi</div>
@@ -487,6 +524,15 @@
         <div class="aday-kurum">Sabancı Üniversitesi</div>
         <div class="aday-sehir">İstanbul · 23</div>
         <div class="aday-li"><a href="https://www.linkedin.com/in/selimturkmends/" target="_blank">LinkedIn →</a></div>
+      </div>
+
+      <div class="aday-card">
+        <div class="aday-foto">AÜ</div>
+        <h4>Anıl Üzengi</h4>
+        <div class="aday-meslek">Kurucu Ortak · Edge AI · Bilgisayarlı Görü</div>
+        <div class="aday-kurum">Stroma (Red Dot · iF Design)</div>
+        <div class="aday-sehir">Toronto, Kanada · 37</div>
+        <div class="aday-li"><a href="https://www.linkedin.com/in/aniluzengi/" target="_blank">LinkedIn →</a></div>
       </div>
 
     </div>
