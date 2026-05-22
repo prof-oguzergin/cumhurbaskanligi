@@ -194,6 +194,38 @@
     @media (max-width: 600px) {
       .aday-grid { grid-template-columns: repeat(2, 1fr); }
     }
+
+    /* Adıyla Destek Veren Diğer (LinkedIn'siz, kompakt mini kart) */
+    .aday-mini-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 0.6rem;
+      margin: 1rem 0 2rem;
+    }
+    .aday-mini-card {
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+      padding: 0.5rem 0.75rem;
+      background: #f7f8fa;
+      border: 1px solid #e3e6eb;
+      border-radius: 8px;
+    }
+    .aday-mini-foto {
+      width: 32px; height: 32px;
+      border-radius: 50%;
+      background: #0f2037;
+      color: #fff;
+      font-size: 0.75rem;
+      font-weight: 600;
+      display: flex; align-items: center; justify-content: center;
+      flex-shrink: 0;
+    }
+    .aday-mini-text { min-width: 0; flex: 1; }
+    .aday-mini-isim { font-weight: 600; font-size: 0.88rem; color: #0f2037; line-height: 1.2; }
+    .aday-mini-detay { color: #5b6371; font-size: 0.75rem; line-height: 1.3; margin-top: 2px; }
+    @media (max-width: 800px) { .aday-mini-grid { grid-template-columns: repeat(2, 1fr); } }
+    @media (max-width: 500px) { .aday-mini-grid { grid-template-columns: 1fr; } }
   </style>
 </head>
 <body class="page">
@@ -717,6 +749,39 @@
         <div class="aday-li"><a href="https://www.linkedin.com/in/aniluzengi/" target="_blank">LinkedIn →</a></div>
       </div>
 
+    </div>
+
+    <h2>Adıyla Destek Veren Diğer Vatandaşlar</h2>
+    <p>LinkedIn profili paylaşmamış ama adıyla destek bildiren vatandaşlarımız.</p>
+    <div class="aday-mini-grid">
+      <div class="aday-mini-card">
+        <div class="aday-mini-foto">EC</div>
+        <div class="aday-mini-text">
+          <div class="aday-mini-isim">Erkan Canlı</div>
+          <div class="aday-mini-detay">Elektronik · Canlı Makina · Muğla · 47</div>
+        </div>
+      </div>
+      <div class="aday-mini-card">
+        <div class="aday-mini-foto">DK</div>
+        <div class="aday-mini-text">
+          <div class="aday-mini-isim">Derya Kıbrıslı</div>
+          <div class="aday-mini-detay">İnşaat Mühendisi · Serbest · Antalya</div>
+        </div>
+      </div>
+      <div class="aday-mini-card">
+        <div class="aday-mini-foto">RK</div>
+        <div class="aday-mini-text">
+          <div class="aday-mini-isim">Rıza Keskan</div>
+          <div class="aday-mini-detay">Elektronik Mühendisi · Emekli · Ankara</div>
+        </div>
+      </div>
+      <div class="aday-mini-card">
+        <div class="aday-mini-foto">ET</div>
+        <div class="aday-mini-text">
+          <div class="aday-mini-isim">Ertan Topçu</div>
+          <div class="aday-mini-detay">Tekstil işçisi · Tekirdağ · 46</div>
+        </div>
+      </div>
     </div>
 
   </main>

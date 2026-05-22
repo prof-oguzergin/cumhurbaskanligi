@@ -1726,3 +1726,56 @@ body.page .dogrudan-iletisim h2 {
 @media (max-width: 600px) {
   .aday-grid { grid-template-columns: repeat(2, 1fr); }
 }
+
+/* --- Adıyla Destek Veren Diğer Vatandaşlar (LinkedIn'siz, kompakt mini kart) --- */
+.aday-mini-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0.6rem;
+  margin: 1rem 0 2rem;
+}
+.aday-mini-card {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  padding: 0.5rem 0.75rem;
+  background: #f7f8fa;
+  border: 1px solid #e3e6eb;
+  border-radius: 8px;
+}
+.aday-mini-foto {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: #0f2037;
+  color: #fff;
+  font-size: 0.75rem;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  letter-spacing: 0.5px;
+}
+.aday-mini-text {
+  min-width: 0;
+  flex: 1;
+}
+.aday-mini-isim {
+  font-weight: 600;
+  font-size: 0.88rem;
+  color: #0f2037;
+  line-height: 1.2;
+}
+.aday-mini-detay {
+  color: #5b6371;
+  font-size: 0.75rem;
+  line-height: 1.3;
+  margin-top: 2px;
+}
+@media (max-width: 800px) {
+  .aday-mini-grid { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 500px) {
+  .aday-mini-grid { grid-template-columns: 1fr; }
+}
