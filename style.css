@@ -1779,3 +1779,87 @@ body.page .dogrudan-iletisim h2 {
 @media (max-width: 500px) {
   .aday-mini-grid { grid-template-columns: 1fr; }
 }
+
+/* === LinkedIn ikon corner (Birlikte Yola + Adıyla Destek mini) === */
+.yanimdaki-card { position: relative; }
+.yanimdaki-card h3 { padding-right: 30px; }
+.yanimdaki-card .yanimdaki-baglanti { display: none; }
+.li-icon-corner {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  width: 22px;
+  height: 22px;
+  background: #0a66c2;
+  color: white !important;
+  border-radius: 4px;
+  font-weight: 700;
+  font-size: 0.75rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none !important;
+  font-family: Arial, sans-serif;
+  letter-spacing: -0.5px;
+}
+.li-icon-corner:hover { background: #084d97; }
+
+/* Adıyla Destek Veren — mini kart yatay (LinkedIn ikon sağ üst) */
+.aday-mini-grid {
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0.5rem;
+}
+.aday-mini-card {
+  align-items: center;
+  gap: 0.55rem;
+  padding: 0.55rem 0.7rem;
+  min-height: 62px;
+  box-sizing: border-box;
+}
+.aday-mini-foto {
+  width: 38px;
+  height: 38px;
+  font-size: 0.78rem;
+}
+.aday-mini-text {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+.aday-mini-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.4rem;
+}
+.aday-mini-isim {
+  font-size: 0.85rem;
+  flex: 1;
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.aday-mini-detay {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+.aday-mini-li-icon {
+  flex-shrink: 0;
+  width: 18px;
+  height: 18px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 3px;
+  background: #0a66c2;
+  color: white !important;
+  font-size: 0.7rem;
+  font-weight: 700;
+  text-decoration: none !important;
+  font-family: Arial, sans-serif;
+  letter-spacing: -0.5px;
+}
+.aday-mini-li-icon:hover { background: #084d97; }
