@@ -1,0 +1,9 @@
+User-agent: *
+Allow: /
+
+# Internal/preview pages
+Disallow: /yanimdakiler-aday-onizleme.html
+Disallow: /yanimdakiler-aday-onizleme-kompakt.html
+Disallow: /assets/maps/
+
+Sitemap: https://oguzergin.net/sitemap.xml
