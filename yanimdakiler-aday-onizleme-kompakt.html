@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Yanımdakiler · Önizleme</title>
-  <link rel="stylesheet" href="style.css?v=46">
+  <link rel="stylesheet" href="style.css?v=40">
   <style>
     .preview-banner {
       background: #fff4cc;
@@ -222,12 +222,207 @@
       flex-shrink: 0;
     }
     .aday-mini-text { min-width: 0; flex: 1; }
-    .aday-mini-row { display: flex; align-items: center; gap: 0.35rem; }
-    .aday-mini-isim { font-weight: 600; font-size: 0.88rem; color: #0f2037; line-height: 1.2; flex: 1; min-width: 0; }
-    .aday-mini-li-icon { display: inline-flex; align-items: center; justify-content: center; width: 18px; height: 18px; background: #0a66c2; color: #fff; font-size: 0.62rem; font-weight: 700; border-radius: 3px; text-decoration: none; flex-shrink: 0; }
+    .aday-mini-isim { font-weight: 600; font-size: 0.88rem; color: #0f2037; line-height: 1.2; }
     .aday-mini-detay { color: #5b6371; font-size: 0.75rem; line-height: 1.3; margin-top: 2px; }
     @media (max-width: 800px) { .aday-mini-grid { grid-template-columns: repeat(2, 1fr); } }
     @media (max-width: 500px) { .aday-mini-grid { grid-template-columns: 1fr; } }
+
+    /* LinkedIn link mini kartlarda */
+    .aday-mini-card { flex-wrap: nowrap; }
+    .aday-mini-text { flex: 1; min-width: 0; }
+    .aday-mini-li {
+      flex-shrink: 0;
+      margin-left: 0.4rem;
+      font-size: 0.7rem;
+    }
+    .aday-mini-li a {
+      color: #d4a017;
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+
+    /* Kompakt versiyon — LinkedIn ismin yanında, sabit yükseklik */
+    .aday-mini-grid {
+      grid-template-columns: repeat(3, 1fr);
+      gap: 0.5rem;
+    }
+    .aday-mini-card {
+      display: flex;
+      align-items: center;
+      gap: 0.55rem;
+      padding: 0.55rem 0.7rem;
+      background: #f7f8fa;
+      border: 1px solid #e3e6eb;
+      border-radius: 8px;
+      min-height: 62px;
+      box-sizing: border-box;
+    }
+    .aday-mini-foto {
+      width: 38px;
+      height: 38px;
+      border-radius: 50%;
+      background: #0f2037;
+      color: #fff;
+      font-size: 0.78rem;
+      font-weight: 600;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      letter-spacing: 0.5px;
+    }
+    .aday-mini-text {
+      flex: 1;
+      min-width: 0;
+      display: flex;
+      flex-direction: column;
+      gap: 2px;
+    }
+    .aday-mini-row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 0.4rem;
+    }
+    .aday-mini-isim {
+      font-weight: 600;
+      font-size: 0.85rem;
+      color: #0f2037;
+      line-height: 1.2;
+      flex: 1;
+      min-width: 0;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+    .aday-mini-detay {
+      color: #5b6371;
+      font-size: 0.73rem;
+      line-height: 1.3;
+      overflow: hidden;
+      display: -webkit-box;
+      -webkit-line-clamp: 2;
+      -webkit-box-orient: vertical;
+    }
+    .aday-mini-li-icon {
+      flex-shrink: 0;
+      width: 18px;
+      height: 18px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 3px;
+      background: #0a66c2;
+      color: white !important;
+      font-size: 0.7rem;
+      font-weight: 700;
+      text-decoration: none !important;
+      font-family: Arial, sans-serif;
+    }
+    .aday-mini-li-icon:hover { background: #084d97; }
+    @media (max-width: 800px) {
+      .aday-mini-grid { grid-template-columns: repeat(2, 1fr); }
+    }
+    @media (max-width: 500px) {
+      .aday-mini-grid { grid-template-columns: 1fr; }
+    }
+
+
+    /* Üst bölüm: foto sol, isim/rol/yer sağ */
+    .ana-card-header {
+      display: flex;
+      align-items: flex-start;
+      gap: 0.9rem;
+    }
+    .ana-card img {
+      width: 80px !important;
+      height: 80px !important;
+      border-radius: 50% !important;
+      margin: 0 !important;
+      flex-shrink: 0 !important;
+    }
+    .ana-card-meta {
+      flex: 1;
+      min-width: 0;
+      display: flex;
+      flex-direction: column;
+      gap: 0.25rem;
+      padding-right: 28px; /* LinkedIn icon yeri */
+    }
+    .ana-card h3 {
+      margin: 0 !important;
+      font-size: 1rem !important;
+      line-height: 1.25 !important;
+      padding: 0 !important;
+      border: none !important;
+    }
+    .ana-card .rol {
+      font-size: 0.82rem !important;
+      margin: 0 !important;
+      line-height: 1.35 !important;
+      color: #444 !important;
+    }
+    .ana-card .yer {
+      font-size: 0.78rem !important;
+      margin: 0 !important;
+      color: #888 !important;
+    }
+    /* Alt bölüm: açıklama + eğitim */
+    .ana-card-body {
+      border-top: 1px solid rgba(0,0,0,0.06);
+      padding-top: 0.7rem;
+      display: flex;
+      flex-direction: column;
+      gap: 0.45rem;
+    }
+    .ana-card .egitim {
+      font-size: 0.78rem !important;
+      margin: 0 !important;
+      line-height: 1.4 !important;
+      color: #555 !important;
+    }
+    .ana-card .aciklama {
+      font-size: 0.82rem !important;
+      margin: 0 !important;
+      line-height: 1.45 !important;
+      color: #333 !important;
+    }
+    .ana-card .li-icon-corner {
+      position: absolute !important;
+      top: 1rem !important;
+      right: 1rem !important;
+    }
+    @media (max-width: 700px) {
+      .ana-grid { grid-template-columns: 1fr !important; }
+    }
+
+
+
+    /* Birlikte Yola — LinkedIn ikon sağ üst köşede */
+    .ana-card { position: relative !important; }
+    .ana-card h3 { padding-right: 30px !important; }
+    .ana-card .baglanti { display: none !important; }
+    .ana-card .li-icon-corner {
+      position: absolute;
+      top: 1rem;
+      right: 1rem;
+      width: 22px;
+      height: 22px;
+      background: #0a66c2;
+      color: white !important;
+      border-radius: 4px;
+      font-weight: 700;
+      font-size: 0.75rem;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      text-decoration: none !important;
+      font-family: Arial, sans-serif;
+      letter-spacing: -0.5px;
+    }
+    .ana-card .li-icon-corner:hover { background: #084d97; }
+
   </style>
 </head>
 <body class="page">
@@ -246,6 +441,7 @@
 
       <div class="ana-card">
         <a class="li-icon-corner" href="https://www.linkedin.com/in/kursad-albayraktaroglu-4b019/" target="_blank" rel="noopener" title="LinkedIn">in</a>
+
         <img src="assets/img/yanimdaki-kursad-albayraktaroglu.jpg" alt="Kürşad Albayraktaroğlu">
         <h3>Kürşad Albayraktaroğlu (Dr.)</h3>
         <p class="rol">Mikroişlemci Tasarım Mühendisi · Intel (NEX, Network &amp; Edge Group)</p>
@@ -257,6 +453,7 @@
 
       <div class="ana-card">
         <a class="li-icon-corner" href="https://www.linkedin.com/in/nart-bedin-atalay-47748346/" target="_blank" rel="noopener" title="LinkedIn">in</a>
+
         <img src="assets/img/yanimdaki-nart-bedin-atalay.jpg" alt="Nart Bedin Atalay">
         <h3>Nart Bedin Atalay (Prof. Dr.)</h3>
         <p class="rol">Öğretim Üyesi · TOBB ETÜ, Psikoloji Bölümü</p>
@@ -268,6 +465,7 @@
 
       <div class="ana-card">
         <a class="li-icon-corner" href="https://www.linkedin.com/in/cemil/" target="_blank" rel="noopener" title="LinkedIn">in</a>
+
         <img src="assets/img/yanimdaki-cemil-azizoglu.jpg" alt="Cemil Azizoğlu">
         <h3>Cemil Azizoğlu (Dr.)</h3>
         <p class="rol">Kıdemli Mühendis (Principal Member of Technical Staff) · AMD</p>
@@ -279,6 +477,7 @@
 
       <div class="ana-card">
         <a class="li-icon-corner" href="https://www.linkedin.com/in/zafer-can-bilgin-64255350/" target="_blank" rel="noopener" title="LinkedIn">in</a>
+
         <img src="assets/img/yanimdaki-zafer-can-bilgin.jpg" alt="Zafer Can Bilgin" style="object-position: 65% 50%;">
         <h3>Zafer Can Bilgin</h3>
         <p class="rol">Yönetim Kurulu Başkanı · Türk Teknik Taahhüt A.Ş.</p>
@@ -290,6 +489,7 @@
 
       <div class="ana-card">
         <a class="li-icon-corner" href="https://www.linkedin.com/in/alibozbey/" target="_blank" rel="noopener" title="LinkedIn">in</a>
+
         <img src="assets/img/yanimdaki-ali-bozbey.jpg" alt="Ali Bozbey">
         <h3>Ali Bozbey (Prof. Dr.)</h3>
         <p class="rol">Öğretim Üyesi · TOBB ETÜ, Elektrik-Elektronik Mühendisliği · Phi0 Quantum Technologies</p>
@@ -301,6 +501,7 @@
 
       <div class="ana-card">
         <a class="li-icon-corner" href="https://www.linkedin.com/in/hsme/" target="_blank" rel="noopener" title="LinkedIn">in</a>
+
         <img src="assets/img/yanimdaki-melihcan-erol.jpg" alt="Melihcan Erol">
         <h3>Melihcan Erol (Dr.)</h3>
         <p class="rol">Yapay Zekâ Araştırmacısı · Meta</p>
@@ -312,6 +513,7 @@
 
       <div class="ana-card">
         <a class="li-icon-corner" href="https://www.linkedin.com/in/cagriery/" target="_blank" rel="noopener" title="LinkedIn">in</a>
+
         <img src="assets/img/yanimdaki-cagri-eryilmaz.jpg" alt="Çağrı Eryılmaz">
         <h3>Çağrı Eryılmaz</h3>
         <p class="rol">Sistem ve SoC Mimarisi Mühendisi · Intel Corporation</p>
@@ -323,6 +525,7 @@
 
       <div class="ana-card">
         <a class="li-icon-corner" href="https://www.linkedin.com/in/tgirici/" target="_blank" rel="noopener" title="LinkedIn">in</a>
+
         <img src="assets/img/yanimdaki-tolga-girici.jpg" alt="Tolga Girici">
         <h3>Tolga Girici (Prof. Dr.)</h3>
         <p class="rol">Öğretim Üyesi · Middlesex Üniversitesi (Londra)</p>
@@ -334,6 +537,7 @@
 
       <div class="ana-card">
         <a class="li-icon-corner" href="https://www.linkedin.com/in/meltemozsoy/" target="_blank" rel="noopener" title="LinkedIn">in</a>
+
         <img src="assets/img/yanimdaki-meltem-ozsoy.jpg" alt="Meltem Özsoy">
         <h3>Meltem Özsoy (Dr.)</h3>
         <p class="rol">Kıdemli Araştırmacı · Intuitive (Da Vinci cerrahi robot şirketi)</p>
@@ -345,6 +549,7 @@
 
       <div class="ana-card">
         <a class="li-icon-corner" href="https://www.linkedin.com/in/mehmet-sankir-4b993684/" target="_blank" rel="noopener" title="LinkedIn">in</a>
+
         <img src="assets/img/yanimdaki-mehmet-sankir.jpg" alt="Mehmet Sankır">
         <h3>Mehmet Sankır (Prof. Dr.)</h3>
         <p class="rol">Öğretim Üyesi · TOBB ETÜ, Malzeme Bilimi ve Nanoteknoloji Mühendisliği Bölümü</p>
@@ -356,6 +561,7 @@
 
       <div class="ana-card">
         <a class="li-icon-corner" href="https://www.linkedin.com/in/serkan-unal-b543414/" target="_blank" rel="noopener" title="LinkedIn">in</a>
+
         <img src="assets/img/yanimdaki-serkan-unal.jpg" alt="Serkan Ünal">
         <h3>Serkan Ünal (Doç. Dr.)</h3>
         <p class="rol">Öğretim Üyesi · Ufuk Üniversitesi</p>
@@ -367,6 +573,7 @@
 
       <div class="ana-card">
         <a class="li-icon-corner" href="https://www.linkedin.com/in/agyaglikci/" target="_blank" rel="noopener" title="LinkedIn">in</a>
+
         <img src="assets/img/yanimdaki-giray-yaglikci.jpg" alt="Abdullah Giray Yağlıkçı">
         <h3>Abdullah Giray Yağlıkçı (Dr.)</h3>
         <p class="rol">Öğretim Üyesi · CISPA Helmholtz Bilgi Güvenliği Merkezi</p>
@@ -384,17 +591,6 @@
     <p class="yanimdaki-siralama"><em>Soyada göre alfabetik sıralı.</em></p>
 
     <div class="aday-mini-grid">
-
-      <div class="aday-mini-card">
-        <div class="aday-mini-foto">AA</div>
-        <div class="aday-mini-text">
-          <div class="aday-mini-row">
-            <div class="aday-mini-isim">Ahmet Ağır (Dr.)</div>
-            <a class="aday-mini-li-icon" href="https://www.linkedin.com/in/ahmet-agir-350175a5/" target="_blank" rel="noopener" title="LinkedIn">in</a>
-          </div>
-          <div class="aday-mini-detay">Dr. Öğr. Üyesi · İstanbul Üniversitesi-Cerrahpaşa · İstanbul · 57</div>
-        </div>
-      </div>
 
       <div class="aday-mini-card">
         <div class="aday-mini-foto">HA</div>
@@ -518,17 +714,6 @@
       </div>
 
       <div class="aday-mini-card">
-        <div class="aday-mini-foto">TB</div>
-        <div class="aday-mini-text">
-          <div class="aday-mini-row">
-            <div class="aday-mini-isim">Tarık Bozğan</div>
-            <a class="aday-mini-li-icon" href="https://www.linkedin.com/in/tarikbozgan" target="_blank" rel="noopener" title="LinkedIn">in</a>
-          </div>
-          <div class="aday-mini-detay">Bilgisayar Müh. Araştırmacı · Manisa Celal Bayar Üni. · Manisa · 23</div>
-        </div>
-      </div>
-
-      <div class="aday-mini-card">
         <div class="aday-mini-foto">SC</div>
         <div class="aday-mini-text">
           <div class="aday-mini-row">
@@ -606,28 +791,6 @@
       </div>
 
       <div class="aday-mini-card">
-        <div class="aday-mini-foto">MD</div>
-        <div class="aday-mini-text">
-          <div class="aday-mini-row">
-            <div class="aday-mini-isim">Melis Dimen</div>
-            <a class="aday-mini-li-icon" href="https://www.linkedin.com/in/melis-dimen" target="_blank" rel="noopener" title="LinkedIn">in</a>
-          </div>
-          <div class="aday-mini-detay">Elektronik ve Haberleşme Müh. Öğrencisi · İzmir · 24</div>
-        </div>
-      </div>
-
-      <div class="aday-mini-card">
-        <div class="aday-mini-foto">ÖE</div>
-        <div class="aday-mini-text">
-          <div class="aday-mini-row">
-            <div class="aday-mini-isim">Özgenç Ebil (Prof. Dr.)</div>
-            <a class="aday-mini-li-icon" href="https://www.linkedin.com/in/ozgenc-ebil-572b343/" target="_blank" rel="noopener" title="LinkedIn">in</a>
-          </div>
-          <div class="aday-mini-detay">Öğretim Üyesi · İYTE, Kimya Mühendisliği · İzmir · 55</div>
-        </div>
-      </div>
-
-      <div class="aday-mini-card">
         <div class="aday-mini-foto">HE</div>
         <div class="aday-mini-text">
           <div class="aday-mini-row">
@@ -653,32 +816,10 @@
         <div class="aday-mini-foto">ŞE</div>
         <div class="aday-mini-text">
           <div class="aday-mini-row">
-            <div class="aday-mini-isim">Şevki Erkan</div>
-            <a class="aday-mini-li-icon" href="https://www.linkedin.com/in/%C5%9Fevki-erkan-7b747857/" target="_blank" rel="noopener" title="LinkedIn">in</a>
-          </div>
-          <div class="aday-mini-detay">Tersine Mühendislik Yazılım · ACME Teknoloji A.Ş. · İstanbul · 34</div>
-        </div>
-      </div>
-
-      <div class="aday-mini-card">
-        <div class="aday-mini-foto">ŞE</div>
-        <div class="aday-mini-text">
-          <div class="aday-mini-row">
             <div class="aday-mini-isim">Şerefcan Eryavuz</div>
             <a class="aday-mini-li-icon" href="https://www.linkedin.com/in/serefcaneryavuz" target="_blank" rel="noopener" title="LinkedIn">in</a>
           </div>
           <div class="aday-mini-detay">Bilgisayar Mühendisi · TUSAŞ · Ankara · 33</div>
-        </div>
-      </div>
-
-      <div class="aday-mini-card">
-        <div class="aday-mini-foto">ZG</div>
-        <div class="aday-mini-text">
-          <div class="aday-mini-row">
-            <div class="aday-mini-isim">Zafer Gezen</div>
-            <a class="aday-mini-li-icon" href="https://www.linkedin.com/in/zafer-gezen-58473817/" target="_blank" rel="noopener" title="LinkedIn">in</a>
-          </div>
-          <div class="aday-mini-detay">Yazılım Geliştirici · Kendi şirketi · İzmir · 46</div>
         </div>
       </div>
 
@@ -734,17 +875,6 @@
             <a class="aday-mini-li-icon" href="https://www.linkedin.com/in/orhankalayci/" target="_blank" rel="noopener" title="LinkedIn">in</a>
           </div>
           <div class="aday-mini-detay">Bilgisayar / Endüstri Mühendisi · Serbest · İstanbul · 57</div>
-        </div>
-      </div>
-
-      <div class="aday-mini-card">
-        <div class="aday-mini-foto">MK</div>
-        <div class="aday-mini-text">
-          <div class="aday-mini-row">
-            <div class="aday-mini-isim">Metehan Kaplan</div>
-            <a class="aday-mini-li-icon" href="https://www.linkedin.com/in/metehan-k-22bb80b3/" target="_blank" rel="noopener" title="LinkedIn">in</a>
-          </div>
-          <div class="aday-mini-detay">Makine Mühendisi · Gaziantep · 31</div>
         </div>
       </div>
 
@@ -833,39 +963,6 @@
             <a class="aday-mini-li-icon" href="https://www.linkedin.com/in/murat-özcan" target="_blank" rel="noopener" title="LinkedIn">in</a>
           </div>
           <div class="aday-mini-detay">Makine Mühendisi · Düzce · 42</div>
-        </div>
-      </div>
-
-      <div class="aday-mini-card">
-        <div class="aday-mini-foto">HÖ</div>
-        <div class="aday-mini-text">
-          <div class="aday-mini-row">
-            <div class="aday-mini-isim">Haktan Özçörekci</div>
-            <a class="aday-mini-li-icon" href="https://www.linkedin.com/in/haktan-%C3%B6-41501a1b5/" target="_blank" rel="noopener" title="LinkedIn">in</a>
-          </div>
-          <div class="aday-mini-detay">Elektronik ve Haberleşme Müh. Öğrencisi · İYTE · İzmir · 25</div>
-        </div>
-      </div>
-
-      <div class="aday-mini-card">
-        <div class="aday-mini-foto">MÖ</div>
-        <div class="aday-mini-text">
-          <div class="aday-mini-row">
-            <div class="aday-mini-isim">Mehmet Özdemir</div>
-            <a class="aday-mini-li-icon" href="https://www.linkedin.com/in/344mehmet/" target="_blank" rel="noopener" title="LinkedIn">in</a>
-          </div>
-          <div class="aday-mini-detay">Şoför · Auzef öğrencisi · İstanbul · 44</div>
-        </div>
-      </div>
-
-      <div class="aday-mini-card">
-        <div class="aday-mini-foto">CÖ</div>
-        <div class="aday-mini-text">
-          <div class="aday-mini-row">
-            <div class="aday-mini-isim">Cihan Özgür</div>
-            <a class="aday-mini-li-icon" href="https://www.linkedin.com/in/cihan-%C3%B6zg%C3%BCr-aa114153/" target="_blank" rel="noopener" title="LinkedIn">in</a>
-          </div>
-          <div class="aday-mini-detay">Oyun yazılımcısı · Kendi işim · İstanbul · 38</div>
         </div>
       </div>
 
@@ -968,17 +1065,6 @@
         </div>
       </div>
 
-      <div class="aday-mini-card">
-        <div class="aday-mini-foto">MY</div>
-        <div class="aday-mini-text">
-          <div class="aday-mini-row">
-            <div class="aday-mini-isim">Mehmet Murat Yılmaz</div>
-            <a class="aday-mini-li-icon" href="https://www.linkedin.com/in/mehmetmuratyilmaz/" target="_blank" rel="noopener" title="LinkedIn">in</a>
-          </div>
-          <div class="aday-mini-detay">Girişimci · Konya · 31</div>
-        </div>
-      </div>
-
     </div>
 
     <h2>Adıyla Destek Veren Diğer Vatandaşlar</h2>
@@ -987,35 +1073,45 @@
       <div class="aday-mini-card">
         <div class="aday-mini-foto">BC</div>
         <div class="aday-mini-text">
-          <div class="aday-mini-isim">Beyazıt Can</div>
+          <div class="aday-mini-row">
+            <div class="aday-mini-isim">Beyazıt Can</div>
+          </div>
           <div class="aday-mini-detay">Çiftçi · Sosyal Hizmet Öğr. · Tekirdağ · 29</div>
         </div>
       </div>
       <div class="aday-mini-card">
         <div class="aday-mini-foto">EC</div>
         <div class="aday-mini-text">
-          <div class="aday-mini-isim">Erkan Canlı</div>
+          <div class="aday-mini-row">
+            <div class="aday-mini-isim">Erkan Canlı</div>
+          </div>
           <div class="aday-mini-detay">Elektronik · Canlı Makina · Muğla · 47</div>
         </div>
       </div>
       <div class="aday-mini-card">
         <div class="aday-mini-foto">DK</div>
         <div class="aday-mini-text">
-          <div class="aday-mini-isim">Derya Kıbrıslı</div>
+          <div class="aday-mini-row">
+            <div class="aday-mini-isim">Derya Kıbrıslı</div>
+          </div>
           <div class="aday-mini-detay">İnşaat Mühendisi · Serbest · Antalya</div>
         </div>
       </div>
       <div class="aday-mini-card">
         <div class="aday-mini-foto">RK</div>
         <div class="aday-mini-text">
-          <div class="aday-mini-isim">Rıza Keskan</div>
+          <div class="aday-mini-row">
+            <div class="aday-mini-isim">Rıza Keskan</div>
+          </div>
           <div class="aday-mini-detay">Elektronik Mühendisi · Emekli · Ankara</div>
         </div>
       </div>
       <div class="aday-mini-card">
         <div class="aday-mini-foto">ET</div>
         <div class="aday-mini-text">
-          <div class="aday-mini-isim">Ertan Topçu</div>
+          <div class="aday-mini-row">
+            <div class="aday-mini-isim">Ertan Topçu</div>
+          </div>
           <div class="aday-mini-detay">Tekstil işçisi · Tekirdağ · 46</div>
         </div>
       </div>
