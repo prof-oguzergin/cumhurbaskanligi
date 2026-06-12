@@ -380,84 +380,76 @@ header.site nav a:hover { opacity: 1; text-decoration: none; }
   line-height: 1.35;
 }
 
-/* ===== YANIMDAKILER (destekci kartlari) ===== */
+/* ===== YANIMDAKILER (destekci kartlari) — YATAY KOMPAKT ===== */
 .yanimdaki-list {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
-  gap: 1.25rem;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
   margin: 2rem 0 1rem;
-  align-items: stretch;
 }
-.yanimdaki-list .yanimdaki-card {
-  flex-direction: column;
-  align-items: center;
-  gap: 0.85rem;
-  padding: 1.5rem 1.25rem 1.25rem;
-}
-.yanimdaki-list .yanimdaki-foto {
-  width: 92px;
-  height: 92px;
-}
-.yanimdaki-list .yanimdaki-info {
-  width: 100%;
-  text-align: left;
-}
-.yanimdaki-list .yanimdaki-info h3 {
-  text-align: center;
-}
-.yanimdaki-list .yanimdaki-rol,
-.yanimdaki-list .yanimdaki-yer {
-  text-align: center;
-}
+/* foto sol (float), metin foto+ikon altina sarar, sabit boy 180px */
 .yanimdaki-card {
-  display: flex;
-  gap: 1.5rem;
+  display: block;
+  height: 180px;
+  padding: 1.1rem 1.25rem;
   background: var(--c-bg-alt);
-  padding: 1.5rem 1.75rem;
   border-radius: 12px;
   border-left: 4px solid var(--c-primary-2);
-  align-items: flex-start;
+  position: relative;
+  overflow: hidden;
 }
 .yanimdaki-foto {
-  width: 96px;
-  height: 96px;
+  float: left;
+  width: 76px;
+  height: 76px;
   border-radius: 50%;
   object-fit: cover;
-  flex-shrink: 0;
-  border: 3px solid #ffffff;
-  box-shadow: 0 2px 8px rgba(15,32,55,0.08);
+  margin: 0 0.9rem 0.4rem 0;
+  border: 2px solid #ffffff;
+  box-shadow: 0 2px 6px rgba(15,32,55,0.1);
 }
-.yanimdaki-info { flex: 1; min-width: 0; }
+.yanimdaki-info { min-width: 0; }
 .yanimdaki-info h3 {
-  margin: 0 0 0.3rem !important;
-  font-size: 1.2rem;
+  margin: 0 0 2px !important;
+  font-size: 1.03rem;
+  color: var(--c-primary);
+  line-height: 1.25;
+  padding-right: 32px;
   border-bottom: none !important;
   padding-bottom: 0 !important;
 }
 .yanimdaki-rol {
-  margin: 0 0 0.2rem !important;
+  margin: 0 0 1px !important;
   font-weight: 600;
   color: var(--c-primary-2);
-  font-size: 0.95rem;
+  font-size: 0.84rem;
+  line-height: 1.35;
+  padding-right: 32px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 .yanimdaki-yer {
-  margin: 0 0 0.4rem !important;
-  font-size: 0.85rem;
-  color: var(--c-text-muted);
+  margin: 0 0 5px !important;
+  font-size: 0.76rem;
+  color: #999;
 }
 .yanimdaki-egitim {
-  margin: 0 0 0.75rem !important;
-  font-size: 0.88rem;
-  color: var(--c-text-muted);
+  margin: 0 0 5px !important;
+  font-size: 0.76rem;
+  color: #666;
+  line-height: 1.45;
 }
 .yanimdaki-aciklama {
-  margin: 0 0 0.75rem !important;
-  font-size: 0.95rem;
-  line-height: 1.55;
-}
-.yanimdaki-baglanti {
   margin: 0 !important;
-  font-size: 0.92rem;
+  font-size: 0.82rem;
+  color: #444;
+  line-height: 1.5;
+}
+.yanimdaki-baglanti { display: none !important; }
+@media (max-width: 760px) {
+  .yanimdaki-list { grid-template-columns: 1fr; }
+  .yanimdaki-card { height: auto; min-height: 170px; }
 }
 @media (max-width: 540px) {
   .yanimdaki-card { flex-direction: column; align-items: center; text-align: center; gap: 1rem; }
