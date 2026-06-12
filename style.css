@@ -846,6 +846,8 @@ body.page main {
   border-radius: 14px;
   box-shadow: 0 4px 24px rgba(15, 32, 55, 0.08);
 }
+/* Yanımdakiler kart galerisi için daha geniş (metin sayfaları 960px kalır) */
+body.page.yanimdakiler-genis main { max-width: 1120px; }
 /* page-iframe-bleed: container 960 kalir, iframe + disclaimer + placeholder
    container'in 3rem yan padding'ini asarak kenarlara dayanir (full-bleed) */
 body.page-iframe-bleed #aiChatWrapper,
