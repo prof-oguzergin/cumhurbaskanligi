@@ -1870,3 +1870,20 @@ body.page .dogrudan-iletisim h2 {
 .proje-serit-oge:hover{transform:translateY(-2px);border-color:#1a3a5f;box-shadow:0 6px 18px rgba(26,58,95,.10)}
 .proje-serit-oge strong{font-size:1rem;color:#1a3a5f}
 .proje-serit-oge span{font-size:.85rem;line-height:1.45;opacity:.75}
+
+/* --- proje serit gorselleri + belge seridi (17 Agu 2026) --- */
+.proje-serit-oge{padding:0;overflow:hidden}
+.serit-thumb{width:100%;height:96px;object-fit:cover;object-position:top center;display:block;border-bottom:1px solid #eef1f5;background:#f5f7fa}
+.proje-serit-oge strong{padding:.85rem 1rem 0}
+.proje-serit-oge span{padding:0 1rem 1rem}
+.belge-serit-sarmal{margin:2.25rem 0 1rem}
+.belge-serit-baslik{font-weight:700;font-size:1.05rem;margin:0 0 .2rem}
+.belge-serit-alt{font-size:.9rem;opacity:.75;margin:0 0 1rem;max-width:60ch}
+.belge-serit{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:.8rem}
+.belge-oge{display:flex;flex-direction:column;border:1px solid rgba(255,255,255,.22);border-radius:10px;overflow:hidden;text-decoration:none;color:inherit;background:rgba(255,255,255,.06);transition:transform .15s,box-shadow .15s}
+.belge-oge:hover{transform:translateY(-2px);box-shadow:0 8px 20px rgba(0,0,0,.18)}
+.belge-oge img{width:100%;height:112px;object-fit:cover;object-position:top center;display:block;background:#fff}
+.belge-bilgi{display:flex;flex-direction:column;gap:.15rem;padding:.6rem .7rem .7rem}
+.belge-bilgi strong{font-size:.85rem;line-height:1.3}
+.belge-bilgi span{font-size:.75rem;opacity:.7}
+@media(max-width:560px){.belge-oge img{height:96px}.serit-thumb{height:86px}}
