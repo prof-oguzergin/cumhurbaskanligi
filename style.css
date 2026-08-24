@@ -1861,3 +1861,12 @@ body.page .dogrudan-iletisim h2 {
   letter-spacing: -0.5px;
 }
 .aday-mini-li-icon:hover { background: #084d97; }
+
+/* --- ana sayfa dokunuslari (17 Agu 2026) --- */
+.hero-kimlik{margin:.35rem 0 0;font-size:.95rem;letter-spacing:.01em;opacity:.82;font-weight:400}
+@media(max-width:640px){.hero-kimlik{font-size:.85rem;line-height:1.5}}
+.proje-serit{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:.85rem;margin:1.75rem 0 .5rem}
+.proje-serit-oge{display:flex;flex-direction:column;gap:.3rem;padding:1rem 1.1rem;border:1px solid #dde1e8;border-radius:12px;background:#fff;text-decoration:none;color:inherit;transition:transform .15s,box-shadow .15s,border-color .15s}
+.proje-serit-oge:hover{transform:translateY(-2px);border-color:#1a3a5f;box-shadow:0 6px 18px rgba(26,58,95,.10)}
+.proje-serit-oge strong{font-size:1rem;color:#1a3a5f}
+.proje-serit-oge span{font-size:.85rem;line-height:1.45;opacity:.75}
