@@ -57,6 +57,9 @@
     .s-satir.s-beklemede { border-style: dashed; border-color: #d8c496; background: #fdfaf3; }
     .s-satir.s-beklemede .s-ad, .s-satir.s-beklemede .s-unvan { color: #7c8794; }
     .s-satir.s-sona { opacity: .6; }
+    /* kare kodla gelinen satir belli olsun */
+    .s-satir:target { border-color: #d4a017; box-shadow: 0 0 0 3px #fdf3e3;
+      scroll-margin-top: 90px; }
     @media (max-width: 560px) {
       .s-no { margin-left: 0; }
       .sema > ul > li > ul, .sema ul ul ul { padding-left: 1rem; margin-left: .5rem; }
@@ -98,17 +101,18 @@
         <h1>Yetkililer</h1>
         <p class="lead y-aciklama">Kampanya adına görev alan kişiler ve görevlendirme
           belgeleri. Size kampanya adına ulaşan biri varsa, elindeki belge numarasını
-          buradan doğrulayabilirsiniz.</p>
+          buradan doğrulayabilirsiniz. Belgedeki kare kodu okutursanız doğrudan
+          ilgili satıra gelirsiniz.</p>
 
         <div class="sema">
           <ul><li><div class="s-satir s-kok"><span class="s-ad">Prof. Dr. Oğuz Ergin</span><span class="s-unvan">Cumhurbaşkanlığına bağımsız adaylık çalışması</span></div>
 <ul>
-<li><div class="s-satir s-gecerli"><span class="s-ad">Şenol Gökner</span><span class="s-unvan">Örgütlenme Koordinatörü</span><span class="s-no">2026/G-001</span></div>
+<li><div class="s-satir s-gecerli" id="2026-G-001"><span class="s-ad">Şenol Gökner</span><span class="s-unvan">Örgütlenme Koordinatörü</span><span class="s-no">2026/G-001</span></div>
 <ul>
-<li><div class="s-satir s-gecerli"><span class="s-ad">Rıza Keskan</span><span class="s-unvan">Gönüllü Ağı Takım Yöneticisi</span><span class="s-no">2026/G-003</span></div></li>
+<li><div class="s-satir s-gecerli" id="2026-G-003"><span class="s-ad">Rıza Keskan</span><span class="s-unvan">Gönüllü Ağı Takım Yöneticisi</span><span class="s-no">2026/G-003</span></div></li>
 </ul>
 </li>
-<li><div class="s-satir s-gecerli"><span class="s-ad">Mehmet Arın Gülüm</span><span class="s-unvan">Hukuki İşler Koordinatörü</span><span class="s-no">2026/G-002</span></div></li>
+<li><div class="s-satir s-gecerli" id="2026-G-002"><span class="s-ad">Mehmet Arın Gülüm</span><span class="s-unvan">Hukuki İşler Koordinatörü</span><span class="s-no">2026/G-002</span></div></li>
 </ul>
 </li></ul>
         </div>
