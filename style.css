@@ -586,7 +586,9 @@ a.calismalar-card:hover {
   display: flex;
   flex-direction: column;
 }
-.book a img {
+/* Bağlantısız kapak (Java kitabı, 24 Eyl 2026): aynı biçim, üzerine gelince kalkmaz */
+.book a img,
+.book > img {
   width: 100%;
   aspect-ratio: 2 / 3;
   object-fit: cover;
