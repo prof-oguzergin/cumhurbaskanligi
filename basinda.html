@@ -23,13 +23,21 @@
   <meta name="twitter:image" content="https://oguzergin.net/assets/img/hero-banner.jpg">
   <link rel="canonical" href="https://oguzergin.net/basinda.html">
   <style>
-    .haber-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:1rem;margin:1rem 0 1.5rem}
-    body.page main a.haber-karti{display:grid;gap:.5rem;align-content:start;background:var(--c-bg-alt);border:1px solid var(--c-border);border-left:3px solid var(--c-accent);border-radius:8px;padding:1rem 1.15rem;text-decoration:none;color:inherit;font-weight:400;transition:box-shadow .15s,transform .15s}
-    body.page main a.haber-karti:hover{box-shadow:0 6px 18px rgba(15,32,55,.12);transform:translateY(-2px)}
-    .haber-karti .organ{font-family:Georgia,"Times New Roman",serif;font-size:1.35rem;font-weight:700;color:var(--c-primary)}
-    .haber-karti .kart-baslik{font-weight:600;color:var(--c-text);line-height:1.4}
-    .haber-karti .kart-alt{display:flex;flex-wrap:wrap;gap:.5rem;align-items:center;font-size:.85rem;color:var(--c-text-muted)}
-    .haber-karti .rozet{background:var(--c-primary);color:#fff;font-size:.75rem;font-weight:600;padding:.15rem .55rem;border-radius:999px}
+    .haber-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:1.6rem 1.4rem;margin:1rem 0 .6rem;padding:6px 4px 12px}
+    body.page main a.kupur{--kagit:#efece4;--murekkep:#22252b;position:relative;display:grid;gap:.5rem;align-content:start;padding:1rem 1.15rem 1.6rem;background:var(--kagit) repeating-linear-gradient(0deg,rgba(0,0,0,.018) 0 1px,transparent 1px 3px);color:var(--murekkep);text-decoration:none;font-weight:400;box-shadow:0 2px 3px rgba(15,32,55,.12),0 10px 22px rgba(15,32,55,.10);clip-path:polygon(0 0,100% 0,100% calc(100% - 8px),94% 100%,87% calc(100% - 6px),79% 100%,70% calc(100% - 7px),61% 100%,52% calc(100% - 5px),43% 100%,34% calc(100% - 8px),25% 100%,16% calc(100% - 6px),8% 100%,0 calc(100% - 7px));transition:transform .2s}
+    body.page main a.kupur.k0{transform:rotate(-.8deg)} body.page main a.kupur.k1{transform:rotate(.6deg)} body.page main a.kupur.k2{transform:rotate(-.3deg)}
+    body.page main a.kupur:hover{transform:rotate(0) translateY(-3px);color:var(--murekkep)}
+    .kupur .k-ust{border-bottom:3px double var(--murekkep);padding-bottom:4px}
+    .kupur .k-organ{font-family:Georgia,"Times New Roman",serif;font-weight:700;font-size:1.25rem;letter-spacing:.06em}
+    .kupur .k-tarih{font-size:.66rem;letter-spacing:.12em;color:#5d5f63;border-bottom:1px solid rgba(0,0,0,.25);padding-bottom:5px}
+    .kupur .k-baslik{font-family:Georgia,"Times New Roman",serif;font-weight:700;font-size:1.28rem;line-height:1.18;letter-spacing:-.01em;display:-webkit-box;-webkit-box-orient:vertical;-webkit-line-clamp:4;line-clamp:4;overflow:hidden}
+    .kupur .k-govde{display:flex;gap:10px;align-items:flex-start}
+    .kupur .k-foto{margin:0;flex:0 0 92px;display:grid;gap:3px}
+    .kupur .k-foto img{width:92px;height:92px;object-fit:cover;filter:grayscale(1) contrast(1.15);mix-blend-mode:multiply;border-radius:0;box-shadow:none}
+    .kupur .k-foto figcaption{font-size:.6rem;color:#5d5f63;font-style:italic;line-height:1.2;margin:0}
+    .kupur .k-satirlar{flex:1;min-width:0;height:96px;background:repeating-linear-gradient(180deg,rgba(34,37,43,.30) 0 2px,transparent 2px 9px);-webkit-mask:linear-gradient(90deg,#000 47%,transparent 47% 53%,#000 53%),linear-gradient(180deg,#000 72%,transparent 100%);-webkit-mask-composite:source-in;mask-composite:intersect}
+    .kupur .k-git{font-size:.8rem;font-weight:600;color:var(--c-primary-2)}
+    p.kupur-not{color:var(--c-text-muted);font-size:.85rem}
     .yil-grafik{margin:1rem 0 .5rem}
     .yil-grafik .sutunlar{display:grid;grid-template-columns:repeat(var(--n),minmax(0,1fr));align-items:end;gap:4px;height:150px;border-bottom:1px solid var(--c-border)}
     .yil-grafik .sutun{display:flex;flex-direction:column;justify-content:flex-end;align-items:center;height:100%;gap:3px;min-width:0}
@@ -46,7 +54,7 @@
     body.page h3 small{font-size:.85rem;color:var(--c-text-muted);font-weight:500;margin-left:.4rem}
     p.not{color:var(--c-text-muted);font-size:.95rem}
     @media (max-width:560px){.basin-liste li{grid-template-columns:minmax(0,1fr)}.basin-liste .t{grid-row:auto}.yil-grafik .yillar span{writing-mode:vertical-rl;transform:rotate(180deg);justify-self:center}}
-    @media (prefers-reduced-motion:reduce){body.page main a.haber-karti{transition:none}}
+    @media (prefers-reduced-motion:reduce){body.page main a.kupur{transition:none}}
   </style>
 </head>
 <body class="page">
@@ -80,37 +88,50 @@
 
 <h2 id="one-cikanlar">Öne çıkanlar</h2>
 <div class="haber-grid">
-  <a class="haber-karti" href="https://www.hurriyet.com.tr/egitim/tecrubesini-oyuna-cevirdi-43349093" target="_blank" rel="noopener">
-    <span class="organ">Hürriyet</span>
-    <span class="kart-baslik">Tecrübesini oyuna çevirdi</span>
-    <span class="kart-alt"><span class="rozet">Rektör Oldum</span>21 Ekim 2026</span>
+  <a class="kupur k0" href="https://www.hurriyet.com.tr/egitim/tecrubesini-oyuna-cevirdi-43349093" target="_blank" rel="noopener">
+    <span class="k-ust"><span class="k-organ">HÜRRİYET</span></span>
+    <span class="k-tarih">21 EKİM 2026 · REKTÖR OLDUM</span>
+    <span class="k-baslik">Tecrübesini oyuna çevirdi</span>
+    <span class="k-govde"><figure class="k-foto"><img src="assets/img/basin-kupur-portre.jpg" alt="Oğuz Ergin" width="92" height="92" loading="lazy"><figcaption>Prof. Dr. Oğuz Ergin</figcaption></figure><span class="k-satirlar"></span></span>
+    <span class="k-git">Habere git →</span>
   </a>
-  <a class="haber-karti" href="https://www.dw.com/tr/savunma-sanayisinde-beyin-g%C3%B6%C3%A7%C3%BC-engellenebilir-mi/a-64472060" target="_blank" rel="noopener">
-    <span class="organ">DW Türkçe</span>
-    <span class="kart-baslik">Savunma sanayisinde beyin göçü engellenebilir mi?</span>
-    <span class="kart-alt"><span class="rozet">Beyin göçü</span>21 Ocak 2023</span>
+  <a class="kupur k1" href="https://www.dw.com/tr/savunma-sanayisinde-beyin-g%C3%B6%C3%A7%C3%BC-engellenebilir-mi/a-64472060" target="_blank" rel="noopener">
+    <span class="k-ust"><span class="k-organ">DW TÜRKÇE</span></span>
+    <span class="k-tarih">21 OCAK 2023 · BEYİN GÖÇÜ</span>
+    <span class="k-baslik">Savunma sanayisinde beyin göçü engellenebilir mi?</span>
+    <span class="k-govde"><span class="k-satirlar"></span></span>
+    <span class="k-git">Habere git →</span>
   </a>
-  <a class="haber-karti" href="https://www.dunya.com/ekonomi/big-mac-degil-tantuni-endeksi-prof-dr-oguz-ergin-paylasti-asgari-ucret-artirilmazsa-haberi-733666" target="_blank" rel="noopener">
-    <span class="organ">Dünya Gazetesi</span>
-    <span class="kart-baslik">Big Mac değil Tantuni Endeksi: Prof. Dr. Oğuz Ergin paylaştı: Asgari ücret artırılmazsa...</span>
-    <span class="kart-alt"><span class="rozet">Tantuni Endeksi</span>25 Haziran 2024</span>
+  <a class="kupur k2" href="https://www.dunya.com/ekonomi/big-mac-degil-tantuni-endeksi-prof-dr-oguz-ergin-paylasti-asgari-ucret-artirilmazsa-haberi-733666" target="_blank" rel="noopener">
+    <span class="k-ust"><span class="k-organ">DÜNYA GAZETESİ</span></span>
+    <span class="k-tarih">25 HAZİRAN 2024 · TANTUNİ ENDEKSİ</span>
+    <span class="k-baslik">Big Mac değil Tantuni Endeksi: Prof. Dr. Oğuz Ergin paylaştı: Asgari ücret artırılmazsa...</span>
+    <span class="k-govde"><span class="k-satirlar"></span></span>
+    <span class="k-git">Habere git →</span>
   </a>
-  <a class="haber-karti" href="https://www.milliyet.com.tr/egitim/akademisyenlerden-yapay-zeka-talepleri-7051885" target="_blank" rel="noopener">
-    <span class="organ">Milliyet</span>
-    <span class="kart-baslik">Akademisyenlerden ‘yapay zekâ’ talepleri</span>
-    <span class="kart-alt"><span class="rozet">YÖK çalıştayı</span>20 Aralık 2023</span>
+  <a class="kupur k0" href="https://www.milliyet.com.tr/egitim/akademisyenlerden-yapay-zeka-talepleri-7051885" target="_blank" rel="noopener">
+    <span class="k-ust"><span class="k-organ">MİLLİYET</span></span>
+    <span class="k-tarih">20 ARALIK 2023 · YÖK ÇALIŞTAYI</span>
+    <span class="k-baslik">Akademisyenlerden ‘yapay zekâ’ talepleri</span>
+    <span class="k-govde"><span class="k-satirlar"></span></span>
+    <span class="k-git">Habere git →</span>
   </a>
-  <a class="haber-karti" href="https://www.turkiyetoday.com/nation/turkiyes-scholars-go-dark-as-free-lectures-become-trade-3227926" target="_blank" rel="noopener">
-    <span class="organ">Türkiye Today</span>
-    <span class="kart-baslik">Türkiye&#x27;s scholars go dark as free lectures become trade</span>
-    <span class="kart-alt"><span class="rozet">YouTube yasağı</span>11 Eylül 2026</span>
+  <a class="kupur k1" href="https://www.turkiyetoday.com/nation/turkiyes-scholars-go-dark-as-free-lectures-become-trade-3227926" target="_blank" rel="noopener">
+    <span class="k-ust"><span class="k-organ">TÜRKİYE TODAY</span></span>
+    <span class="k-tarih">11 EYLÜL 2026 · YOUTUBE YASAĞI</span>
+    <span class="k-baslik">Türkiye&#x27;s scholars go dark as free lectures become trade</span>
+    <span class="k-govde"><span class="k-satirlar"></span></span>
+    <span class="k-git">Habere git →</span>
   </a>
-  <a class="haber-karti" href="https://www.eetimes.com/turkey-needs-to-make-its-own-chips-not-just-design-them/" target="_blank" rel="noopener">
-    <span class="organ">EE Times</span>
-    <span class="kart-baslik">Turkey Needs to Make Its Own Chips, Not Just Design Them</span>
-    <span class="kart-alt"><span class="rozet">Yerli çip</span>2 Temmuz 2026</span>
+  <a class="kupur k2" href="https://www.eetimes.com/turkey-needs-to-make-its-own-chips-not-just-design-them/" target="_blank" rel="noopener">
+    <span class="k-ust"><span class="k-organ">EE TIMES</span></span>
+    <span class="k-tarih">2 TEMMUZ 2026 · YERLİ ÇİP</span>
+    <span class="k-baslik">Turkey Needs to Make Its Own Chips, Not Just Design Them</span>
+    <span class="k-govde"><span class="k-satirlar"></span></span>
+    <span class="k-git">Habere git →</span>
   </a>
 </div>
+<p class="kupur-not">Kupürler haberlerin kendi görselleri değil, başlıklardan hazırladığım temsilî kesikler. Hürriyet kupüründeki fotoğraf, habere benim verdiğim portre.</p>
 
 <h2 id="yillar">Yıllara göre</h2>
 <div class="yil-grafik" style="--n:15" role="img" aria-label="Yıllara göre haber sayısı">
