@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Basında · Prof. Dr. Oğuz Ergin</title>
+  <meta name="description" content="Prof. Dr. Oğuz Ergin hakkında çıkan haberler, röportajlar, radyo yayınları ve yazılar; konulara göre.">
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicon-32.png?v=5">
+  <link rel="icon" type="image/png" sizes="192x192" href="assets/img/favicon-192.png?v=5">
+  <link rel="apple-touch-icon" sizes="180x180" href="assets/img/favicon-192.png?v=5">
+  <link rel="stylesheet" href="style.css?v=41">
+  <link rel="stylesheet" href="assets/css/cookie-banner.css?v=2">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Basında · Prof. Dr. Oğuz Ergin">
+  <meta property="og:description" content="Prof. Dr. Oğuz Ergin hakkında çıkan haberler, röportajlar, radyo yayınları ve yazılar; konulara göre.">
+  <meta property="og:image" content="https://oguzergin.net/assets/img/hero-banner.jpg">
+  <meta property="og:url" content="https://oguzergin.net/basinda.html">
+  <meta property="og:site_name" content="Prof. Dr. Oğuz Ergin">
+  <meta property="og:locale" content="tr_TR">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Basında · Prof. Dr. Oğuz Ergin">
+  <meta name="twitter:description" content="Prof. Dr. Oğuz Ergin hakkında çıkan haberler, röportajlar, radyo yayınları ve yazılar; konulara göre.">
+  <meta name="twitter:image" content="https://oguzergin.net/assets/img/hero-banner.jpg">
+  <link rel="canonical" href="https://oguzergin.net/basinda.html">
+  <style>
+    .haber-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:1rem;margin:1rem 0 1.5rem}
+    body.page main a.haber-karti{display:grid;gap:.5rem;align-content:start;background:var(--c-bg-alt);border:1px solid var(--c-border);border-left:3px solid var(--c-accent);border-radius:8px;padding:1rem 1.15rem;text-decoration:none;color:inherit;font-weight:400;transition:box-shadow .15s,transform .15s}
+    body.page main a.haber-karti:hover{box-shadow:0 6px 18px rgba(15,32,55,.12);transform:translateY(-2px)}
+    .haber-karti .organ{font-family:Georgia,"Times New Roman",serif;font-size:1.35rem;font-weight:700;color:var(--c-primary)}
+    .haber-karti .kart-baslik{font-weight:600;color:var(--c-text);line-height:1.4}
+    .haber-karti .kart-alt{display:flex;flex-wrap:wrap;gap:.5rem;align-items:center;font-size:.85rem;color:var(--c-text-muted)}
+    .haber-karti .rozet{background:var(--c-primary);color:#fff;font-size:.75rem;font-weight:600;padding:.15rem .55rem;border-radius:999px}
+    .yil-grafik{margin:1rem 0 .5rem}
+    .yil-grafik .sutunlar{display:grid;grid-template-columns:repeat(var(--n),minmax(0,1fr));align-items:end;gap:4px;height:150px;border-bottom:1px solid var(--c-border)}
+    .yil-grafik .sutun{display:flex;flex-direction:column;justify-content:flex-end;align-items:center;height:100%;gap:3px;min-width:0}
+    .yil-grafik .cubuk{width:100%;max-width:34px;background:var(--c-primary-2);border-radius:4px 4px 0 0}
+    .yil-grafik .sutun:last-child .cubuk{background:var(--c-accent)}
+    .yil-grafik .adet{font-size:.75rem;color:var(--c-text-muted)}
+    .yil-grafik .yillar{display:grid;grid-template-columns:repeat(var(--n),minmax(0,1fr));gap:4px;font-size:.72rem;color:var(--c-text-muted);text-align:center;margin-top:4px}
+    .basin-liste{list-style:none;margin:0 0 1rem;padding:0;border-top:1px solid var(--c-border)}
+    .basin-liste li{display:grid;grid-template-columns:125px minmax(0,1fr);column-gap:1rem;padding:.65rem 0;border-bottom:1px solid var(--c-border)}
+    .basin-liste .t{grid-row:span 2;color:var(--c-text-muted);font-size:.88rem;padding-top:2px}
+    .basin-liste .o{font-size:.85rem;color:var(--c-text-muted);font-weight:600}
+    .basin-liste .o em{font-style:normal;font-weight:400;margin-left:.5rem}
+    .basin-liste a{overflow-wrap:anywhere}
+    body.page h3 small{font-size:.85rem;color:var(--c-text-muted);font-weight:500;margin-left:.4rem}
+    p.not{color:var(--c-text-muted);font-size:.95rem}
+    @media (max-width:560px){.basin-liste li{grid-template-columns:minmax(0,1fr)}.basin-liste .t{grid-row:auto}.yil-grafik .yillar span{writing-mode:vertical-rl;transform:rotate(180deg);justify-self:center}}
+    @media (prefers-reduced-motion:reduce){body.page main a.haber-karti{transition:none}}
+  </style>
+</head>
+<body class="page">
+  <header class="site">
+    <a class="brand" href="index.html">
+      <img src="assets/img/oguz-ergin.avif" alt="Oğuz Ergin">
+      <span>Oğuz Ergin</span>
+    </a>
+    <button class="nav-toggle" aria-label="Menüyü aç" aria-expanded="false" aria-controls="site-nav"><span></span><span></span><span></span></button>
+    <nav id="site-nav">
+    <a href="index.html">Ana Sayfa</a>
+    <a href="hakkimda.html">Hakkımda</a>
+    <a href="calismalar.html">Çalışmalar</a>
+    <a href="program.html">Program</a>
+    <a href="hukuki-surec.html">Hukuki Süreç</a>
+    <a href="yapay-oguz.html">Yapay Oğuz'a Sor</a>
+    <a href="yanimdakiler.html">Yanımdakiler</a>
+    <a href="destekci-ol.html">Destekçi Ol</a>
+    </nav>
+  </header>
+  <main>
+<h1>Basında</h1>
+<p>Hakkımda çıkan haberler, röportajlar, radyo yayınları ve yazdığım yazılar. Her kayıt, yayın organının kendi sayfasına bağlanır.</p>
+
+<div class="stat-row">
+  <div class="stat-card"><div class="stat-num">50</div><div class="stat-label">haber, röportaj ve yayın</div></div>
+  <div class="stat-card"><div class="stat-num">41</div><div class="stat-label">yayın organı</div></div>
+  <div class="stat-card"><div class="stat-num">2012</div><div class="stat-label">ilk kayıt</div></div>
+  <div class="stat-card"><div class="stat-num">9</div><div class="stat-label">konu</div></div>
+</div>
+
+<h2 id="one-cikanlar">Öne çıkanlar</h2>
+<div class="haber-grid">
+  <a class="haber-karti" href="https://www.hurriyet.com.tr/egitim/tecrubesini-oyuna-cevirdi-43349093" target="_blank" rel="noopener">
+    <span class="organ">Hürriyet</span>
+    <span class="kart-baslik">Tecrübesini oyuna çevirdi</span>
+    <span class="kart-alt"><span class="rozet">Rektör Oldum</span>21 Ekim 2026</span>
+  </a>
+  <a class="haber-karti" href="https://www.dw.com/tr/savunma-sanayisinde-beyin-g%C3%B6%C3%A7%C3%BC-engellenebilir-mi/a-64472060" target="_blank" rel="noopener">
+    <span class="organ">DW Türkçe</span>
+    <span class="kart-baslik">Savunma sanayisinde beyin göçü engellenebilir mi?</span>
+    <span class="kart-alt"><span class="rozet">Beyin göçü</span>21 Ocak 2023</span>
+  </a>
+  <a class="haber-karti" href="https://www.dunya.com/ekonomi/big-mac-degil-tantuni-endeksi-prof-dr-oguz-ergin-paylasti-asgari-ucret-artirilmazsa-haberi-733666" target="_blank" rel="noopener">
+    <span class="organ">Dünya Gazetesi</span>
+    <span class="kart-baslik">Big Mac değil Tantuni Endeksi: Prof. Dr. Oğuz Ergin paylaştı: Asgari ücret artırılmazsa...</span>
+    <span class="kart-alt"><span class="rozet">Tantuni Endeksi</span>25 Haziran 2024</span>
+  </a>
+  <a class="haber-karti" href="https://www.milliyet.com.tr/egitim/akademisyenlerden-yapay-zeka-talepleri-7051885" target="_blank" rel="noopener">
+    <span class="organ">Milliyet</span>
+    <span class="kart-baslik">Akademisyenlerden ‘yapay zekâ’ talepleri</span>
+    <span class="kart-alt"><span class="rozet">YÖK çalıştayı</span>20 Aralık 2023</span>
+  </a>
+  <a class="haber-karti" href="https://www.turkiyetoday.com/nation/turkiyes-scholars-go-dark-as-free-lectures-become-trade-3227926" target="_blank" rel="noopener">
+    <span class="organ">Türkiye Today</span>
+    <span class="kart-baslik">Türkiye&#x27;s scholars go dark as free lectures become trade</span>
+    <span class="kart-alt"><span class="rozet">YouTube yasağı</span>11 Eylül 2026</span>
+  </a>
+  <a class="haber-karti" href="https://www.eetimes.com/turkey-needs-to-make-its-own-chips-not-just-design-them/" target="_blank" rel="noopener">
+    <span class="organ">EE Times</span>
+    <span class="kart-baslik">Turkey Needs to Make Its Own Chips, Not Just Design Them</span>
+    <span class="kart-alt"><span class="rozet">Yerli çip</span>2 Temmuz 2026</span>
+  </a>
+</div>
+
+<h2 id="yillar">Yıllara göre</h2>
+<div class="yil-grafik" style="--n:15" role="img" aria-label="Yıllara göre haber sayısı">
+  <div class="sutunlar"><div class="sutun"><span class="adet">1</span><span class="cubuk" style="height:6%"></span></div><div class="sutun"><span class="adet"></span><span class="cubuk" style="height:0%"></span></div><div class="sutun"><span class="adet"></span><span class="cubuk" style="height:0%"></span></div><div class="sutun"><span class="adet"></span><span class="cubuk" style="height:0%"></span></div><div class="sutun"><span class="adet">1</span><span class="cubuk" style="height:6%"></span></div><div class="sutun"><span class="adet"></span><span class="cubuk" style="height:0%"></span></div><div class="sutun"><span class="adet"></span><span class="cubuk" style="height:0%"></span></div><div class="sutun"><span class="adet">3</span><span class="cubuk" style="height:18%"></span></div><div class="sutun"><span class="adet"></span><span class="cubuk" style="height:0%"></span></div><div class="sutun"><span class="adet">3</span><span class="cubuk" style="height:18%"></span></div><div class="sutun"><span class="adet">6</span><span class="cubuk" style="height:35%"></span></div><div class="sutun"><span class="adet">7</span><span class="cubuk" style="height:41%"></span></div><div class="sutun"><span class="adet">7</span><span class="cubuk" style="height:41%"></span></div><div class="sutun"><span class="adet">5</span><span class="cubuk" style="height:29%"></span></div><div class="sutun"><span class="adet">17</span><span class="cubuk" style="height:100%"></span></div></div>
+  <div class="yillar"><span>2012</span><span>2013</span><span>2014</span><span>2015</span><span>2016</span><span>2017</span><span>2018</span><span>2019</span><span>2020</span><span>2021</span><span>2022</span><span>2023</span><span>2024</span><span>2025</span><span>2026</span></div>
+</div>
+
+<h2 id="konular">Konulara göre</h2>
+<p class="page-toc"><strong>Konular:</strong> <a href="#yapay-zeka">Yapay zekâ</a> · <a href="#tantuni-endeksi">Tantuni Endeksi</a> · <a href="#akademisyenlere-youtube-yasagi">Akademisyenlere YouTube yasağı</a> · <a href="#yerli-islemci-ve-cip">Yerli işlemci ve çip</a> · <a href="#egitim-ve-universite">Eğitim ve üniversite</a> · <a href="#rektor-oldum-ve-bilge-ve-yonga">Rektör Oldum ve Bilge ve Yonga</a> · <a href="#adaylik-ve-siyaset">Adaylık ve siyaset</a> · <a href="#bulut-bilisim">Bulut bilişim</a> · <a href="#savunma-sanayisi-ve-beyin-gocu">Savunma sanayisi ve beyin göçü</a></p>
+
+<h3 id="yapay-zeka">Yapay zekâ <small>11</small></h3>
+<ul class="basin-liste">
+  <li><span class="t">4 Ocak 2026</span>
+    <span class="o">Daktilo 1984<em>Kendi yazısı</em></span>
+    <a href="https://daktilo1984.com/daktilo2/robotlar-geliyor-turkiyede-once-verim-sonra-dagitim/" target="_blank" rel="noopener">Robotlar Geliyor: Türkiye&#x27;de Önce Verim, Sonra Dağıtım</a></li>
+  <li><span class="t">13 Nisan 2025</span>
+    <span class="o">Haber Kenti<em>Haber</em></span>
+    <a href="https://www.haberkenti.com/istanbulda-12-satin-alma-ve-tedarik-yonetimi-zirvesinde-gelecege-donusum-stratejileri-masaya-yatirildi" target="_blank" rel="noopener">İstanbul&#x27;da 12. Satın Alma ve Tedarik Yönetimi Zirvesi&#x27;nde Geleceğe Dönüşüm Stratejileri Masaya Yatırıldı</a></li>
+  <li><span class="t">Nisan 2025</span>
+    <span class="o">Metal Dünyası<em>Haber</em></span>
+    <a href="https://metaldunyasi.com.tr/upload/1lx3rd8zx600ocw.pdf" target="_blank" rel="noopener">Yapay Zekâ Şirketlere Maliyet Avantajı Sunuyor</a></li>
+  <li><span class="t">22 Temmuz 2024</span>
+    <span class="o">TRT Radyo 1, Çevrim İçi programı<em>Radyo</em></span>
+    <a href="https://www.youtube.com/watch?v=aBpKyqncRIk" target="_blank" rel="noopener">Yapay Zeka Nereye Gidiyor? - Radyo Sohbetleri</a></li>
+  <li><span class="t">14 Mart 2024</span>
+    <span class="o">Odatv<em>Haber</em></span>
+    <a href="https://www.odatv.com/guncel/yapay-zeka-hangi-meslekleri-etkileyecek-yapay-zeka-issizligi-artiracak-mi-yapay-zeka-mavi-yakadan-once-beyaz-yakayi-issiz-birakacak-120033318" target="_blank" rel="noopener">Mavi yakadan önce beyaz yaka: Yapay zekanın hedefi</a></li>
+  <li><span class="t">20 Aralık 2023</span>
+    <span class="o">Milliyet<em>Haber</em></span>
+    <a href="https://www.milliyet.com.tr/egitim/akademisyenlerden-yapay-zeka-talepleri-7051885" target="_blank" rel="noopener">Akademisyenlerden ‘yapay zekâ’ talepleri</a></li>
+  <li><span class="t">26 Nisan 2023</span>
+    <span class="o">TRT Radyo 1, Çevrim İçi programı<em>Radyo</em></span>
+    <a href="https://www.youtube.com/watch?v=d0sxRXp29xM" target="_blank" rel="noopener">Yapay Zeka ve ChatGPT - Radyo Sohbetleri</a></li>
+  <li><span class="t">19 Nisan 2023</span>
+    <span class="o">Çanakkale Kalem Gazetesi<em>Haber</em></span>
+    <a href="https://www.canakkalekalem.com/haber/28710077/prof-dr-oguz-ergin-yapay-zeka-gercek" target="_blank" rel="noopener">Prof. Dr. Oğuz Ergin: &quot;Yapay Zeka Gerçek&quot;</a></li>
+  <li><span class="t">14 Nisan 2023</span>
+    <span class="o">İste Çanakkale Gazetesi<em>Haber</em></span>
+    <a href="https://www.istecanakkalegazetesi.com/haber/50031-yapay-zeknin-dunu-bugunu-konusulacak" target="_blank" rel="noopener">Yapay Zekânın Dünü Bugünü Konuşulacak</a></li>
+  <li><span class="t">4 Eylül 2019</span>
+    <span class="o">Anadolu Ajansı<em>Röportaj</em></span>
+    <a href="https://www.aa.com.tr/tr/egitim/siyaset-bilimi-okuyanlar-bile-programlama-ogreniyor/1572757" target="_blank" rel="noopener">&#x27;Siyaset bilimi okuyanlar bile programlama öğreniyor&#x27;</a></li>
+  <li><span class="t">26 Temmuz 2019</span>
+    <span class="o">Demirören Haber Ajansı (DHA)<em>Haber</em></span>
+    <a href="https://www.dha.com.tr/egitim/bu-bolumden-mezun-olanlarin-is-secme-sorunu-olacak-1690389" target="_blank" rel="noopener">&#x27;Bu bölümden mezun olanların iş seçme sorunu olacak&#x27;</a></li>
+</ul>
+
+<h3 id="tantuni-endeksi">Tantuni Endeksi <small>10</small></h3>
+<ul class="basin-liste">
+  <li><span class="t">4 Nisan 2026</span>
+    <span class="o">Ekonomim<em>Haber</em></span>
+    <a href="https://www.ekonomim.com/ekonomi/menemen-tantuni-lahmacun-enflasyon-beklentilerin-altinda-geldi-alternatif-endekslerde-durum-ne-haberi-886039" target="_blank" rel="noopener">Menemen, tantuni, lahmacun... Enflasyon beklentilerin altında geldi: Alternatif endekslerde durum ne?</a></li>
+  <li><span class="t">4 Nisan 2026</span>
+    <span class="o">Yeniçağ<em>Haber</em></span>
+    <a href="https://www.yenicaggazetesi.com/tantuni-de-luks-oldu-asgari-ucretli-tantuniyi-de-ruyasinda-goruyor-1015753h.htm" target="_blank" rel="noopener">Tantuni de lüks oldu: Asgari ücretli tantuniyi de rüyasında görüyor</a></li>
+  <li><span class="t">25 Aralık 2025</span>
+    <span class="o">Halk TV<em>Haber</em></span>
+    <a href="https://halktv.com.tr/ekonomi/asgari-ucretlinin-tabagindan-5-yilda-yarisi-gitti-bu-da-tantuni-hesabi-995820h" target="_blank" rel="noopener">Asgari ücretlinin tabağından 5 yılda yarısı gitti: Bu da tantuni hesabı</a></li>
+  <li><span class="t">2 Temmuz 2024</span>
+    <span class="o">Satınalma Dergisi<em>Köşe yazısı</em></span>
+    <a href="https://satinalmadergisi.com/tantuni-endeksi/" target="_blank" rel="noopener">Tantuni Endeksi</a></li>
+  <li><span class="t">26 Haziran 2024</span>
+    <span class="o">Sonsöz (Ankara)<em>Haber</em></span>
+    <a href="https://sonsoz.com.tr/enflasyon-gostergesi-tantuni-endeksi" target="_blank" rel="noopener">Enflasyon göstergesi: Tantuni endeksi</a></li>
+  <li><span class="t">26 Haziran 2024</span>
+    <span class="o">Zafer Gazetesi<em>Haber</em></span>
+    <a href="https://zafergazetesi.org/halkin-alim-gucu-gorulmemis-duzeye-dusecek" target="_blank" rel="noopener">&quot;Halkın alım gücü görülmemiş düzeye düşecek&quot;</a></li>
+  <li><span class="t">25 Haziran 2024</span>
+    <span class="o">Dünya Gazetesi<em>Haber</em></span>
+    <a href="https://www.dunya.com/ekonomi/big-mac-degil-tantuni-endeksi-prof-dr-oguz-ergin-paylasti-asgari-ucret-artirilmazsa-haberi-733666" target="_blank" rel="noopener">Big Mac değil Tantuni Endeksi: Prof. Dr. Oğuz Ergin paylaştı: Asgari ücret artırılmazsa...</a></li>
+  <li><span class="t">18 Kasım 2022</span>
+    <span class="o">Hakimiyet Gazetesi (Mersin)<em>Haber</em></span>
+    <a href="https://mersinhakimiyet.com/haber/22929/prof-dr-oguz-ergin-tantuni-endeksime-gore-yillik-fiyat-artisi-yuzde-140-olarak-gerceklesti.html" target="_blank" rel="noopener">Prof. Dr. Oğuz Ergin: &#x27;Tantuni endeksime göre yıllık fiyat artışı yüzde 140 olarak gerçekleşti&#x27;</a></li>
+  <li><span class="t">5 Temmuz 2022</span>
+    <span class="o">Çukurova Gazetesi<em>Haber</em></span>
+    <a href="https://cukurovagazetesi.com/bir-aylik-asgari-ucrete-125-tantuni-geliyor" target="_blank" rel="noopener">Bir aylık asgari ücrete 125 tantuni geliyor</a></li>
+  <li><span class="t">3 Temmuz 2022</span>
+    <span class="o">Onedio<em>Haber</em></span>
+    <a href="https://onedio.com/haber/bir-zamanlarin-ucuz-ogrenci-yemegi-tantuninin-asgari-ucreti-yonlendirdigini-aciklayan-tweet-ve-gelen-yorumlar-1080345" target="_blank" rel="noopener">Bir Zamanların Ucuz Öğrenci Yemeği Tantuninin Asgari Ücreti Yönlendirdiğini Açıklayan Tweet ve Gelen Yorumlar</a></li>
+</ul>
+
+<h3 id="akademisyenlere-youtube-yasagi">Akademisyenlere YouTube yasağı <small>8</small></h3>
+<ul class="basin-liste">
+  <li><span class="t">28 Eylül 2026</span>
+    <span class="o">Akaturk<em>Haber</em></span>
+    <a href="https://akaturk.com/haberler/turkey-academics-youtube-income-ban-law-657?lang=en" target="_blank" rel="noopener">Turkey&#x27;s YouTube income ban for academics: what changed?</a></li>
+  <li><span class="t">21 Eylül 2026</span>
+    <span class="o">Karar<em>Haber</em></span>
+    <a href="https://www.karar.com/teknoloji-haberleri/akademisyenlere-youtube-yasak-mi-akademik-kanallar-kapatiliyor-mu-2073199" target="_blank" rel="noopener">Akademisyenlere Youtube yasak mı? Akademik kanallar kapatılıyor mu? Devlet memuru öğretim üyelerinin Youtube yayınlarına yasak</a></li>
+  <li><span class="t">12 Eylül 2026</span>
+    <span class="o">Aydınlık<em>Haber</em></span>
+    <a href="https://www.aydinlik.com.tr/haber/akademisyenlerden-dijital-icerik-yasagina-tepki-videonun-kitaptan-ne-farki-var-589787" target="_blank" rel="noopener">Akademisyenlerden dijital içerik yasağına tepki! Videonun kitaptan ne farkı var?</a></li>
+  <li><span class="t">11 Eylül 2026</span>
+    <span class="o">Türkiye Today<em>Röportaj</em></span>
+    <a href="https://www.turkiyetoday.com/nation/turkiyes-scholars-go-dark-as-free-lectures-become-trade-3227926" target="_blank" rel="noopener">Türkiye&#x27;s scholars go dark as free lectures become trade</a></li>
+  <li><span class="t">9 Eylül 2026</span>
+    <span class="o">Karar<em>Haber</em></span>
+    <a href="https://www.karar.com/guncel-haberler/akademisyene-garip-yasak-2070762" target="_blank" rel="noopener">Akademisyene garip yasak</a></li>
+  <li><span class="t">9 Eylül 2026</span>
+    <span class="o">Halk TV<em>Haber</em></span>
+    <a href="https://halktv.com.tr/turkiye/akademisyenlere-youtube-yasagi-kanallar-birer-birer-kapatildi-1053939h" target="_blank" rel="noopener">Akademisyenlere YouTube yasağı! Kanallar birer birer kapatıldı</a></li>
+  <li><span class="t">9 Eylül 2026</span>
+    <span class="o">Gazete Oksijen<em>Haber</em></span>
+    <a href="https://gazeteoksijen.com/turkiye/akademisyenlerin-youtube-gelirlerine-kisitlama-dijital-yayincilik-ticari-faaliyet-sayildi-288832" target="_blank" rel="noopener">Akademisyenler YouTube&#x27;da video paylaşamayacak: Dijital yayıncılık ticari faaliyet sayıldı</a></li>
+  <li><span class="t">9 Eylül 2026</span>
+    <span class="o">Kayseri Haber<em>Haber</em></span>
+    <a href="https://www.kayserihaber.com/yok-kisitlama-akademisyen-youtube-esnaf" target="_blank" rel="noopener">YÖK&#x27;ten akademisyenlere kısıtlama: &#x27;Esnaflık&#x27; olarak değerlendirilen YouTube kanalları kapanıyor!</a></li>
+</ul>
+
+<h3 id="yerli-islemci-ve-cip">Yerli işlemci ve çip <small>5</small></h3>
+<ul class="basin-liste">
+  <li><span class="t">2 Temmuz 2026</span>
+    <span class="o">EE Times<em>Kendi yazısı</em></span>
+    <a href="https://www.eetimes.com/turkey-needs-to-make-its-own-chips-not-just-design-them/" target="_blank" rel="noopener">Turkey Needs to Make Its Own Chips, Not Just Design Them</a></li>
+  <li><span class="t">2 Mayıs 2023</span>
+    <span class="o">Webtekno<em>Haber</em></span>
+    <a href="https://www.webtekno.com/yerli-islemci-yongatek-konustuk-h134235.html" target="_blank" rel="noopener">Yerli İşlemciler Geliştiren Yongatek&#x27;le Konuştuk: Türkiye, AMD ve Intel&#x27;e Yetişebilir mi?</a></li>
+  <li><span class="t">10 Kasım 2022</span>
+    <span class="o">Webtekno<em>Röportaj</em></span>
+    <a href="https://www.webtekno.com/yerli-islemci-gelistiren-ogrencileri-yurt-disina-kaptirdik-h129627.html" target="_blank" rel="noopener">Yerli İşlemci Geliştiren Öğrencileri Yurt Dışına Kaptırdık, Yaşananları Hocaları Anlattı: Nasıl Kal Diyelim?</a></li>
+  <li><span class="t">30 Mart 2022</span>
+    <span class="o">Onedio<em>Haber</em></span>
+    <a href="https://onedio.com/haber/prof-oguz-ergin-aselsan-muhendisinin-yurtdisinda-daha-iyisi-varken-neden-senden-alalim-cikisini-anlatiyor-1058096" target="_blank" rel="noopener">Prof. Oğuz Ergin, ASELSAN Mühendisinin &#x27;Yurtdışında Daha İyisi Varken Neden Senden Alalım?&#x27; Çıkışını Anlatıyor</a></li>
+  <li><span class="t">7 Mayıs 2021</span>
+    <span class="o">TRT Radyo 1, Gündem programı<em>Radyo</em></span>
+    <a href="https://www.youtube.com/watch?v=EbmEllGiJWQ" target="_blank" rel="noopener">Türkiye&#x27;de Yonga Üretilmeli mi? - Radyo Sohbetleri</a></li>
+</ul>
+
+<h3 id="egitim-ve-universite">Eğitim ve üniversite <small>5</small></h3>
+<ul class="basin-liste">
+  <li><span class="t">28 Aralık 2025</span>
+    <span class="o">Daktilo 1984<em>Kendi yazısı</em></span>
+    <a href="https://daktilo1984.com/daktilo2/universiteyi-kisaltmak-degil-egitimi-ciddiye-almak/" target="_blank" rel="noopener">Üniversiteyi Kısaltmak Değil, Eğitimi Ciddiye Almak</a></li>
+  <li><span class="t">4 Mayıs 2023</span>
+    <span class="o">Gazete Vitamin (Çanakkale)<em>Köşe yazısı</em></span>
+    <a href="https://www.gazetevitamin.com/yazar/31207-prof-dr-oguz-ergin-ve-bayraktar-kardesler" target="_blank" rel="noopener">Prof. Dr. Oğuz Ergin ve Bayraktar Kardeşler</a></li>
+  <li><span class="t">18 Ağustos 2021</span>
+    <span class="o">Kalenin Sesi (Çanakkale)<em>Haber</em></span>
+    <a href="https://www.kaleninsesi.com/ogrencilere-tobb-etu-tanitildi-18082021" target="_blank" rel="noopener">Öğrencilere TOBB ETÜ tanıtıldı (18.08.2021)</a></li>
+  <li><span class="t">14 Ağustos 2021</span>
+    <span class="o">TRT Radyo 1, Gündem Hafta Sonu programı<em>Radyo</em></span>
+    <a href="https://www.youtube.com/watch?v=0RsO_nAcUWI" target="_blank" rel="noopener">Üniversite Tercihleri ve TOBB ETÜ - Radyo Sohbetleri</a></li>
+  <li><span class="t">2016</span>
+    <span class="o">TOBB Ekonomik Forum<em>Haber</em></span>
+    <a href="https://haber.tobb.org.tr/ekonomikforum/2016/268/086_090.pdf" target="_blank" rel="noopener">TOBB ETÜ&#x27;den Tarihi Başarı</a></li>
+</ul>
+
+<h3 id="rektor-oldum-ve-bilge-ve-yonga">Rektör Oldum ve Bilge ve Yonga <small>3</small></h3>
+<ul class="basin-liste">
+  <li><span class="t">21 Ekim 2026</span>
+    <span class="o">Hürriyet<em>Haber</em></span>
+    <a href="https://www.hurriyet.com.tr/egitim/tecrubesini-oyuna-cevirdi-43349093" target="_blank" rel="noopener">Tecrübesini oyuna çevirdi</a></li>
+  <li><span class="t">21 Ekim 2026</span>
+    <span class="o">Bölge Gündemi<em>Haber</em></span>
+    <a href="https://www.bolgegundemi.com/egitim/akademik-tecrube-rektor-oldum-oyunuyla-dijital-simulasyona-donustu-216822.html" target="_blank" rel="noopener">Akademik tecrübe &quot;Rektör Oldum&quot; oyunuyla dijital simülasyona dönüştü</a></li>
+  <li><span class="t">1 Eylül 2026</span>
+    <span class="o">TRT Radyo 1, Gündem programı<em>Radyo</em></span>
+    <a href="https://www.youtube.com/watch?v=Yqs_hrVlAlo" target="_blank" rel="noopener">Bilgisayarı Çocuğa Anlatmak · TRT Radyo 1 Gündem söyleşisi</a></li>
+</ul>
+
+<h3 id="adaylik-ve-siyaset">Adaylık ve siyaset <small>3</small></h3>
+<ul class="basin-liste">
+  <li><span class="t">20 Mayıs 2026</span>
+    <span class="o">Eti Haber<em>Haber</em></span>
+    <a href="https://www.etihaber.com/cumhurbaskani-aday-adayi-prof-dr-oguz-ergin-kimse-evladinin-boyle-olmasini-istemez/" target="_blank" rel="noopener">Cumhurbaşkanı Aday Adayı Prof. Dr. Oğuz Ergin: Kimse Evladının Böyle Olmasını İstemez!</a></li>
+  <li><span class="t">20 Mayıs 2026</span>
+    <span class="o">Eti Haber<em>Haber</em></span>
+    <a href="https://www.etihaber.com/halktan-gelen-cumhurbaskani-aday-adayi-prof-dr-oguz-ergin-kimdir/amp/" target="_blank" rel="noopener">Halktan Gelen Cumhurbaşkanı Aday Adayı Prof. Dr. Oğuz Ergin Kimdir?</a></li>
+  <li><span class="t">21 Aralık 2025</span>
+    <span class="o">Daktilo 1984<em>Kendi yazısı</em></span>
+    <a href="https://daktilo1984.com/daktilo2/sozelci-siyaseti-olculemez-vaatlerin-rahatligi/" target="_blank" rel="noopener">Sözelci Siyaseti: Ölçülemez Vaatlerin Rahatlığı</a></li>
+</ul>
+
+<h3 id="bulut-bilisim">Bulut bilişim <small>3</small></h3>
+<ul class="basin-liste">
+  <li><span class="t">25 Ekim 2024</span>
+    <span class="o">TRT Dinle, Dijital Dönüşüm programı<em>Podcast</em></span>
+    <a href="https://www.trtdinle.com/show/dijital-donusum?id=20626720" target="_blank" rel="noopener">Bulut Bilişim</a></li>
+  <li><span class="t">31 Temmuz 2019</span>
+    <span class="o">TRT Radyo (Ankara Radyosu), Çevrim İçi programı<em>Radyo</em></span>
+    <a href="https://www.youtube.com/watch?v=kBoYYk5-lYw" target="_blank" rel="noopener">Bulut Bilişim - Radyo Sohbetleri</a></li>
+  <li><span class="t">Temmuz 2012</span>
+    <span class="o">Bilişim Dergisi (Türkiye Bilişim Derneği)<em>Röportaj</em></span>
+    <a href="https://www.bilisimdergisi.org.tr/bilisim-dergisi-sayilari/s145.pdf" target="_blank" rel="noopener">Türkiye Bulut Kurumu kurulmalı</a></li>
+</ul>
+
+<h3 id="savunma-sanayisi-ve-beyin-gocu">Savunma sanayisi ve beyin göçü <small>2</small></h3>
+<ul class="basin-liste">
+  <li><span class="t">21 Ocak 2023</span>
+    <span class="o">DW Türkçe<em>Haber</em></span>
+    <a href="https://www.dw.com/tr/savunma-sanayisinde-beyin-g%C3%B6%C3%A7%C3%BC-engellenebilir-mi/a-64472060" target="_blank" rel="noopener">Savunma sanayisinde beyin göçü engellenebilir mi?</a></li>
+  <li><span class="t">26 Ağustos 2022</span>
+    <span class="o">Defensehere<em>Haber</em></span>
+    <a href="https://defensehere.com/tr/prof-dr-oguz-ergin-savunma-sirketlerinin-kan-kaybi-nasil-duracak/" target="_blank" rel="noopener">Prof. Dr. Oğuz Ergin: Savunma Şirketlerinin Kan Kaybı Nasıl Duracak?</a></li>
+</ul>
+
+<h3 id="adinin-gectigi">Adının geçtiği haberler</h3>
+<p class="not">Konusu ben olmayan, adımın yalnız bir listede ya da duyuruda geçtiği haberler.</p>
+<ul class="basin-liste">
+  <li><span class="t">26 Mart 2025</span>
+    <span class="o">ST Endüstri<em>Haber</em></span>
+    <a href="https://www.stendustri.com.tr/global-ekonomik-politik-belirsizlik-endeksinde-grafik-yukseliyor" target="_blank" rel="noopener">Global Ekonomik Politik Belirsizlik Endeksinde Grafik Yükseliyor</a></li>
+  <li><span class="t">12 Şubat 2021</span>
+    <span class="o">BThaber<em>Haber</em></span>
+    <a href="https://bthaber.com/haberler/turkiyenin-yapay-zeka-yarisinda-ilerlemesi-icin-traiden-dev-adim-trai-danisma-kurullari-ilk-kez-toplandi" target="_blank" rel="noopener">Türkiye&#x27;nin Yapay Zeka Yarışında İlerlemesi için TRAI&#x27;den Dev Adım: TRAI Danışma Kurulları İlk Kez Toplandı!</a></li>
+</ul>
+
+<hr>
+
+<h2 id="basin-icin">Basın için</h2>
+<p>Röportaj, bilgi notu ve yüksek çözünürlüklü fotoğraf için <a href="mailto:bilgi@oguzergin.net">bilgi@oguzergin.net</a> adresine yazabilirsiniz. Gözümden kaçan bir haber görürseniz de aynı adrese bildirmeniz beni sevindirir.</p>
+</main>
+  <footer class="site">
+    <div class="footer-inner">
+
+    <div class="footer-cols">
+      <div class="footer-col">
+        <h4>Kampanya</h4>
+        <a href="hukuki-surec.html">Hukuki Süreç</a>
+        <a href="sss.html">Sıkça Sorulan Sorular</a>
+        <a href="basinda.html">Basında</a>
+        <a href="bulten.html">Bültene Abone Ol</a>
+        <a href="yanimdakiler.html">Yanımdakiler</a>
+        <a href="sarkilar.html">Şarkılar</a>
+      </div>
+      <div class="footer-col">
+        <h4>Akademik</h4>
+        <a href="https://orcid.org/0000-0003-2701-3787" target="_blank" rel="noopener">ORCID</a>
+        <a href="https://scholar.google.com/citations?user=NSuo6qgAAAAJ&hl=tr" target="_blank" rel="noopener">Google Scholar</a>
+        <a href="https://dblp.org/pid/48/389" target="_blank" rel="noopener">DBLP</a>
+        <a href="https://www.researchgate.net/profile/Oguz-Ergin" target="_blank" rel="noopener">ResearchGate</a>
+        <a href="https://github.com/prof-oguzergin" target="_blank" rel="noopener">GitHub</a>
+      </div>
+      <div class="footer-col">
+        <h4>Açık Projeler</h4>
+        <a href="https://bilgeveyonga.oguzergin.net" target="_blank" rel="noopener">Bilge ve Yonga</a>
+        <a href="https://tantuni.oguzergin.net" target="_blank" rel="noopener">Tantuni Endeksi</a>
+        <a href="https://yapayzeka.oguzergin.net" target="_blank" rel="noopener">Yapay Zekâ Çizelgeleri</a>
+        <a href="https://yks.oguzergin.net" target="_blank" rel="noopener">YKS Çizelgeleri</a>
+        <a href="https://prof-oguzergin.github.io/CompArch-HallOfFame/" target="_blank" rel="noopener">CompArch Hall of Fame</a>
+        <a href="https://rektoroldum.oguzergin.net" target="_blank" rel="noopener">Rektör Oldum</a>
+      </div>
+      <div class="footer-col">
+        <h4>Sosyal</h4>
+        <a href="https://www.youtube.com/@oguz_ergin" target="_blank" rel="noopener">YouTube</a>
+        <a href="https://www.linkedin.com/in/oguzergin/" target="_blank" rel="noopener">LinkedIn</a>
+        <a href="https://x.com/oguzergin" target="_blank" rel="noopener">X (Twitter)</a>
+        <a href="https://www.instagram.com/prof.dr.oguzergin/" target="_blank" rel="noopener">Instagram</a>
+      </div>
+      <div class="footer-col">
+        <h4>İletişim</h4>
+        <a href="iletisim.html">İletişim sayfası</a>
+        <a href="mailto:bilgi@oguzergin.net">bilgi@oguzergin.net</a>
+        <p class="footer-note">Bağımsız vatandaş kampanyası.<br>Hiçbir parti hesabı değildir.</p>
+      </div>
+    </div>
+    <p class="footer-legal">© 2026 Prof. Dr. Oğuz Ergin · <a href="yasal.html">Yasal</a> · <a href="kullanim-sartlari.html">Kullanım Şartları</a> · <button type="button" class="cookie-prefs-link" data-cookie-prefs>Çerez Tercihleri</button></p>
+    </div>
+  </footer>
+<script defer src="assets/js/nav.js?v=2"></script>
+<script defer src="assets/js/cookie-banner.js?v=3"></script>
+</body>
+</html>

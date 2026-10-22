@@ -1,0 +1,667 @@
+[
+ {
+  "date": "2012-07",
+  "date_precision": "month",
+  "outlet": "Bilişim Dergisi (Türkiye Bilişim Derneği)",
+  "title": "Türkiye Bulut Kurumu kurulmalı",
+  "type": "röportaj",
+  "topic": "Kamu için merkezi bulut bilişim kurumu önerisi",
+  "language": "tr",
+  "url": "https://www.bilisimdergisi.org.tr/bilisim-dergisi-sayilari/s145.pdf",
+  "also": [],
+  "category": "Bulut bilişim"
+ },
+ {
+  "date": "2016",
+  "date_precision": "year",
+  "outlet": "TOBB Ekonomik Forum",
+  "title": "TOBB ETÜ'den Tarihi Başarı",
+  "type": "haber",
+  "topic": "ACM ICPC bölge yarışmasında TOBB ETÜ takımının derecesi, bölüm başkanı açıklaması",
+  "language": "tr",
+  "url": "https://haber.tobb.org.tr/ekonomikforum/2016/268/086_090.pdf",
+  "also": [],
+  "category": "Eğitim ve üniversite"
+ },
+ {
+  "date": "2019-07-26",
+  "date_precision": "day",
+  "outlet": "Demirören Haber Ajansı (DHA)",
+  "title": "'Bu bölümden mezun olanların iş seçme sorunu olacak'",
+  "type": "haber",
+  "topic": "Yapay Zekâ Mühendisliği bölümü ve mezunların iş olanakları",
+  "language": "tr",
+  "url": "https://www.dha.com.tr/egitim/bu-bolumden-mezun-olanlarin-is-secme-sorunu-olacak-1690389",
+  "also": [
+   "https://www.dha.com.tr/son-dakika/bu-bolumden-mezun-olanlarin-is-secme-sorunu-olacak-1690347",
+   "https://www.memurlar.net/haber/844521/bu-bolumden-mezun-olanlarin-is-secme-sorunu-olacak.html",
+   "https://haberkurulu.com/bu-bolumden-mezun-olanlarin-is-secme-sorunu-olacak/"
+  ],
+  "category": "Yapay zekâ"
+ },
+ {
+  "date": "2019-07-31",
+  "date_precision": "day",
+  "outlet": "TRT Radyo (Ankara Radyosu), Çevrim İçi programı",
+  "title": "Bulut Bilişim - Radyo Sohbetleri",
+  "type": "radyo",
+  "topic": "Bulut bilişim üzerine radyo söyleşisi",
+  "language": "tr",
+  "url": "https://www.youtube.com/watch?v=kBoYYk5-lYw",
+  "also": [],
+  "category": "Bulut bilişim"
+ },
+ {
+  "date": "2019-09-04",
+  "date_precision": "day",
+  "outlet": "Anadolu Ajansı",
+  "title": "'Siyaset bilimi okuyanlar bile programlama öğreniyor'",
+  "type": "röportaj",
+  "topic": "Veri bilimi, yapay zekâ eğitimi ve programlama öğrenimi",
+  "language": "tr",
+  "url": "https://www.aa.com.tr/tr/egitim/siyaset-bilimi-okuyanlar-bile-programlama-ogreniyor/1572757",
+  "also": [
+   "https://www.ntv.com.tr/egitim/siyaset-bilimi-okuyanlar-bile-programlama-ogreniyor,Z2U1jSV_1E-78ul6wSaLVw",
+   "https://www.memleket.com.tr/siyaset-bilimi-okuyanlar-bile-programlama-ogreniyor-1853737h.htm",
+   "https://www.egitimajansi.com/haber/siyaset-bilimi-okuyanlar-bile-programlama-ogreniyor-haberi-72854h.html",
+   "https://www.sondakika.com/ekonomi/haber-siyaset-bilimi-okuyanlar-bile-programlama-12390048/"
+  ],
+  "category": "Yapay zekâ"
+ },
+ {
+  "date": "2021-02-12",
+  "date_precision": "day",
+  "outlet": "BThaber",
+  "title": "Türkiye'nin Yapay Zeka Yarışında İlerlemesi için TRAI'den Dev Adım: TRAI Danışma Kurulları İlk Kez Toplandı!",
+  "type": "haber",
+  "topic": "TRAI 2021 Akademik Danışma Kurulu üyeleri arasında",
+  "language": "tr",
+  "url": "https://bthaber.com/haberler/turkiyenin-yapay-zeka-yarisinda-ilerlemesi-icin-traiden-dev-adim-trai-danisma-kurullari-ilk-kez-toplandi",
+  "also": [],
+  "category": "Adının geçtiği haberler"
+ },
+ {
+  "date": "2021-05-07",
+  "date_precision": "day",
+  "outlet": "TRT Radyo 1, Gündem programı",
+  "title": "Türkiye'de Yonga Üretilmeli mi? - Radyo Sohbetleri",
+  "type": "radyo",
+  "topic": "Türkiye'de yonga (çip) üretimi gerekli mi",
+  "language": "tr",
+  "url": "https://www.youtube.com/watch?v=EbmEllGiJWQ",
+  "also": [],
+  "category": "Yerli işlemci ve çip"
+ },
+ {
+  "date": "2021-08-14",
+  "date_precision": "day",
+  "outlet": "TRT Radyo 1, Gündem Hafta Sonu programı",
+  "title": "Üniversite Tercihleri ve TOBB ETÜ - Radyo Sohbetleri",
+  "type": "radyo",
+  "topic": "Üniversite tercihleri ve TOBB ETÜ",
+  "language": "tr",
+  "url": "https://www.youtube.com/watch?v=0RsO_nAcUWI",
+  "also": [],
+  "category": "Eğitim ve üniversite"
+ },
+ {
+  "date": "2021-08-18",
+  "date_precision": "day",
+  "outlet": "Kalenin Sesi (Çanakkale)",
+  "title": "Öğrencilere TOBB ETÜ tanıtıldı (18.08.2021)",
+  "type": "haber",
+  "topic": "Çanakkale Ticaret Borsası'nda YKS derecelilerine TOBB ETÜ tanıtımı",
+  "language": "tr",
+  "url": "https://www.kaleninsesi.com/ogrencilere-tobb-etu-tanitildi-18082021",
+  "also": [],
+  "category": "Eğitim ve üniversite"
+ },
+ {
+  "date": "2022-03-30",
+  "date_precision": "day",
+  "outlet": "Onedio",
+  "title": "Prof. Oğuz Ergin, ASELSAN Mühendisinin 'Yurtdışında Daha İyisi Varken Neden Senden Alalım?' Çıkışını Anlatıyor",
+  "type": "haber",
+  "topic": "Yerli işlemci üretimi ve ASELSAN sunumu anekdotu",
+  "language": "tr",
+  "url": "https://onedio.com/haber/prof-oguz-ergin-aselsan-muhendisinin-yurtdisinda-daha-iyisi-varken-neden-senden-alalim-cikisini-anlatiyor-1058096",
+  "also": [],
+  "category": "Yerli işlemci ve çip"
+ },
+ {
+  "date": "2022-07-03",
+  "date_precision": "day",
+  "outlet": "Onedio",
+  "title": "Bir Zamanların Ucuz Öğrenci Yemeği Tantuninin Asgari Ücreti Yönlendirdiğini Açıklayan Tweet ve Gelen Yorumlar",
+  "type": "haber",
+  "topic": "Tantuni Endeksi tweeti ve okur yorumları",
+  "language": "tr",
+  "url": "https://onedio.com/haber/bir-zamanlarin-ucuz-ogrenci-yemegi-tantuninin-asgari-ucreti-yonlendirdigini-aciklayan-tweet-ve-gelen-yorumlar-1080345",
+  "also": [],
+  "category": "Tantuni Endeksi"
+ },
+ {
+  "date": "2022-07-05",
+  "date_precision": "day",
+  "outlet": "Çukurova Gazetesi",
+  "title": "Bir aylık asgari ücrete 125 tantuni geliyor",
+  "type": "haber",
+  "topic": "Tantuni Endeksi: asgari ücretle alınabilen tantuni sayısı",
+  "language": "tr",
+  "url": "https://cukurovagazetesi.com/bir-aylik-asgari-ucrete-125-tantuni-geliyor",
+  "also": [],
+  "category": "Tantuni Endeksi"
+ },
+ {
+  "date": "2022-08-26",
+  "date_precision": "day",
+  "outlet": "Defensehere",
+  "title": "Prof. Dr. Oğuz Ergin: Savunma Şirketlerinin Kan Kaybı Nasıl Duracak?",
+  "type": "haber",
+  "topic": "Savunma şirketlerinin eleman kaybı; YouTube yayınından aktarım",
+  "language": "tr",
+  "url": "https://defensehere.com/tr/prof-dr-oguz-ergin-savunma-sirketlerinin-kan-kaybi-nasil-duracak/",
+  "also": [],
+  "category": "Savunma sanayisi ve beyin göçü"
+ },
+ {
+  "date": "2022-11-10",
+  "date_precision": "day",
+  "outlet": "Webtekno",
+  "title": "Yerli İşlemci Geliştiren Öğrencileri Yurt Dışına Kaptırdık, Yaşananları Hocaları Anlattı: Nasıl Kal Diyelim?",
+  "type": "röportaj",
+  "topic": "Kasırga takımının yurt dışına göçü ve beyin göçü",
+  "language": "tr",
+  "url": "https://www.webtekno.com/yerli-islemci-gelistiren-ogrencileri-yurt-disina-kaptirdik-h129627.html",
+  "also": [
+   "https://kirkagachaber.com.tr/yerli-islemci-gelistiren-ogrencileri-yurt-disina-kaptirdik/"
+  ],
+  "category": "Yerli işlemci ve çip"
+ },
+ {
+  "date": "2022-11-18",
+  "date_precision": "day",
+  "outlet": "Hakimiyet Gazetesi (Mersin)",
+  "title": "Prof. Dr. Oğuz Ergin: 'Tantuni endeksime göre yıllık fiyat artışı yüzde 140 olarak gerçekleşti'",
+  "type": "haber",
+  "topic": "Tantuni Endeksi: yıllık yüzde 140 fiyat artışı",
+  "language": "tr",
+  "url": "https://mersinhakimiyet.com/haber/22929/prof-dr-oguz-ergin-tantuni-endeksime-gore-yillik-fiyat-artisi-yuzde-140-olarak-gerceklesti.html",
+  "also": [],
+  "category": "Tantuni Endeksi"
+ },
+ {
+  "date": "2023-01-21",
+  "date_precision": "day",
+  "outlet": "DW Türkçe",
+  "title": "Savunma sanayisinde beyin göçü engellenebilir mi?",
+  "type": "haber",
+  "topic": "Yargı paketi, savunma sanayisi çalışanlarına kısıt ve beyin göçü",
+  "language": "tr",
+  "url": "https://www.dw.com/tr/savunma-sanayisinde-beyin-g%C3%B6%C3%A7%C3%BC-engellenebilir-mi/a-64472060",
+  "also": [
+   "https://t24.com.tr/gundem/savunma-sanayisinde-beyin-gocu-engellenebilir-mi,1086802"
+  ],
+  "category": "Savunma sanayisi ve beyin göçü"
+ },
+ {
+  "date": "2023-04-14",
+  "date_precision": "day",
+  "outlet": "İste Çanakkale Gazetesi",
+  "title": "Yapay Zekânın Dünü Bugünü Konuşulacak",
+  "type": "haber",
+  "topic": "Çanakkale Kent Konseyi yapay zekâ söyleşisinin duyurusu",
+  "language": "tr",
+  "url": "https://www.istecanakkalegazetesi.com/haber/50031-yapay-zeknin-dunu-bugunu-konusulacak",
+  "also": [
+   "https://www.canakkalekentkonseyi.org/yapay-zekanin-dunu-bugunu-konusulacak/"
+  ],
+  "category": "Yapay zekâ"
+ },
+ {
+  "date": "2023-04-19",
+  "date_precision": "day",
+  "outlet": "Çanakkale Kalem Gazetesi",
+  "title": "Prof. Dr. Oğuz Ergin: \"Yapay Zeka Gerçek\"",
+  "type": "haber",
+  "topic": "Çanakkale'de 'Yapay Zekanın Dünü ve Bugünü' söyleşisi",
+  "language": "tr",
+  "url": "https://www.canakkalekalem.com/haber/28710077/prof-dr-oguz-ergin-yapay-zeka-gercek",
+  "also": [
+   "https://www.canakkalekentkonseyi.org/prof-dr-oguz-ergin-yapay-zeka-gercek/"
+  ],
+  "category": "Yapay zekâ"
+ },
+ {
+  "date": "2023-04-26",
+  "date_precision": "day",
+  "outlet": "TRT Radyo 1, Çevrim İçi programı",
+  "title": "Yapay Zeka ve ChatGPT - Radyo Sohbetleri",
+  "type": "radyo",
+  "topic": "Yapay zekâ ve ChatGPT üzerine radyo söyleşisi",
+  "language": "tr",
+  "url": "https://www.youtube.com/watch?v=d0sxRXp29xM",
+  "also": [],
+  "category": "Yapay zekâ"
+ },
+ {
+  "date": "2023-05-02",
+  "date_precision": "day",
+  "outlet": "Webtekno",
+  "title": "Yerli İşlemciler Geliştiren Yongatek'le Konuştuk: Türkiye, AMD ve Intel'e Yetişebilir mi?",
+  "type": "haber",
+  "topic": "Yerli işlemci sektörü; Ergin'in önceki söyleşisine atıf",
+  "language": "tr",
+  "url": "https://www.webtekno.com/yerli-islemci-yongatek-konustuk-h134235.html",
+  "also": [],
+  "category": "Yerli işlemci ve çip"
+ },
+ {
+  "date": "2023-05-04",
+  "date_precision": "day",
+  "outlet": "Gazete Vitamin (Çanakkale)",
+  "title": "Prof. Dr. Oğuz Ergin ve Bayraktar Kardeşler",
+  "type": "köşe yazısı",
+  "topic": "Ömer Yıldız'ın Ergin'i Çanakkaleli gençlere tanıtan yazısı",
+  "language": "tr",
+  "url": "https://www.gazetevitamin.com/yazar/31207-prof-dr-oguz-ergin-ve-bayraktar-kardesler",
+  "also": [],
+  "category": "Eğitim ve üniversite"
+ },
+ {
+  "date": "2023-12-20",
+  "date_precision": "day",
+  "outlet": "Milliyet",
+  "title": "Akademisyenlerden ‘yapay zekâ’ talepleri",
+  "type": "haber",
+  "topic": "YÖK üretken yapay zekâ çalıştayı; yeni bölüm açılmasına itiraz",
+  "language": "tr",
+  "url": "https://www.milliyet.com.tr/egitim/akademisyenlerden-yapay-zeka-talepleri-7051885",
+  "also": [],
+  "category": "Yapay zekâ"
+ },
+ {
+  "date": "2024-03-14",
+  "date_precision": "day",
+  "outlet": "Odatv",
+  "title": "Mavi yakadan önce beyaz yaka: Yapay zekanın hedefi",
+  "type": "haber",
+  "topic": "Ergin'in GPT-4'e sorduğu mesleklerin geleceği tablosu",
+  "language": "tr",
+  "url": "https://www.odatv.com/guncel/yapay-zeka-hangi-meslekleri-etkileyecek-yapay-zeka-issizligi-artiracak-mi-yapay-zeka-mavi-yakadan-once-beyaz-yakayi-issiz-birakacak-120033318",
+  "also": [],
+  "category": "Yapay zekâ"
+ },
+ {
+  "date": "2024-06-25",
+  "date_precision": "day",
+  "outlet": "Dünya Gazetesi",
+  "title": "Big Mac değil Tantuni Endeksi: Prof. Dr. Oğuz Ergin paylaştı: Asgari ücret artırılmazsa...",
+  "type": "haber",
+  "topic": "Tantuni Endeksi ile dört yılda alım gücü kaybı",
+  "language": "tr",
+  "url": "https://www.dunya.com/ekonomi/big-mac-degil-tantuni-endeksi-prof-dr-oguz-ergin-paylasti-asgari-ucret-artirilmazsa-haberi-733666",
+  "also": [
+   "https://www.psmmag.com/big-mac-degil-tantuni-endeksi-prof-dr-oguz-ergin-paylasti-asgari-ucret-artirilmazsa"
+  ],
+  "category": "Tantuni Endeksi"
+ },
+ {
+  "date": "2024-06-26",
+  "date_precision": "day",
+  "outlet": "Sonsöz (Ankara)",
+  "title": "Enflasyon göstergesi: Tantuni endeksi",
+  "type": "haber",
+  "topic": "Tantuni Endeksi: dört yılın asgari ücret karşılaştırması",
+  "language": "tr",
+  "url": "https://sonsoz.com.tr/enflasyon-gostergesi-tantuni-endeksi",
+  "also": [],
+  "category": "Tantuni Endeksi"
+ },
+ {
+  "date": "2024-06-26",
+  "date_precision": "day",
+  "outlet": "Zafer Gazetesi",
+  "title": "\"Halkın alım gücü görülmemiş düzeye düşecek\"",
+  "type": "haber",
+  "topic": "Tantuni Endeksi ve asgari ücret artışı uyarısı",
+  "language": "tr",
+  "url": "https://zafergazetesi.org/halkin-alim-gucu-gorulmemis-duzeye-dusecek",
+  "also": [
+   "https://zafergazetesi.org/haber/20610936/halkin-alim-gucu-gorulmemis-duzeye-dusecek"
+  ],
+  "category": "Tantuni Endeksi"
+ },
+ {
+  "date": "2024-07-02",
+  "date_precision": "day",
+  "outlet": "Satınalma Dergisi",
+  "title": "Tantuni Endeksi",
+  "type": "köşe yazısı",
+  "topic": "Reşat Bağcıoğlu'nun Ergin'in Tantuni Endeksi'ni aktardığı yazı",
+  "language": "tr",
+  "url": "https://satinalmadergisi.com/tantuni-endeksi/",
+  "also": [],
+  "category": "Tantuni Endeksi"
+ },
+ {
+  "date": "2024-07-22",
+  "date_precision": "day",
+  "outlet": "TRT Radyo 1, Çevrim İçi programı",
+  "title": "Yapay Zeka Nereye Gidiyor? - Radyo Sohbetleri",
+  "type": "radyo",
+  "topic": "Yapay zekânın gelişimi üzerine radyo söyleşisi",
+  "language": "tr",
+  "url": "https://www.youtube.com/watch?v=aBpKyqncRIk",
+  "also": [],
+  "category": "Yapay zekâ"
+ },
+ {
+  "date": "2024-10-25",
+  "date_precision": "day",
+  "outlet": "TRT Dinle, Dijital Dönüşüm programı",
+  "title": "Bulut Bilişim",
+  "type": "podcast",
+  "topic": "Bulut bilişim üzerine radyo programı bölümü",
+  "language": "tr",
+  "url": "https://www.trtdinle.com/show/dijital-donusum?id=20626720",
+  "also": [],
+  "category": "Bulut bilişim"
+ },
+ {
+  "date": "2025-03-26",
+  "date_precision": "day",
+  "outlet": "ST Endüstri",
+  "title": "Global Ekonomik Politik Belirsizlik Endeksinde Grafik Yükseliyor",
+  "type": "haber",
+  "topic": "12. Satın Alma ve Tedarik Zirvesi duyurusunda yapay zekâ paneli konuşmacısı",
+  "language": "tr",
+  "url": "https://www.stendustri.com.tr/global-ekonomik-politik-belirsizlik-endeksinde-grafik-yukseliyor",
+  "also": [],
+  "category": "Adının geçtiği haberler"
+ },
+ {
+  "date": "2025-04",
+  "date_precision": "month",
+  "outlet": "Metal Dünyası",
+  "title": "Yapay Zekâ Şirketlere Maliyet Avantajı Sunuyor",
+  "type": "haber",
+  "topic": "Satın Alma ve Tedarik Zirvesi yapay zekâ paneli",
+  "language": "tr",
+  "url": "https://metaldunyasi.com.tr/upload/1lx3rd8zx600ocw.pdf",
+  "also": [],
+  "category": "Yapay zekâ"
+ },
+ {
+  "date": "2025-04-13",
+  "date_precision": "day",
+  "outlet": "Haber Kenti",
+  "title": "İstanbul'da 12. Satın Alma ve Tedarik Yönetimi Zirvesi'nde Geleceğe Dönüşüm Stratejileri Masaya Yatırıldı",
+  "type": "haber",
+  "topic": "Tedarik zincirinde yapay zekâ paneli konuşması",
+  "language": "tr",
+  "url": "https://www.haberkenti.com/istanbulda-12-satin-alma-ve-tedarik-yonetimi-zirvesinde-gelecege-donusum-stratejileri-masaya-yatirildi",
+  "also": [
+   "https://www.haberler.com/ekonomi/satin-alma-ve-tedarik-profesyonelleri-istanbul-da-18508267-haberi/",
+   "https://beyazyakaris.com/satin-alma-ve-tedarik-profesyonelleri-istanbulda-bulustu/"
+  ],
+  "category": "Yapay zekâ"
+ },
+ {
+  "date": "2025-12-21",
+  "date_precision": "day",
+  "outlet": "Daktilo 1984",
+  "title": "Sözelci Siyaseti: Ölçülemez Vaatlerin Rahatlığı",
+  "type": "kendi yazısı",
+  "topic": "Sayısal-sözel ayrımı ve ölçülemez siyasi vaatler",
+  "language": "tr",
+  "url": "https://daktilo1984.com/daktilo2/sozelci-siyaseti-olculemez-vaatlerin-rahatligi/",
+  "also": [],
+  "category": "Adaylık ve siyaset"
+ },
+ {
+  "date": "2025-12-25",
+  "date_precision": "day",
+  "outlet": "Halk TV",
+  "title": "Asgari ücretlinin tabağından 5 yılda yarısı gitti: Bu da tantuni hesabı",
+  "type": "haber",
+  "topic": "Tantuni Endeksi: 2025 sonunda alım gücü beş yılın dibinde",
+  "language": "tr",
+  "url": "https://halktv.com.tr/ekonomi/asgari-ucretlinin-tabagindan-5-yilda-yarisi-gitti-bu-da-tantuni-hesabi-995820h",
+  "also": [
+   "https://www.babaocagi.com.tr/tantuni-porsiyonu-ile-asgari-ucret-hesabi"
+  ],
+  "category": "Tantuni Endeksi"
+ },
+ {
+  "date": "2025-12-28",
+  "date_precision": "day",
+  "outlet": "Daktilo 1984",
+  "title": "Üniversiteyi Kısaltmak Değil, Eğitimi Ciddiye Almak",
+  "type": "kendi yazısı",
+  "topic": "YÖK'ün lisans süresini kısaltma kararına eleştiri",
+  "language": "tr",
+  "url": "https://daktilo1984.com/daktilo2/universiteyi-kisaltmak-degil-egitimi-ciddiye-almak/",
+  "also": [],
+  "category": "Eğitim ve üniversite"
+ },
+ {
+  "date": "2026-01-04",
+  "date_precision": "day",
+  "outlet": "Daktilo 1984",
+  "title": "Robotlar Geliyor: Türkiye'de Önce Verim, Sonra Dağıtım",
+  "type": "kendi yazısı",
+  "topic": "Yapay zekâ ve robotlaşmanın Türkiye ekonomisine etkisi",
+  "language": "tr",
+  "url": "https://daktilo1984.com/daktilo2/robotlar-geliyor-turkiyede-once-verim-sonra-dagitim/",
+  "also": [],
+  "category": "Yapay zekâ"
+ },
+ {
+  "date": "2026-04-04",
+  "date_precision": "day",
+  "outlet": "Ekonomim",
+  "title": "Menemen, tantuni, lahmacun... Enflasyon beklentilerin altında geldi: Alternatif endekslerde durum ne?",
+  "type": "haber",
+  "topic": "Alternatif endeksler arasında Tantuni Endeksi'nin mart verisi",
+  "language": "tr",
+  "url": "https://www.ekonomim.com/ekonomi/menemen-tantuni-lahmacun-enflasyon-beklentilerin-altinda-geldi-alternatif-endekslerde-durum-ne-haberi-886039",
+  "also": [],
+  "category": "Tantuni Endeksi"
+ },
+ {
+  "date": "2026-04-04",
+  "date_precision": "day",
+  "outlet": "Yeniçağ",
+  "title": "Tantuni de lüks oldu: Asgari ücretli tantuniyi de rüyasında görüyor",
+  "type": "haber",
+  "topic": "Tantuni Endeksi: asgari ücretle alınan tantuni 160'tan 70'e",
+  "language": "tr",
+  "url": "https://www.yenicaggazetesi.com/tantuni-de-luks-oldu-asgari-ucretli-tantuniyi-de-ruyasinda-goruyor-1015753h.htm",
+  "also": [],
+  "category": "Tantuni Endeksi"
+ },
+ {
+  "date": "2026-05-20",
+  "date_precision": "day",
+  "outlet": "Eti Haber",
+  "title": "Cumhurbaşkanı Aday Adayı Prof. Dr. Oğuz Ergin: Kimse Evladının Böyle Olmasını İstemez!",
+  "type": "haber",
+  "topic": "Bağımsız cumhurbaşkanı aday adaylığı açıklamaları",
+  "language": "tr",
+  "url": "https://www.etihaber.com/cumhurbaskani-aday-adayi-prof-dr-oguz-ergin-kimse-evladinin-boyle-olmasini-istemez/",
+  "also": [],
+  "category": "Adaylık ve siyaset"
+ },
+ {
+  "date": "2026-05-20",
+  "date_precision": "day",
+  "outlet": "Eti Haber",
+  "title": "Halktan Gelen Cumhurbaşkanı Aday Adayı Prof. Dr. Oğuz Ergin Kimdir?",
+  "type": "haber",
+  "topic": "Aday adayı Ergin'in özgeçmişi",
+  "language": "tr",
+  "url": "https://www.etihaber.com/halktan-gelen-cumhurbaskani-aday-adayi-prof-dr-oguz-ergin-kimdir/amp/",
+  "also": [],
+  "category": "Adaylık ve siyaset"
+ },
+ {
+  "date": "2026-07-02",
+  "date_precision": "day",
+  "outlet": "EE Times",
+  "title": "Turkey Needs to Make Its Own Chips, Not Just Design Them",
+  "type": "kendi yazısı",
+  "topic": "Türkiye'nin yalnız tasarım değil yonga üretimi de yapması gereği",
+  "language": "en",
+  "url": "https://www.eetimes.com/turkey-needs-to-make-its-own-chips-not-just-design-them/",
+  "also": [
+   "https://www.partgenie.ai/insights/turkey-needs-to-make-its-own-chips-not-just-design-them-1"
+  ],
+  "category": "Yerli işlemci ve çip"
+ },
+ {
+  "date": "2026-09-01",
+  "date_precision": "day",
+  "outlet": "TRT Radyo 1, Gündem programı",
+  "title": "Bilgisayarı Çocuğa Anlatmak · TRT Radyo 1 Gündem söyleşisi",
+  "type": "radyo",
+  "topic": "Bilge ve Yonga kitapları ve çocuklara bilgisayar mimarisi",
+  "language": "tr",
+  "url": "https://www.youtube.com/watch?v=Yqs_hrVlAlo",
+  "also": [
+   "https://xloji.com/bilim/bilgisayari-cocuga-anlatmak-trt-radyo-1-gundem-soylesisi-yqs_hr"
+  ],
+  "category": "Rektör Oldum ve Bilge ve Yonga"
+ },
+ {
+  "date": "2026-09-09",
+  "date_precision": "day",
+  "outlet": "Karar",
+  "title": "Akademisyene garip yasak",
+  "type": "haber",
+  "topic": "YÖK/657 görüşü: akademisyenlerin YouTube geliri, 146 kanal",
+  "language": "tr",
+  "url": "https://www.karar.com/guncel-haberler/akademisyene-garip-yasak-2070762",
+  "also": [],
+  "category": "Akademisyenlere YouTube yasağı"
+ },
+ {
+  "date": "2026-09-09",
+  "date_precision": "day",
+  "outlet": "Halk TV",
+  "title": "Akademisyenlere YouTube yasağı! Kanallar birer birer kapatıldı",
+  "type": "haber",
+  "topic": "YÖK/657 görüşü: akademisyenlerin YouTube geliri, 146 kanal",
+  "language": "tr",
+  "url": "https://halktv.com.tr/turkiye/akademisyenlere-youtube-yasagi-kanallar-birer-birer-kapatildi-1053939h",
+  "also": [
+   "https://t24.com.tr/gundem/akademisyenlere-dijital-icerik-kisitlamasi-youtube-ve-sosyal-medya-gelirleri-ticari-faaliyet-sayildi,1346750",
+   "https://www.istiklal.com.tr/gundem/akademisyenlere-youtube-freni-bilimsel-yayinlar-ticaret-sayildi-1104623h",
+   "https://www.babaocagi.com.tr/akademisyenlere-dijital-icerik-kisitlamasi-youtube-yayinlari-durduruluyor/amp",
+   "https://www.afyonturkeligazetesi.com/akademisyenlerin-youtube-gelirlerine-yeni-duzenleme-dijital-icerik-uretimine-ticari-faaliyet-engeli/143299",
+   "https://mansethaber.com/haber/cumhurbaskanligi-yazisi-yoke-ulasti-akademisyenlerin-youtube-yayinlari-mercek-altinda",
+   "https://www.tigrishaber.com/akademisyenlere-sosyal-medya-kisitlamasi-youtube-gelirleri-ticari-faaliyet-sayildi-161208h.htm",
+   "https://www.arkeolojikhaber.com/haber-akademisyenlere-dijital-yayin-yasagi-geldi-youtube-kanallari-bir-bir-kapatildi-44351/",
+   "https://www.medyarota.com/haber/28669614/akademisyenler-youtubeda-video-paylasamayacak",
+   "https://www.milliirade.com/akademisyenlerin-dijital-yayinciligi-ticari-faaliyet-sayildi-youtube-kanallari-durduruluyor",
+   "https://www.sondakika.com/memur/haber-akademisyenlerin-dijital-gelirlerine-657-yasagi-go-20226928/"
+  ],
+  "category": "Akademisyenlere YouTube yasağı"
+ },
+ {
+  "date": "2026-09-09",
+  "date_precision": "day",
+  "outlet": "Gazete Oksijen",
+  "title": "Akademisyenler YouTube'da video paylaşamayacak: Dijital yayıncılık ticari faaliyet sayıldı",
+  "type": "haber",
+  "topic": "YÖK/657 görüşü; Ergin'in 146 kanal derlemesi ve Bilim İletişim Ofisleri çelişkisi",
+  "language": "tr",
+  "url": "https://gazeteoksijen.com/turkiye/akademisyenlerin-youtube-gelirlerine-kisitlama-dijital-yayincilik-ticari-faaliyet-sayildi-288832",
+  "also": [],
+  "category": "Akademisyenlere YouTube yasağı"
+ },
+ {
+  "date": "2026-09-09",
+  "date_precision": "day",
+  "outlet": "Kayseri Haber",
+  "title": "YÖK'ten akademisyenlere kısıtlama: 'Esnaflık' olarak değerlendirilen YouTube kanalları kapanıyor!",
+  "type": "haber",
+  "topic": "YouTube kısıtlaması; Ergin'in Bilim İletişim Ofisleri çelişkisi eleştirisi",
+  "language": "tr",
+  "url": "https://www.kayserihaber.com/yok-kisitlama-akademisyen-youtube-esnaf",
+  "also": [],
+  "category": "Akademisyenlere YouTube yasağı"
+ },
+ {
+  "date": "2026-09-11",
+  "date_precision": "day",
+  "outlet": "Türkiye Today",
+  "title": "Türkiye's scholars go dark as free lectures become trade",
+  "type": "röportaj",
+  "topic": "Akademisyen YouTube kısıtlaması; Ergin'in 146 kanal derlemesi",
+  "language": "en",
+  "url": "https://www.turkiyetoday.com/nation/turkiyes-scholars-go-dark-as-free-lectures-become-trade-3227926",
+  "also": [],
+  "category": "Akademisyenlere YouTube yasağı"
+ },
+ {
+  "date": "2026-09-12",
+  "date_precision": "day",
+  "outlet": "Aydınlık",
+  "title": "Akademisyenlerden dijital içerik yasağına tepki! Videonun kitaptan ne farkı var?",
+  "type": "haber",
+  "topic": "YÖK/657 görüşüne akademisyen tepkileri, Ergin'in 146 sayısı",
+  "language": "tr",
+  "url": "https://www.aydinlik.com.tr/haber/akademisyenlerden-dijital-icerik-yasagina-tepki-videonun-kitaptan-ne-farki-var-589787",
+  "also": [],
+  "category": "Akademisyenlere YouTube yasağı"
+ },
+ {
+  "date": "2026-09-21",
+  "date_precision": "day",
+  "outlet": "Karar",
+  "title": "Akademisyenlere Youtube yasak mı? Akademik kanallar kapatılıyor mu? Devlet memuru öğretim üyelerinin Youtube yayınlarına yasak",
+  "type": "haber",
+  "topic": "Akademisyen YouTube yasağı açıklayıcı haberi, Ergin'in derlemesi",
+  "language": "tr",
+  "url": "https://www.karar.com/teknoloji-haberleri/akademisyenlere-youtube-yasak-mi-akademik-kanallar-kapatiliyor-mu-2073199",
+  "also": [],
+  "category": "Akademisyenlere YouTube yasağı"
+ },
+ {
+  "date": "2026-09-28",
+  "date_precision": "day",
+  "outlet": "Akaturk",
+  "title": "Turkey's YouTube income ban for academics: what changed?",
+  "type": "haber",
+  "topic": "Akademisyen YouTube geliri yasağı açıklaması, Ergin'in 146 sayısı",
+  "language": "en",
+  "url": "https://akaturk.com/haberler/turkey-academics-youtube-income-ban-law-657?lang=en",
+  "also": [],
+  "category": "Akademisyenlere YouTube yasağı"
+ },
+ {
+  "date": "2026-10-21",
+  "date_precision": "day",
+  "outlet": "Hürriyet",
+  "title": "Tecrübesini oyuna çevirdi",
+  "type": "haber",
+  "topic": "Rektör Oldum üniversite yönetim oyunu ve Bilge ve Yonga",
+  "language": "tr",
+  "url": "https://www.hurriyet.com.tr/egitim/tecrubesini-oyuna-cevirdi-43349093",
+  "also": [],
+  "category": "Rektör Oldum ve Bilge ve Yonga"
+ },
+ {
+  "date": "2026-10-21",
+  "date_precision": "day",
+  "outlet": "Bölge Gündemi",
+  "title": "Akademik tecrübe \"Rektör Oldum\" oyunuyla dijital simülasyona dönüştü",
+  "type": "haber",
+  "topic": "Rektör Oldum oyunu 5 ayda 7 bin kullanıcı; Bilge ve Yonga",
+  "language": "tr",
+  "url": "https://www.bolgegundemi.com/egitim/akademik-tecrube-rektor-oldum-oyunuyla-dijital-simulasyona-donustu-216822.html",
+  "also": [],
+  "category": "Rektör Oldum ve Bilge ve Yonga"
+ }
+]
