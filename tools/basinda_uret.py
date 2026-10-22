@@ -3,7 +3,10 @@
 Kullanim (depo kokunden):  python tools/basinda_uret.py
 Ust bilgi, menu ve alt bilgi calismalar.html'den alinir; boylece site ile ayni kalir.
 """
-import collections, html, json, pathlib, re
+import collections, html, json, pathlib, re, sys
+
+sys.path.insert(0, str(pathlib.Path(__file__).resolve().parent))
+from konu_simgeleri import simge  # noqa: E402
 
 KOK = pathlib.Path(__file__).resolve().parent.parent
 VERI = KOK / "assets" / "data" / "basin.json"
@@ -99,11 +102,11 @@ def liste(kayitlar):
 
 
 bolumler = "".join(
-    f'\n<h3 id="{kimlik(c)}">{e(c)} <small>{len(gruplar[c])}</small></h3>\n<ul class="basin-liste">{liste(gruplar[c])}\n</ul>\n'
+    f'\n<h3 class="konu-h" id="{kimlik(c)}">{simge(c)}<span>{e(c)}</span> <small>{len(gruplar[c])}</small></h3>\n<ul class="basin-liste">{liste(gruplar[c])}\n</ul>\n'
     for c in sira)
-dizin = " · ".join(f'<a href="#{kimlik(c)}">{e(c)}</a>' for c in sira)
+dizin = "".join(f'<a class="toc-konu" href="#{kimlik(c)}">{simge(c, "toc-simge")}<span>{e(c)}</span></a>' for c in sira)
 anilan_html = (f'''
-<h3 id="adinin-gectigi">{ADIN_GECTIGI}</h3>
+<h3 class="konu-h" id="adinin-gectigi">{simge(ADIN_GECTIGI)}<span>{ADIN_GECTIGI}</span></h3>
 <p class="not">Konusu ben olmayan, adımın yalnız bir listede ya da duyuruda geçtiği haberler.</p>
 <ul class="basin-liste">{liste(anilan)}
 </ul>''' if anilan else "")
@@ -131,6 +134,12 @@ STIL = """  <style>
     .yil-grafik .sutun:last-child .cubuk{background:var(--c-accent)}
     .yil-grafik .adet{font-size:.75rem;color:var(--c-text-muted)}
     .yil-grafik .yillar{display:grid;grid-template-columns:repeat(var(--n),minmax(0,1fr));gap:4px;font-size:.72rem;color:var(--c-text-muted);text-align:center;margin-top:4px}
+    .konu-dizin{display:flex;flex-wrap:wrap;gap:.5rem;margin:.6rem 0 .4rem}
+    body.page main a.toc-konu{display:inline-flex;align-items:center;gap:.45rem;padding:.45rem .8rem .45rem .6rem;border:1px solid var(--c-border);border-radius:999px;background:var(--c-bg-alt);color:var(--c-primary);font-weight:500;font-size:.9rem;text-decoration:none}
+    body.page main a.toc-konu:hover{border-color:var(--c-accent)}
+    .toc-simge{width:18px;height:18px;color:var(--c-primary-2);flex:none}
+    body.page h3.konu-h{display:flex;align-items:center;gap:.65rem}
+    .konu-simge{width:30px;height:30px;padding:5px;border-radius:8px;background:var(--c-primary);color:var(--c-accent);flex:none;box-sizing:content-box}
     .basin-liste{list-style:none;margin:0 0 1rem;padding:0;border-top:1px solid var(--c-border)}
     .basin-liste li{display:grid;grid-template-columns:125px minmax(0,1fr);column-gap:1rem;padding:.65rem 0;border-bottom:1px solid var(--c-border)}
     .basin-liste .t{grid-row:span 2;color:var(--c-text-muted);font-size:.88rem;padding-top:2px}
@@ -167,7 +176,7 @@ ANA = f"""<h1>Basında</h1>
 </div>
 
 <h2 id="konular">Konulara göre</h2>
-<p class="page-toc"><strong>Konular:</strong> {dizin}</p>
+<nav class="konu-dizin" aria-label="Konular">{dizin}</nav>
 {bolumler}{anilan_html}
 
 <hr>

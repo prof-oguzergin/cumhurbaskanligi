@@ -45,6 +45,12 @@
     .yil-grafik .sutun:last-child .cubuk{background:var(--c-accent)}
     .yil-grafik .adet{font-size:.75rem;color:var(--c-text-muted)}
     .yil-grafik .yillar{display:grid;grid-template-columns:repeat(var(--n),minmax(0,1fr));gap:4px;font-size:.72rem;color:var(--c-text-muted);text-align:center;margin-top:4px}
+    .konu-dizin{display:flex;flex-wrap:wrap;gap:.5rem;margin:.6rem 0 .4rem}
+    body.page main a.toc-konu{display:inline-flex;align-items:center;gap:.45rem;padding:.45rem .8rem .45rem .6rem;border:1px solid var(--c-border);border-radius:999px;background:var(--c-bg-alt);color:var(--c-primary);font-weight:500;font-size:.9rem;text-decoration:none}
+    body.page main a.toc-konu:hover{border-color:var(--c-accent)}
+    .toc-simge{width:18px;height:18px;color:var(--c-primary-2);flex:none}
+    body.page h3.konu-h{display:flex;align-items:center;gap:.65rem}
+    .konu-simge{width:30px;height:30px;padding:5px;border-radius:8px;background:var(--c-primary);color:var(--c-accent);flex:none;box-sizing:content-box}
     .basin-liste{list-style:none;margin:0 0 1rem;padding:0;border-top:1px solid var(--c-border)}
     .basin-liste li{display:grid;grid-template-columns:125px minmax(0,1fr);column-gap:1rem;padding:.65rem 0;border-bottom:1px solid var(--c-border)}
     .basin-liste .t{grid-row:span 2;color:var(--c-text-muted);font-size:.88rem;padding-top:2px}
@@ -140,9 +146,9 @@
 </div>
 
 <h2 id="konular">Konulara göre</h2>
-<p class="page-toc"><strong>Konular:</strong> <a href="#yapay-zeka">Yapay zekâ</a> · <a href="#tantuni-endeksi">Tantuni Endeksi</a> · <a href="#akademisyenlere-youtube-yasagi">Akademisyenlere YouTube yasağı</a> · <a href="#yerli-islemci-ve-cip">Yerli işlemci ve çip</a> · <a href="#egitim-ve-universite">Eğitim ve üniversite</a> · <a href="#rektor-oldum-ve-bilge-ve-yonga">Rektör Oldum ve Bilge ve Yonga</a> · <a href="#adaylik-ve-siyaset">Adaylık ve siyaset</a> · <a href="#bulut-bilisim">Bulut bilişim</a> · <a href="#savunma-sanayisi-ve-beyin-gocu">Savunma sanayisi ve beyin göçü</a></p>
+<nav class="konu-dizin" aria-label="Konular"><a class="toc-konu" href="#yapay-zeka"><svg class="toc-simge" viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M11 3.5l1.9 5.1 5.1 1.9-5.1 1.9L11 17.5l-1.9-5.1L4 10.5l5.1-1.9z"/><path d="M18 14.5l.8 2.2 2.2.8-2.2.8-.8 2.2-.8-2.2-2.2-.8 2.2-.8z"/></svg><span>Yapay zekâ</span></a><a class="toc-konu" href="#tantuni-endeksi"><svg class="toc-simge" viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M2.8 11.2V4.3c0-.8.7-1.5 1.5-1.5h6.9l10 10-8.4 8.4z"/><circle cx="7.3" cy="7.3" r="1.3"/><text x="13.6" y="16.4" font-size="8.2" font-weight="700" text-anchor="middle" fill="currentColor" stroke="none" font-family="Arial, sans-serif" transform="rotate(45 13.6 13.6)">₺</text></svg><span>Tantuni Endeksi</span></a><a class="toc-konu" href="#akademisyenlere-youtube-yasagi"><svg class="toc-simge" viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="6" width="18" height="12" rx="3.5"/><path d="M10.3 9.6v4.8l4.1-2.4z"/><path d="M4 3.5l16 17"/></svg><span>Akademisyenlere YouTube yasağı</span></a><a class="toc-konu" href="#yerli-islemci-ve-cip"><svg class="toc-simge" viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="7" y="7" width="10" height="10" rx="1.5"/><rect x="10" y="10" width="4" height="4" rx=".5"/><path d="M9.5 3.5v3.5M14.5 3.5v3.5M9.5 17v3.5M14.5 17v3.5M3.5 9.5H7M3.5 14.5H7M17 9.5h3.5M17 14.5h3.5"/></svg><span>Yerli işlemci ve çip</span></a><a class="toc-konu" href="#egitim-ve-universite"><svg class="toc-simge" viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M2 9.5l10-5 10 5-10 5z"/><path d="M6 11.5v4.8c3.2 2.4 8.8 2.4 12 0v-4.8"/><path d="M22 9.5v5.5"/></svg><span>Eğitim ve üniversite</span></a><a class="toc-konu" href="#rektor-oldum-ve-bilge-ve-yonga"><svg class="toc-simge" viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M3 5.6c2.6-1 6-1 9 1 3-2 6.4-2 9-1v13.6c-2.6-1-6-1-9 1-3-2-6.4-2-9-1z"/><path d="M12 6.6v13.6"/></svg><span>Rektör Oldum ve Bilge ve Yonga</span></a><a class="toc-konu" href="#adaylik-ve-siyaset"><svg class="toc-simge" viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M4 11h16v9.5H4z"/><path d="M7.5 11V3.5h9V11"/><path d="M9.7 7.3l1.6 1.6 3-3.1"/><path d="M4 14.5h16"/></svg><span>Adaylık ve siyaset</span></a><a class="toc-konu" href="#bulut-bilisim"><svg class="toc-simge" viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M7 18.5h10.2a4 4 0 0 0 .4-7.98A6 6 0 0 0 6.2 9.8 4.35 4.35 0 0 0 7 18.5z"/></svg><span>Bulut bilişim</span></a><a class="toc-konu" href="#savunma-sanayisi-ve-beyin-gocu"><svg class="toc-simge" viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2.8l8 3.1v6.1c0 4.6-3.4 7.9-8 9.2-4.6-1.3-8-4.6-8-9.2V5.9z"/><path d="M8.5 12h6.5M12.7 9.5l2.5 2.5-2.5 2.5"/></svg><span>Savunma sanayisi ve beyin göçü</span></a></nav>
 
-<h3 id="yapay-zeka">Yapay zekâ <small>11</small></h3>
+<h3 class="konu-h" id="yapay-zeka"><svg class="konu-simge" viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M11 3.5l1.9 5.1 5.1 1.9-5.1 1.9L11 17.5l-1.9-5.1L4 10.5l5.1-1.9z"/><path d="M18 14.5l.8 2.2 2.2.8-2.2.8-.8 2.2-.8-2.2-2.2-.8 2.2-.8z"/></svg><span>Yapay zekâ</span> <small>11</small></h3>
 <ul class="basin-liste">
   <li><span class="t">4 Ocak 2026</span>
     <span class="o">Daktilo 1984<em>Kendi yazısı</em></span>
@@ -179,7 +185,7 @@
     <a href="https://www.dha.com.tr/egitim/bu-bolumden-mezun-olanlarin-is-secme-sorunu-olacak-1690389" target="_blank" rel="noopener">&#x27;Bu bölümden mezun olanların iş seçme sorunu olacak&#x27;</a></li>
 </ul>
 
-<h3 id="tantuni-endeksi">Tantuni Endeksi <small>10</small></h3>
+<h3 class="konu-h" id="tantuni-endeksi"><svg class="konu-simge" viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M2.8 11.2V4.3c0-.8.7-1.5 1.5-1.5h6.9l10 10-8.4 8.4z"/><circle cx="7.3" cy="7.3" r="1.3"/><text x="13.6" y="16.4" font-size="8.2" font-weight="700" text-anchor="middle" fill="currentColor" stroke="none" font-family="Arial, sans-serif" transform="rotate(45 13.6 13.6)">₺</text></svg><span>Tantuni Endeksi</span> <small>10</small></h3>
 <ul class="basin-liste">
   <li><span class="t">4 Nisan 2026</span>
     <span class="o">Ekonomim<em>Haber</em></span>
@@ -213,7 +219,7 @@
     <a href="https://onedio.com/haber/bir-zamanlarin-ucuz-ogrenci-yemegi-tantuninin-asgari-ucreti-yonlendirdigini-aciklayan-tweet-ve-gelen-yorumlar-1080345" target="_blank" rel="noopener">Bir Zamanların Ucuz Öğrenci Yemeği Tantuninin Asgari Ücreti Yönlendirdiğini Açıklayan Tweet ve Gelen Yorumlar</a></li>
 </ul>
 
-<h3 id="akademisyenlere-youtube-yasagi">Akademisyenlere YouTube yasağı <small>8</small></h3>
+<h3 class="konu-h" id="akademisyenlere-youtube-yasagi"><svg class="konu-simge" viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="6" width="18" height="12" rx="3.5"/><path d="M10.3 9.6v4.8l4.1-2.4z"/><path d="M4 3.5l16 17"/></svg><span>Akademisyenlere YouTube yasağı</span> <small>8</small></h3>
 <ul class="basin-liste">
   <li><span class="t">28 Eylül 2026</span>
     <span class="o">Akaturk<em>Haber</em></span>
@@ -241,7 +247,7 @@
     <a href="https://www.kayserihaber.com/yok-kisitlama-akademisyen-youtube-esnaf" target="_blank" rel="noopener">YÖK&#x27;ten akademisyenlere kısıtlama: &#x27;Esnaflık&#x27; olarak değerlendirilen YouTube kanalları kapanıyor!</a></li>
 </ul>
 
-<h3 id="yerli-islemci-ve-cip">Yerli işlemci ve çip <small>5</small></h3>
+<h3 class="konu-h" id="yerli-islemci-ve-cip"><svg class="konu-simge" viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="7" y="7" width="10" height="10" rx="1.5"/><rect x="10" y="10" width="4" height="4" rx=".5"/><path d="M9.5 3.5v3.5M14.5 3.5v3.5M9.5 17v3.5M14.5 17v3.5M3.5 9.5H7M3.5 14.5H7M17 9.5h3.5M17 14.5h3.5"/></svg><span>Yerli işlemci ve çip</span> <small>5</small></h3>
 <ul class="basin-liste">
   <li><span class="t">2 Temmuz 2026</span>
     <span class="o">EE Times<em>Kendi yazısı</em></span>
@@ -260,7 +266,7 @@
     <a href="https://www.youtube.com/watch?v=EbmEllGiJWQ" target="_blank" rel="noopener">Türkiye&#x27;de Yonga Üretilmeli mi? - Radyo Sohbetleri</a></li>
 </ul>
 
-<h3 id="egitim-ve-universite">Eğitim ve üniversite <small>5</small></h3>
+<h3 class="konu-h" id="egitim-ve-universite"><svg class="konu-simge" viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M2 9.5l10-5 10 5-10 5z"/><path d="M6 11.5v4.8c3.2 2.4 8.8 2.4 12 0v-4.8"/><path d="M22 9.5v5.5"/></svg><span>Eğitim ve üniversite</span> <small>5</small></h3>
 <ul class="basin-liste">
   <li><span class="t">28 Aralık 2025</span>
     <span class="o">Daktilo 1984<em>Kendi yazısı</em></span>
@@ -279,7 +285,7 @@
     <a href="https://haber.tobb.org.tr/ekonomikforum/2016/268/086_090.pdf" target="_blank" rel="noopener">TOBB ETÜ&#x27;den Tarihi Başarı</a></li>
 </ul>
 
-<h3 id="rektor-oldum-ve-bilge-ve-yonga">Rektör Oldum ve Bilge ve Yonga <small>3</small></h3>
+<h3 class="konu-h" id="rektor-oldum-ve-bilge-ve-yonga"><svg class="konu-simge" viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M3 5.6c2.6-1 6-1 9 1 3-2 6.4-2 9-1v13.6c-2.6-1-6-1-9 1-3-2-6.4-2-9-1z"/><path d="M12 6.6v13.6"/></svg><span>Rektör Oldum ve Bilge ve Yonga</span> <small>3</small></h3>
 <ul class="basin-liste">
   <li><span class="t">21 Ekim 2026</span>
     <span class="o">Hürriyet<em>Haber</em></span>
@@ -292,7 +298,7 @@
     <a href="https://www.youtube.com/watch?v=Yqs_hrVlAlo" target="_blank" rel="noopener">Bilgisayarı Çocuğa Anlatmak · TRT Radyo 1 Gündem söyleşisi</a></li>
 </ul>
 
-<h3 id="adaylik-ve-siyaset">Adaylık ve siyaset <small>3</small></h3>
+<h3 class="konu-h" id="adaylik-ve-siyaset"><svg class="konu-simge" viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M4 11h16v9.5H4z"/><path d="M7.5 11V3.5h9V11"/><path d="M9.7 7.3l1.6 1.6 3-3.1"/><path d="M4 14.5h16"/></svg><span>Adaylık ve siyaset</span> <small>3</small></h3>
 <ul class="basin-liste">
   <li><span class="t">20 Mayıs 2026</span>
     <span class="o">Eti Haber<em>Haber</em></span>
@@ -305,7 +311,7 @@
     <a href="https://daktilo1984.com/daktilo2/sozelci-siyaseti-olculemez-vaatlerin-rahatligi/" target="_blank" rel="noopener">Sözelci Siyaseti: Ölçülemez Vaatlerin Rahatlığı</a></li>
 </ul>
 
-<h3 id="bulut-bilisim">Bulut bilişim <small>3</small></h3>
+<h3 class="konu-h" id="bulut-bilisim"><svg class="konu-simge" viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M7 18.5h10.2a4 4 0 0 0 .4-7.98A6 6 0 0 0 6.2 9.8 4.35 4.35 0 0 0 7 18.5z"/></svg><span>Bulut bilişim</span> <small>3</small></h3>
 <ul class="basin-liste">
   <li><span class="t">25 Ekim 2024</span>
     <span class="o">TRT Dinle, Dijital Dönüşüm programı<em>Podcast</em></span>
@@ -318,7 +324,7 @@
     <a href="https://www.bilisimdergisi.org.tr/bilisim-dergisi-sayilari/s145.pdf" target="_blank" rel="noopener">Türkiye Bulut Kurumu kurulmalı</a></li>
 </ul>
 
-<h3 id="savunma-sanayisi-ve-beyin-gocu">Savunma sanayisi ve beyin göçü <small>2</small></h3>
+<h3 class="konu-h" id="savunma-sanayisi-ve-beyin-gocu"><svg class="konu-simge" viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2.8l8 3.1v6.1c0 4.6-3.4 7.9-8 9.2-4.6-1.3-8-4.6-8-9.2V5.9z"/><path d="M8.5 12h6.5M12.7 9.5l2.5 2.5-2.5 2.5"/></svg><span>Savunma sanayisi ve beyin göçü</span> <small>2</small></h3>
 <ul class="basin-liste">
   <li><span class="t">21 Ocak 2023</span>
     <span class="o">DW Türkçe<em>Haber</em></span>
@@ -328,7 +334,7 @@
     <a href="https://defensehere.com/tr/prof-dr-oguz-ergin-savunma-sirketlerinin-kan-kaybi-nasil-duracak/" target="_blank" rel="noopener">Prof. Dr. Oğuz Ergin: Savunma Şirketlerinin Kan Kaybı Nasıl Duracak?</a></li>
 </ul>
 
-<h3 id="adinin-gectigi">Adının geçtiği haberler</h3>
+<h3 class="konu-h" id="adinin-gectigi"><svg class="konu-simge" viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M5 11.5h4v5.5H4v-3.3c0-2.6 1.1-4.6 3.2-6"/><path d="M15 11.5h4v5.5h-5v-3.3c0-2.6 1.1-4.6 3.2-6"/></svg><span>Adının geçtiği haberler</span></h3>
 <p class="not">Konusu ben olmayan, adımın yalnız bir listede ya da duyuruda geçtiği haberler.</p>
 <ul class="basin-liste">
   <li><span class="t">26 Mart 2025</span>
