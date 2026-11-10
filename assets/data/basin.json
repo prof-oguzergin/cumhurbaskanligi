@@ -663,5 +663,17 @@
   "url": "https://www.bolgegundemi.com/egitim/akademik-tecrube-rektor-oldum-oyunuyla-dijital-simulasyona-donustu-216822.html",
   "also": [],
   "category": "Rektör Oldum ve Bilge ve Yonga"
+ },
+ {
+  "date": "2026-11-10",
+  "date_precision": "day",
+  "outlet": "Anadolu Ajansı",
+  "title": "Intel'in donanım güvenliği ödüllerine Türk araştırmacı imzası",
+  "type": "haber",
+  "topic": "Intel Güncel Yayın Ödülü (Chronus) ve Kalıcı Etki Ödülü; Kasırga Lab öğrencileri",
+  "language": "tr",
+  "url": "https://www.aa.com.tr/tr/bilim-teknoloji/intelin-donanim-guvenligi-odullerine-turk-arastirmaci-imzasi/4118367",
+  "also": [],
+  "category": "Yerli işlemci ve çip"
  }
 ]
